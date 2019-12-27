@@ -1,0 +1,9 @@
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\bin\Debug\GraKarciana.exe.config
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\bin\Debug\GraKarciana.exe
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\bin\Debug\GraKarciana.pdb
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\obj\Debug\GraKarciana.csprojAssemblyReference.cache
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\obj\Debug\GraKarciana.Form1.resources
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\obj\Debug\GraKarciana.Properties.Resources.resources
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\obj\Debug\GraKarciana.csproj.GenerateResource.cache
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\obj\Debug\GraKarciana.exe
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\GraKarciana\obj\Debug\GraKarciana.pdb
