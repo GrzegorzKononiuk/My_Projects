@@ -13,26 +13,41 @@ namespace TraningDiary
 {
     public partial class Form1 : Form
     {
-        private string name;
+        TrainingPlan plan = new TrainingPlan();
         public Form1()
         {
             InitializeComponent();
         }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-
+            
         }
         private void fbwOpen_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if(!Directory.Exists(@"c:\TRAINING")) 
             {
+                MessageBox.Show("FOLDER TRAINING HAS CREATED IN C:\\TRAINING");
+                Directory.CreateDirectory(@"c:\TRAINING");
+            }
+            else
+            {
+                MessageBox.Show("TRAINING IT'S ALREADY EXIST, CLICK 'SET TRANING' AND OPEN TXT FILE ");
+            }
+            plan.Generate();
+            
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string name;
+            if(openFileDialog1.ShowDialog() == DialogResult.OK) 
+            {
+                
                 name = openFileDialog1.FileName;
                 textBox1.Clear();
                 textBox1.Text = File.ReadAllText(name);
             }
-           
         }
-
-      
     }
 }

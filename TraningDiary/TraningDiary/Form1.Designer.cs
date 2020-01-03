@@ -33,6 +33,7 @@
             this.splitOpen = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +52,7 @@
             this.fbwOpen.Name = "fbwOpen";
             this.fbwOpen.Size = new System.Drawing.Size(202, 40);
             this.fbwOpen.TabIndex = 1;
-            this.fbwOpen.Text = "FBW (FULL BODY WORKOUT)";
+            this.fbwOpen.Text = "GENERATE FBW (FULL BODY WORKOUT TRAINING) ";
             this.fbwOpen.UseVisualStyleBackColor = true;
             this.fbwOpen.Click += new System.EventHandler(this.fbwOpen_Click);
             // 
@@ -66,10 +67,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 166);
+            this.textBox1.Location = new System.Drawing.Point(38, 245);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(731, 301);
+            this.textBox1.Size = new System.Drawing.Size(731, 222);
             this.textBox1.TabIndex = 3;
             // 
             // openFileDialog1
@@ -77,11 +78,22 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(180, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 46);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Set Traning";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 544);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.splitOpen);
             this.Controls.Add(this.fbwOpen);
@@ -100,6 +112,7 @@
         private System.Windows.Forms.Button splitOpen;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
