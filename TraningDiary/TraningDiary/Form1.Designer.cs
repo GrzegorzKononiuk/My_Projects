@@ -33,7 +33,7 @@
             this.splitOpen = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.setTraning = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,22 +78,22 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // button1
+            // setTraning
             // 
-            this.button1.Location = new System.Drawing.Point(180, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 46);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Set Traning";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.setTraning.Location = new System.Drawing.Point(180, 153);
+            this.setTraning.Name = "setTraning";
+            this.setTraning.Size = new System.Drawing.Size(136, 46);
+            this.setTraning.TabIndex = 4;
+            this.setTraning.Text = "Set Traning";
+            this.setTraning.UseVisualStyleBackColor = true;
+            this.setTraning.Click += new System.EventHandler(this.setTraning_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 544);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.setTraning);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.splitOpen);
             this.Controls.Add(this.fbwOpen);
@@ -112,7 +112,7 @@
         private System.Windows.Forms.Button splitOpen;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button setTraning;
     }
 }
 

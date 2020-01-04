@@ -38,7 +38,7 @@ namespace TraningDiary
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void setTraning_Click(object sender, EventArgs e)
         {
             string name;
             if(openFileDialog1.ShowDialog() == DialogResult.OK) 
