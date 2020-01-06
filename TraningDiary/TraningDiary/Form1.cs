@@ -33,7 +33,7 @@ namespace TraningDiary
             {
                 MessageBox.Show("TRAINING IT'S ALREADY EXIST, CLICK 'SET TRANING' AND OPEN TXT FILE ");
             }
-            plan.Generate();
+            //plan.Generate();
             
             
         }
@@ -45,9 +45,24 @@ namespace TraningDiary
             {
                 
                 name = openFileDialog1.FileName;
-                textBox1.Clear();
-                textBox1.Text = File.ReadAllText(name);
+              
+                dataGridView1.Text = File.ReadAllText(name);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Exercise");
+            dt.Columns.Add("Series");
+
+            dt.Rows.Add(Exercises.BenchPress, plan.Series);
+            
+            
+            dataGridView1.DataSource = dt;
+
+
         }
     }
 }

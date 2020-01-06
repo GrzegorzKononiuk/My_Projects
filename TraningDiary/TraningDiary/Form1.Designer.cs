@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.fbwOpen = new System.Windows.Forms.Button();
-            this.splitOpen = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.setTraning = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,30 +48,13 @@
             // 
             // fbwOpen
             // 
-            this.fbwOpen.Location = new System.Drawing.Point(155, 93);
+            this.fbwOpen.Location = new System.Drawing.Point(298, 90);
             this.fbwOpen.Name = "fbwOpen";
             this.fbwOpen.Size = new System.Drawing.Size(202, 40);
             this.fbwOpen.TabIndex = 1;
-            this.fbwOpen.Text = "GENERATE FBW (FULL BODY WORKOUT TRAINING) ";
+            this.fbwOpen.Text = "CREATE FOLDER \"TRAINING\"";
             this.fbwOpen.UseVisualStyleBackColor = true;
             this.fbwOpen.Click += new System.EventHandler(this.fbwOpen_Click);
-            // 
-            // splitOpen
-            // 
-            this.splitOpen.Location = new System.Drawing.Point(433, 93);
-            this.splitOpen.Name = "splitOpen";
-            this.splitOpen.Size = new System.Drawing.Size(202, 40);
-            this.splitOpen.TabIndex = 2;
-            this.splitOpen.Text = "SPLIT";
-            this.splitOpen.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(38, 245);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(731, 222);
-            this.textBox1.TabIndex = 3;
             // 
             // openFileDialog1
             // 
@@ -80,26 +63,35 @@
             // 
             // setTraning
             // 
-            this.setTraning.Location = new System.Drawing.Point(180, 153);
+            this.setTraning.Location = new System.Drawing.Point(319, 154);
             this.setTraning.Name = "setTraning";
             this.setTraning.Size = new System.Drawing.Size(136, 46);
             this.setTraning.TabIndex = 4;
-            this.setTraning.Text = "Set Traning";
+            this.setTraning.Text = "Open Your Training";
             this.setTraning.UseVisualStyleBackColor = true;
             this.setTraning.Click += new System.EventHandler(this.setTraning_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 224);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(731, 150);
+            this.dataGridView1.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 544);
+            this.ClientSize = new System.Drawing.Size(800, 480);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.setTraning);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.splitOpen);
             this.Controls.Add(this.fbwOpen);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,10 +101,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button fbwOpen;
-        private System.Windows.Forms.Button splitOpen;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button setTraning;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
