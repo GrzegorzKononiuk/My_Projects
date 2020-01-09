@@ -21,28 +21,16 @@ namespace TraningDiary
             }
             
         }
-       /**
-        public int Reps { get; set; }
-        public int Weight { get; set; }
-        public int CurrentResults { get; set; }
-        **/
-        
         /**
-        public void Generate()
-        {
-            
-            StreamWriter writer = new StreamWriter(@"c:\TRAINING\TRAINING-FBW.txt");
-            writer.WriteLine(Exercises.BenchPress.ToString() + Series.ToString());
-            writer.WriteLine(Exercises.Ohp.ToString() + Series.ToString());
-            
-            writer.Close();
+         public int Reps { get; set; }
+         public int Weight { get; set; }
+         public int CurrentResults { get; set; }
+         **/
+
+
+        
 
 
 
-
-        }
-    **/
-    
-       
     }
 }

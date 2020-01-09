@@ -26,43 +26,97 @@ namespace TraningDiary
         {
             if(!Directory.Exists(@"c:\TRAINING")) 
             {
-                MessageBox.Show("FOLDER TRAINING HAS CREATED IN C:\\TRAINING");
+                MessageBox.Show("FOLDER TRAINING HAS CREATED IN C:\\TRAINING, CLICK OPEN TO CHECK YOUR TRAINIG");
                 Directory.CreateDirectory(@"c:\TRAINING");
+                CreateTable();
+                
             }
             else
             {
                 MessageBox.Show("TRAINING IT'S ALREADY EXIST, CLICK 'SET TRANING' AND OPEN TXT FILE ");
             }
-            //plan.Generate();
+          
             
             
         }
 
         private void setTraning_Click(object sender, EventArgs e)
         {
-            string name;
-            if(openFileDialog1.ShowDialog() == DialogResult.OK) 
+            if (!Directory.Exists(@"c:\TRAINING"))
             {
+                MessageBox.Show("PLEASE CLICK 'CREATE FOLDER FIRST'");
                 
-                name = openFileDialog1.FileName;
-              
-                dataGridView1.Text = File.ReadAllText(name);
+            }
+            else
+            {
+                string name;
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    name = openFileDialog1.FileName;
+
+                    dataGridView1.Text = File.ReadAllText(name);
+                }
+            }
+            
+          
+        }
+
+        public void CreateTable()
+        {
+        //
+            //dlaczego table moge zrobic tylko tutaj a nie w klasie ???
+            DataTable dt = new DataTable();
+
+            if (Directory.Exists(@"c:\TRAINING"))
+            {
+                StreamWriter writer = new StreamWriter(@"c:\TRAINING\TRAINING-FBW.txt");
+
+                //writer.WriteLine(@"c:\TRAINING\TRAINING-FBW.txt");
+
+                writer.WriteLine(dt.Columns.Add("Exercise"));
+                writer.WriteLine(dt.Columns.Add("Series"));
+                dt.Rows.Add(Exercises.BenchPress, plan.Series);
+
+
+
+
+                dataGridView1.DataSource = dt;
+                GenerateToFile(dt, writer.ToString());
+                writer.Close();
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public static void GenerateToFile(DataTable submittedDataTable, string submittedFilePath)
         {
-            DataTable dt = new DataTable();
+            int i = 0;
+            StreamWriter sw = null;
 
-            dt.Columns.Add("Exercise");
-            dt.Columns.Add("Series");
+            sw = new StreamWriter(submittedFilePath, false);
 
-            dt.Rows.Add(Exercises.BenchPress, plan.Series);
-            
-            
-            dataGridView1.DataSource = dt;
+            for (i = 0; i < submittedDataTable.Columns.Count - 1; i++)
+            {
 
+                sw.Write(submittedDataTable.Columns[i].ColumnName + ";");
 
+            }
+            sw.Write(submittedDataTable.Columns[i].ColumnName);
+            sw.WriteLine();
+
+            foreach (DataRow row in submittedDataTable.Rows)
+            {
+                object[] array = row.ItemArray;
+
+                for (i = 0; i < array.Length - 1; i++)
+                {
+                    sw.Write(array[i].ToString() + ";");
+                }
+                sw.Write(array[i].ToString());
+                sw.WriteLine();
+
+            }
+
+            sw.Close();
         }
     }
 }
