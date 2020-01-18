@@ -8,39 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace TraningDiary
 {
     public partial class Form1 : Form
     {
-        TrainingPlan plan = new TrainingPlan();
+        
+
         public Form1()
         {
             InitializeComponent();
+           
         }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             
         }
-        private void fbwOpen_Click(object sender, EventArgs e)
+        private void CreateFolder_Click(object sender, EventArgs e)
         {
             if(!Directory.Exists(@"c:\TRAINING")) 
             {
                 MessageBox.Show("FOLDER TRAINING HAS CREATED IN C:\\TRAINING, CLICK OPEN TO CHECK YOUR TRAINIG");
                 Directory.CreateDirectory(@"c:\TRAINING");
-                CreateTable();
+               
                 
             }
             else
             {
-                MessageBox.Show("TRAINING IT'S ALREADY EXIST, CLICK 'SET TRANING' AND OPEN TXT FILE ");
+                MessageBox.Show("TRAINING IT'S ALREADY EXIST, CLICK 'SET TRANING' AND OPEN PDF FILE ");
             }
-          
-            
-            
         }
 
-        private void setTraning_Click(object sender, EventArgs e)
+        private void openTraning_Click(object sender, EventArgs e)
         {
             if (!Directory.Exists(@"c:\TRAINING"))
             {
@@ -57,66 +58,54 @@ namespace TraningDiary
 
                     dataGridView1.Text = File.ReadAllText(name);
                 }
+                
             }
             
           
         }
-
-        public void CreateTable()
+        
+        
+        //TEN KOD CHCE PRZENIES DO KLASY
+        private void savePdf_Click(object sender, EventArgs e)
         {
-        //
-            //dlaczego table moge zrobic tylko tutaj a nie w klasie ???
-            DataTable dt = new DataTable();
-
-            if (Directory.Exists(@"c:\TRAINING"))
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF file|*.pdf", ValidateNames = true })
             {
-                StreamWriter writer = new StreamWriter(@"c:\TRAINING\TRAINING-FBW.txt");
-
-                //writer.WriteLine(@"c:\TRAINING\TRAINING-FBW.txt");
-
-                writer.WriteLine(dt.Columns.Add("Exercise"));
-                writer.WriteLine(dt.Columns.Add("Series"));
-                dt.Rows.Add(Exercises.BenchPress, plan.Series);
-
-
-
-
-                dataGridView1.DataSource = dt;
-                GenerateToFile(dt, writer.ToString());
-                writer.Close();
-            }
-        }
-
-        public static void GenerateToFile(DataTable submittedDataTable, string submittedFilePath)
-        {
-            int i = 0;
-            StreamWriter sw = null;
-
-            sw = new StreamWriter(submittedFilePath, false);
-
-            for (i = 0; i < submittedDataTable.Columns.Count - 1; i++)
-            {
-
-                sw.Write(submittedDataTable.Columns[i].ColumnName + ";");
-
-            }
-            sw.Write(submittedDataTable.Columns[i].ColumnName);
-            sw.WriteLine();
-
-            foreach (DataRow row in submittedDataTable.Rows)
-            {
-                object[] array = row.ItemArray;
-
-                for (i = 0; i < array.Length - 1; i++)
+                if(sfd.ShowDialog() == DialogResult.OK)
                 {
-                    sw.Write(array[i].ToString() + ";");
+                    Document doc = new Document(iTextSharp.text.PageSize.A4, 15, 15, 0, 0);
+                    try
+                    {
+
+                        //TUTAJ UMIESCIC WCZENSIEJSZA METODE CreateTable
+                        PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                        doc.Open();
+                        PdfPTable table = new PdfPTable(3);
+                        table.AddCell("Row 1, Col 1");
+                        table.AddCell("Row 1, Col 2");
+                        table.AddCell("Row 1, Col 3");
+
+                        table.AddCell("Row 2, Col 1");
+                        table.AddCell("Row 2, Col 2");
+                        table.AddCell("Row 2, Col 3");
+
+                        table.AddCell("Row 3, Col 1");
+                        table.AddCell("Row 3, Col 2");
+                        table.AddCell("Row 3, Col 3");
+                        doc.Add(table);
+                       
+                       
+                        //doc.Add(new Paragraph(dataGridView1.Text));
+                        doc.Close();
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                   
+                  
                 }
-                sw.Write(array[i].ToString());
-                sw.WriteLine();
-
+               
             }
-
-            sw.Close();
         }
     }
 }

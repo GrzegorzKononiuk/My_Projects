@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.fbwOpen = new System.Windows.Forms.Button();
+            this.createFolder = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.setTraning = new System.Windows.Forms.Button();
+            this.openTraning = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.savePdf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,30 +47,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CHOOSE YOUR TRAINING MODE";
             // 
-            // fbwOpen
+            // createFolder
             // 
-            this.fbwOpen.Location = new System.Drawing.Point(298, 90);
-            this.fbwOpen.Name = "fbwOpen";
-            this.fbwOpen.Size = new System.Drawing.Size(202, 40);
-            this.fbwOpen.TabIndex = 1;
-            this.fbwOpen.Text = "CREATE FOLDER \"TRAINING\"";
-            this.fbwOpen.UseVisualStyleBackColor = true;
-            this.fbwOpen.Click += new System.EventHandler(this.fbwOpen_Click);
+            this.createFolder.Location = new System.Drawing.Point(298, 90);
+            this.createFolder.Name = "createFolder";
+            this.createFolder.Size = new System.Drawing.Size(202, 40);
+            this.createFolder.TabIndex = 1;
+            this.createFolder.Text = "CREATE FOLDER \"TRAINING\"";
+            this.createFolder.UseVisualStyleBackColor = true;
+            this.createFolder.Click += new System.EventHandler(this.CreateFolder_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // setTraning
+            // openTraning
             // 
-            this.setTraning.Location = new System.Drawing.Point(319, 154);
-            this.setTraning.Name = "setTraning";
-            this.setTraning.Size = new System.Drawing.Size(136, 46);
-            this.setTraning.TabIndex = 4;
-            this.setTraning.Text = "Open Your Training";
-            this.setTraning.UseVisualStyleBackColor = true;
-            this.setTraning.Click += new System.EventHandler(this.setTraning_Click);
+            this.openTraning.Location = new System.Drawing.Point(319, 154);
+            this.openTraning.Name = "openTraning";
+            this.openTraning.Size = new System.Drawing.Size(136, 46);
+            this.openTraning.TabIndex = 4;
+            this.openTraning.Text = "Open Your Training";
+            this.openTraning.UseVisualStyleBackColor = true;
+            this.openTraning.Click += new System.EventHandler(this.openTraning_Click);
             // 
             // dataGridView1
             // 
@@ -79,18 +80,28 @@
             this.dataGridView1.Size = new System.Drawing.Size(731, 150);
             this.dataGridView1.TabIndex = 5;
             // 
+            // savePdf
+            // 
+            this.savePdf.Location = new System.Drawing.Point(312, 389);
+            this.savePdf.Name = "savePdf";
+            this.savePdf.Size = new System.Drawing.Size(143, 66);
+            this.savePdf.TabIndex = 6;
+            this.savePdf.Text = "SAVE TO PDF";
+            this.savePdf.UseVisualStyleBackColor = true;
+            this.savePdf.Click += new System.EventHandler(this.savePdf_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 480);
+            this.Controls.Add(this.savePdf);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.setTraning);
-            this.Controls.Add(this.fbwOpen);
+            this.Controls.Add(this.openTraning);
+            this.Controls.Add(this.createFolder);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,10 +111,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button fbwOpen;
+        private System.Windows.Forms.Button createFolder;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button setTraning;
+        private System.Windows.Forms.Button openTraning;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button savePdf;
     }
 }
 

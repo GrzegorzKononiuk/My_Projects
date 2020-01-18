@@ -10,6 +10,7 @@ namespace TraningDiary
 {
     public class TrainingPlan
     {
+        
         Random random = new Random();
         public Exercises exercises { get; set; }
         public int Series 

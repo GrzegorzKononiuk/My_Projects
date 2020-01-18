@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateTableToPdf.cs" />
     <Compile Include="Exercises.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
