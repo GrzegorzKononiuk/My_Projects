@@ -53,25 +53,27 @@ namespace TraningDiary
 
 
 
-                using (OpenFileDialog sfd = new OpenFileDialog() { Filter = "PDF file|*.pdf", ValidateNames = true })
+               
+                string name;
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    string name;
-                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                    {
 
-                        name = openFileDialog1.FileName;
+                    name = openFileDialog1.FileName;
 
-                        dataGridView1.Text = ExtractTextFromPdf(name);
-                    }
+                    textBox1.Text = ExtractTextFromPdf(name);
+                   
 
                 }
+
+                
             }
             
           
         }
-     
+
         public static string ExtractTextFromPdf(string path)
         {
+
             using (PdfReader reader = new PdfReader(path))
             {
                 StringBuilder text = new StringBuilder();
@@ -84,8 +86,8 @@ namespace TraningDiary
                 return text.ToString();
             }
         }
-            //TEN KOD CHCE PRZENIES DO KLASY
-            private void savePdf_Click(object sender, EventArgs e)
+        //TEN KOD CHCE PRZENIES DO KLASY
+        private void savePdf_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF file|*.pdf", ValidateNames = true })
             {
@@ -94,24 +96,17 @@ namespace TraningDiary
                     Document doc = new Document(iTextSharp.text.PageSize.A4, 15, 15, 0, 0);
                     try
                     {
-                        
+                        TrainingPlan plan = new TrainingPlan();
                         //TUTAJ UMIESCIC WCZENSIEJSZA METODE CreateTable
                         PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
                         
                         doc.Open();
-                        PdfPTable table = new PdfPTable(3);
+                        PdfPTable table = new PdfPTable(1);
 
-                        table.AddCell("Row 1, Col 1");
+                        table.AddCell("SERIES" + plan.Series.ToString());
                         table.AddCell("Row 1, Col 2");
                         table.AddCell("Row 1, Col 3");
 
-                        table.AddCell("Row 2, Col 1");
-                        table.AddCell("Row 2, Col 2");
-                        table.AddCell("Row 2, Col 3");
-
-                        table.AddCell("Row 3, Col 1");
-                        table.AddCell("Row 3, Col 2");
-                        table.AddCell("Row 3, Col 3");
                         doc.Add(table);
                        
                        

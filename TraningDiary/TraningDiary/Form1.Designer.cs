@@ -32,9 +32,8 @@
             this.createFolder = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openTraning = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.savePdf = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -72,17 +71,9 @@
             this.openTraning.UseVisualStyleBackColor = true;
             this.openTraning.Click += new System.EventHandler(this.openTraning_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 224);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(731, 150);
-            this.dataGridView1.TabIndex = 5;
-            // 
             // savePdf
             // 
-            this.savePdf.Location = new System.Drawing.Point(312, 389);
+            this.savePdf.Location = new System.Drawing.Point(298, 439);
             this.savePdf.Name = "savePdf";
             this.savePdf.Size = new System.Drawing.Size(143, 66);
             this.savePdf.TabIndex = 6;
@@ -90,19 +81,26 @@
             this.savePdf.UseVisualStyleBackColor = true;
             this.savePdf.Click += new System.EventHandler(this.savePdf_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(85, 229);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(603, 177);
+            this.textBox1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 480);
+            this.ClientSize = new System.Drawing.Size(800, 624);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.savePdf);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.openTraning);
             this.Controls.Add(this.createFolder);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,8 +112,8 @@
         private System.Windows.Forms.Button createFolder;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button openTraning;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button savePdf;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
