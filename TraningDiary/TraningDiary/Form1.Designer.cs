@@ -77,7 +77,7 @@
             this.savePdf.Name = "savePdf";
             this.savePdf.Size = new System.Drawing.Size(143, 66);
             this.savePdf.TabIndex = 6;
-            this.savePdf.Text = "SAVE TO PDF";
+            this.savePdf.Text = "SAVE PDF";
             this.savePdf.UseVisualStyleBackColor = true;
             this.savePdf.Click += new System.EventHandler(this.savePdf_Click);
             // 

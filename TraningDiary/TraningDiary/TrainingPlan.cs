@@ -13,7 +13,7 @@ namespace TraningDiary
         
         Random random = new Random();
         public Exercises exercises { get; set; }
-        public int Series 
+        public int Series
         {
             get 
             {
@@ -22,6 +22,7 @@ namespace TraningDiary
             }
             
         }
+        
         /**
          public int Reps { get; set; }
          public int Weight { get; set; }

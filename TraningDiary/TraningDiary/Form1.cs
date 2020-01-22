@@ -73,7 +73,7 @@ namespace TraningDiary
 
         public static string ExtractTextFromPdf(string path)
         {
-
+            
             using (PdfReader reader = new PdfReader(path))
             {
                 StringBuilder text = new StringBuilder();
@@ -86,31 +86,29 @@ namespace TraningDiary
                 return text.ToString();
             }
         }
-        //TEN KOD CHCE PRZENIES DO KLASY
+       
         private void savePdf_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF file|*.pdf", ValidateNames = true })
             {
                 if(sfd.ShowDialog() == DialogResult.OK)
                 {
-                    Document doc = new Document(iTextSharp.text.PageSize.A4, 15, 15, 0, 0);
+                    Document doc = new Document(PageSize.A4, 15, 15, 0, 0);
                     try
                     {
                         TrainingPlan plan = new TrainingPlan();
-                        //TUTAJ UMIESCIC WCZENSIEJSZA METODE CreateTable
+                        
                         PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
                         
                         doc.Open();
                         PdfPTable table = new PdfPTable(1);
 
-                        table.AddCell("SERIES" + plan.Series.ToString());
-                        table.AddCell("Row 1, Col 2");
-                        table.AddCell("Row 1, Col 3");
+                        table.AddCell(new Paragraph(textBox1.Text = plan.Series.ToString()));
 
                         doc.Add(table);
-                       
-                       
-                        //doc.Add(new Paragraph(dataGridView1.Text));
+
+
+                        
                         doc.Close();
                     }
                     catch(Exception ex)
