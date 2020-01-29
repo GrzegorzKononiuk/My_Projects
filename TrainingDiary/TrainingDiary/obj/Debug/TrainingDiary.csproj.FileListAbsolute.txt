@@ -47,9 +47,11 @@ E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\roslyn\vbc.e
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\roslyn\vbc.rsp
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\roslyn\VBCSCompiler.exe
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\roslyn\VBCSCompiler.exe.config
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\itextsharp.dll
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\itextsharp.xml
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.csprojAssemblyReference.cache
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.csproj.CopyComplete
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.dll
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.pdb
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.csprojAssemblyReference.cache

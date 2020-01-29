@@ -13,6 +13,8 @@
             <asp:gridview runat="server" ID="Gv1" AutoGenerateColumns="true" HeaderStyle-BackColor="Red" BackColor="LightBlue"
             BorderWidth="5" BorderColor="Blue">
             </asp:gridview>
+          <asp:Button runat="server" ID="SavePdf" Text="Save To Pdf" OnClick="SavePdf_Click" />
+
       </div>
 
     </form>

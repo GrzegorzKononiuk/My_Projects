@@ -5,13 +5,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
 
 namespace TrainingDiary
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
         DataTable tb = new DataTable();
-
+        SafePdf safePdf = new SafePdf();
         DataRow dr;
         TrainingPlan plan = new TrainingPlan();
         protected void Page_Load(object sender, EventArgs e)
@@ -72,5 +76,21 @@ namespace TrainingDiary
 
         }
 
+        protected void SavePdf_Click(object sender, EventArgs e)
+        {
+
+            safePdf.GeneratePDF();
+
+
+
+
+
+
+
+
+
+        }
+
     }
 }
+ 
