@@ -15,22 +15,31 @@ namespace TrainingDiary
     public partial class WebForm1 : System.Web.UI.Page
     {
         DataTable tb = new DataTable();
-        SafePdf safePdf = new SafePdf();
-        DataRow dr;
+        //SafePdf safePdf = new SafePdf();
+        //DataRow dr;
         TrainingPlan plan = new TrainingPlan();
+        PdfPTable table = new PdfPTable(3);
+
+        PdfPCell cell = new PdfPCell(new Phrase("Header spanning 3 columns"));
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 CreateTable();
+                
             }
 
 
         }
         public void CreateTable()
         {
+            PdfPTable table = new PdfPTable(9);
 
+            PdfPCell cell = new PdfPCell(new Phrase("Header spanning 3 columns"));
 
+            cell.Colspan = 9;
+
+            cell.HorizontalAlignment = 1; //0=Left, 1=Centre, 2=Right
 
             tb.Columns.Add("Exercise", typeof(string));
 
@@ -39,47 +48,35 @@ namespace TrainingDiary
             tb.Columns.Add("Reps", typeof(string));
 
             tb.Columns.Add("Weight", typeof(string));
+            
 
 
+            table.AddCell(cell);
 
-            dr = tb.NewRow();
+            table.AddCell("Col 1 Row 1");
 
-            dr["Exercise"] = plan.exercises.ToString();
+            table.AddCell("Col 2 Row 1");
 
-            dr["Series"] = plan.Series.ToString() + " s";
+            table.AddCell("Col 3 Row 1");
 
-            dr["Reps"] = plan.Reps.ToString() + " rep";
+            table.AddCell("Col 1 Row 2");
 
-            dr["Weight"] = plan.Weight.ToString() + " KG";
+            table.AddCell("Col 2 Row 2");
 
-            tb.Rows.Add(dr);
+            table.AddCell("Col 3 Row 2");
 
-
-
-            dr = tb.NewRow();
-
-            dr["Exercise"] = "";
-
-            dr["Series"] = "";
-
-            dr["Reps"] = "";
-
-            dr["Weight"] = "";
-
-            tb.Rows.Add(dr);
-
+            tb.Rows.Add(table);
             Gv1.DataSource = tb;
 
             Gv1.DataBind();
 
             ViewState["table1"] = tb;
-
         }
 
         protected void SavePdf_Click(object sender, EventArgs e)
         {
 
-            safePdf.GeneratePDF();
+            //safePdf.GeneratePDF(dr);
 
 
 

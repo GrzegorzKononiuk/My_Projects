@@ -55,3 +55,16 @@ E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\Traini
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.dll
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.pdb
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\obj\Debug\TrainingDiary.csprojAssemblyReference.cache
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\Newtonsoft.Json.dll
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\Select.HtmlToPdf.dll
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Buffers.dll
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Numerics.Vectors.dll
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Threading.Tasks.Extensions.dll
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\Newtonsoft.Json.pdb
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\Newtonsoft.Json.xml
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\Select.HtmlToPdf.xml
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Buffers.xml
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Numerics.Vectors.xml
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\TrainingDiary\TrainingDiary\bin\System.Threading.Tasks.Extensions.xml

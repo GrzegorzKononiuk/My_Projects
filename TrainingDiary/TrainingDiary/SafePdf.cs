@@ -11,9 +11,11 @@ namespace TrainingDiary
 {
     public class SafePdf
     {
+        DataTable tb = new DataTable();
         MemoryStream memoryStream = new MemoryStream();
         TrainingPlan plan = new TrainingPlan();
-        public byte[] GeneratePDF()
+        
+        public byte[] GeneratePDF(DataRow dr)
         {
             FileStream fs = File.Open(@"E:\0001.pdf", FileMode.Create);
             Document doc = new Document(PageSize.A4, 15, 15, 0, 0);
@@ -22,7 +24,7 @@ namespace TrainingDiary
             doc.SetMargins(20f, 20f, 20f, 20f);
             doc.Open();
             doc.Add(new Paragraph(plan.exercises.ToString()));
-
+            //dr["Exercise"] = plan.exercises.ToString();
             
             doc.Close();
             return memoryStream.ToArray();
