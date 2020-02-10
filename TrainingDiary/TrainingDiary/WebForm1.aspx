@@ -17,6 +17,12 @@
 
       </div>
 
+        <p>
+             <asp:TextBox ID="Value1" MaxLength="3" runat="server"/>  
+          <asp:Button runat="server" ID="AddExercise" Text="Add Exercise" OnClick="AddExercise_Click" Height="48px" Width="114px" />
+          
+          </p>
+
     </form>
 </body>
 </html>
