@@ -71,7 +71,7 @@ namespace TrainingDiary
                tb = (DataTable)ViewState["table1"];
                
                safePdf.GeneratePDF(tb, @"E:\TrainingPlan.pdf", "TrainingPlan");
-
+            
             }
             catch
             { 
@@ -106,6 +106,26 @@ namespace TrainingDiary
 
             //txtb4.Text = "";
         }
+
+        protected void OpenPdf_Click(object sender, EventArgs e)
+        {
+            Response.Clear();
+            string filePath = @"E:\TrainingPlan.pdf";
+            Response.ContentType = "application/pdf";
+            Response.WriteFile(filePath);
+            
+            Response.End();
+        }
+
+        protected void gv1_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+          
+        }
+
+        protected void gv1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+        }
+       
     }
 }
  
