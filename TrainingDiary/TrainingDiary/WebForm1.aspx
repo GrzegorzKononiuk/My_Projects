@@ -15,24 +15,11 @@
             BorderWidth="5" BorderColor="Blue" OnRowEditing="gv1_RowEditing" OnRowUpdating="gv1_RowUpdating">
             
                  <Columns>
-
+                     <asp:BoundField DataField="Exercise" HeaderText="Komorka z Asp" ItemStyle-Width="150" />
+                    
                     <asp:CommandField ShowEditButton="True"/>
                     
-                    <!-- CZY DA SIE POLACZYC TEXTBOX Z WARTOSCIAMI Z FORMULARZAA ( dr["Exercise"] = plan.exercises.ToString();) -->
-                    <asp:TemplateField HeaderText="sno" InsertVisible="False" SortExpression="sno">
-
-                            <EditItemTemplate>
-                                 <asp:TextBox ID="TextBox2" runat="server" Visible='<%# IsInEditMode %>' Text='<%# Bind("parameters") %>'></asp:TextBox>
-                            </EditItemTemplate>
-                            
-                            <ItemTemplate>
-
-                                <asp:Label ID="Label2" runat="server" Visible='<%# !(bool) IsInEditMode %>' Text='<%# Bind("parameters") %>'></asp:Label>
-
-                                <asp:TextBox ID="TextBox2" runat="server" Visible='<%# IsInEditMode %>' Text='<%# Bind("parameters") %>'></asp:TextBox>
-
-                            </ItemTemplate>
-                    </asp:TemplateField>
+                    
                 
                        
                            
@@ -46,7 +33,7 @@
           <asp:Button runat="server" ID="SavePdf" Text="Save To Pdf" OnClick="SavePdf_Click" />
             <asp:Button ID="OpenPdf" runat="server" Text="Open PDF in Browser" Font-Bold="True" OnClick="OpenPdf_Click" />
           <p>
-            <asp:TextBox ID="Value1" MaxLength="3" runat="server"/>  
+            <asp:TextBox ID="Value1" MaxLength="50" runat="server"/>  
             <asp:Button runat="server" ID="AddExercise" Text="Add Exercise" OnClick="AddExercise_Click" Height="48px" Width="114px" />
             
           

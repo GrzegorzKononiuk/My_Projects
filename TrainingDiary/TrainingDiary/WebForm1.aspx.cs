@@ -44,7 +44,7 @@ namespace TrainingDiary
 
 
             dr = tb.NewRow();
-
+        
             dr["Exercise"] = plan.exercises.ToString();
 
             dr["Series"] = plan.Series.ToString() + " s";
@@ -119,11 +119,23 @@ namespace TrainingDiary
 
         protected void gv1_RowEditing(object sender, GridViewEditEventArgs e)
         {
-          
+            Gv1.EditIndex = e.NewEditIndex;
+            CreateTable();
         }
 
         protected void gv1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            for (int i = 0; i <= Gv1.Rows.Count - 1; i++)
+
+            {
+
+                
+
+        
+                int sno = Convert.ToInt32(Gv1.Rows[i].Cells[1].Text);
+
+                //String pram = ((TextBox)Gv1.Rows[i].FindControl("Exercise")).Text;
+            }
         }
        
     }
