@@ -4,49 +4,39 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>TrainigTable</title>
 </head>
 <body style="background-color:Yellow">
    
     <form id="form1" runat="server">
       <div>
-            <!-- Modify Grid -->
-            <asp:gridview runat="server" ID="Gv1" AutoGenerateColumns="true" HeaderStyle-BackColor="Red" BackColor="LightBlue"
-            BorderWidth="5" BorderColor="Blue" OnRowEditing="gv1_RowEditing" OnRowUpdating="gv1_RowUpdating">
+           
+            <asp:gridview ID="Gv1" runat="server"
+                AutoGenerateEditButton="True" 
+                AutoGenerateColumns="true" 
+                AllowPaging="true" 
+                HeaderStyle-BackColor="Red" 
+                BackColor="LightBlue"
+                BorderWidth="5" 
+                BorderColor="Blue" 
+                OnRowEditing="Gv1_RowEditing" 
+                OnRowUpdating="Gv1_RowUpdating" 
+                OnPageIndexChanging="Gv1_PageIndexChanging" 
+                OnRowCancelingEdit="Gv1_RowCancelingEdit">
             
-                 <Columns>
-                     <asp:BoundField DataField="Exercise" HeaderText="Komorka z Asp" ItemStyle-Width="150" />
-                    
-                    <asp:CommandField ShowEditButton="True"/>
-                    
-                    
-                
-                       
-                           
-                </Columns>            
+                      
             </asp:gridview>
             
-          
-          
-          
-          
-          <asp:Button runat="server" ID="SavePdf" Text="Save To Pdf" OnClick="SavePdf_Click" />
+          <!-- Safe & Open PDF Buttons -->
+            <asp:Button ID="SavePdf" runat="server"  Text="Save To Pdf" OnClick="SavePdf_Click" />
             <asp:Button ID="OpenPdf" runat="server" Text="Open PDF in Browser" Font-Bold="True" OnClick="OpenPdf_Click" />
           <p>
+              <!-- Add Exercise -->
             <asp:TextBox ID="Value1" MaxLength="50" runat="server"/>  
-            <asp:Button runat="server" ID="AddExercise" Text="Add Exercise" OnClick="AddExercise_Click" Height="48px" Width="114px" />
-            
-          
-             
-          </p>
+            <asp:Button  ID="AddExercise" runat="server" Text="Add Exercise" OnClick="AddExercise_Click" Height="48px" Width="114px" />
+           </p>
             
       </div>
-     
-          
-
-
-       
-
-    </form>
+     </form>
 </body>
 </html>
