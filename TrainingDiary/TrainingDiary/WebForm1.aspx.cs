@@ -48,6 +48,7 @@ namespace TrainingDiary
                 Session["TaskTable"] = taskTable;
 
                 BindData();
+                
 
             }
 
@@ -61,7 +62,7 @@ namespace TrainingDiary
 
             try
             {
-                taskTable = (DataTable)ViewState["table1"];
+                taskTable = (DataTable)Session["TaskTable"];
 
                 safePdf.GeneratePDF(taskTable, @"E:\TrainingPlan.pdf", "TrainingPlan");
 
@@ -73,11 +74,11 @@ namespace TrainingDiary
 
         protected void AddExercise_Click(object sender, EventArgs e)
         {
-            taskTable = (DataTable)ViewState["table1"];
+            taskTable = (DataTable)Session["TaskTable"];
 
             tableRow = taskTable.NewRow();
 
-            tableRow["Exercise"] = Value1.Text;
+            //tableRow["Exercise"] = Value1.Text;
 
             //dr["Series"] = txtb2.Text;
 
@@ -91,7 +92,7 @@ namespace TrainingDiary
 
             Gv1.DataBind();
 
-            Value1.Text = "";
+            //Value1.Text = "";
 
             //txtb2.Text = "";
 

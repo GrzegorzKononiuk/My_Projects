@@ -32,8 +32,7 @@
             <asp:Button ID="OpenPdf" runat="server" Text="Open PDF in Browser" Font-Bold="True" OnClick="OpenPdf_Click" />
           <p>
               <!-- Add Exercise -->
-            <asp:TextBox ID="Value1" MaxLength="50" runat="server"/>  
-            <asp:Button  ID="AddExercise" runat="server" Text="Add Exercise" OnClick="AddExercise_Click" Height="48px" Width="114px" />
+            <asp:Button  ID="AddExercise" runat="server" Text="Add New Line" OnClick="AddExercise_Click" Height="48px" Width="114px" />
            </p>
             
       </div>
