@@ -25,7 +25,7 @@ namespace TrainingDiary
             if (!IsPostBack)
             {
                
-
+                //Create Table, Columns, Rows
                 taskTable.Columns.Add("Exercise", typeof(string));
 
                 taskTable.Columns.Add("Series", typeof(string));
@@ -54,9 +54,45 @@ namespace TrainingDiary
 
 
         }
-        //TABELA W HTML ASP.NET
-      
+        //Safe to Txt File
+        protected void ExportTextFile(object sender, EventArgs e)
+        {
 
+            //Build the Text file data.
+            string txt = string.Empty;
+
+            foreach (TableCell cell in Gv1.HeaderRow.Cells)
+            {
+                //Add the Header row for Text file.
+                txt += cell.Text + "\t\t";
+            }
+
+            //Add new line.
+            txt += "\r\n";
+
+            foreach (GridViewRow row in Gv1.Rows)
+            {
+                foreach (TableCell cell in row.Cells)
+                {
+                    //Add the Data rows.
+                    txt += cell.Text + "\t\t";
+                }
+
+                //Add new line.
+                txt += "\r\n";
+            }
+
+            //Download the Text File.
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.txt");
+            Response.Charset = "";
+            Response.ContentType = "application/text";
+            Response.Output.Write(txt);
+            Response.Flush();
+            Response.End();
+        }
+        //Safe To Pdf file
         protected void SavePdf_Click(object sender, EventArgs e)
         {
 
@@ -71,6 +107,7 @@ namespace TrainingDiary
             {
             }
         }
+
 
         protected void AddExercise_Click(object sender, EventArgs e)
         {
@@ -157,6 +194,11 @@ namespace TrainingDiary
         {
             Gv1.DataSource = Session["TaskTable"];
             Gv1.DataBind();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ExportTextFile(sender, e);
         }
     }
 }

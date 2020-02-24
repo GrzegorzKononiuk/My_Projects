@@ -30,6 +30,7 @@
           <!-- Safe & Open PDF Buttons -->
             <asp:Button ID="SavePdf" runat="server"  Text="Save To Pdf" OnClick="SavePdf_Click" />
             <asp:Button ID="OpenPdf" runat="server" Text="Open PDF in Browser" Font-Bold="True" OnClick="OpenPdf_Click" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Save To Txt" />
           <p>
               <!-- Add Exercise -->
             <asp:Button  ID="AddExercise" runat="server" Text="Add New Line" OnClick="AddExercise_Click" Height="48px" Width="114px" />
