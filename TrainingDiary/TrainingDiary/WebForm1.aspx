@@ -22,15 +22,16 @@
                 OnRowEditing="Gv1_RowEditing" 
                 OnRowUpdating="Gv1_RowUpdating" 
                 OnPageIndexChanging="Gv1_PageIndexChanging" 
-                OnRowCancelingEdit="Gv1_RowCancelingEdit">
+                OnRowCancelingEdit="Gv1_RowCancelingEdit" OnRowDataBound="Gv1_RowDataBound">
             
-                      
+
             </asp:gridview>
             
           <!-- Safe & Open PDF Buttons -->
             <asp:Button ID="SavePdf" runat="server"  Text="Save To Pdf" OnClick="SavePdf_Click" />
             <asp:Button ID="OpenPdf" runat="server" Text="Open PDF in Browser" Font-Bold="True" OnClick="OpenPdf_Click" />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Save To Txt" />
+            <asp:Button ID="SafeToTxt" runat="server" OnClick="SafeToTxt_Click" Text="Save To Txt" />
+            <asp:Button ID="OpenTxt" runat="server" OnClick="OpenTxt_Click" Text="Open Txt To Edit" />
           <p>
               <!-- Add Exercise -->
             <asp:Button  ID="AddExercise" runat="server" Text="Add New Line" OnClick="AddExercise_Click" Height="48px" Width="114px" />

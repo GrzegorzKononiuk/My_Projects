@@ -38,11 +38,11 @@ namespace TrainingDiary
 
                 tableRow["Exercise"] = plan.exercises.ToString();
 
-                tableRow["Series"] = plan.Series.ToString() + " s";
+                tableRow["Series"] = plan.Series.ToString() + "s";
 
-                tableRow["Reps"] = plan.Reps.ToString() + " rep";
+                tableRow["Reps"] = plan.Reps.ToString() + "rep";
 
-                tableRow["Weight"] = plan.Weight.ToString() + " KG";
+                tableRow["Weight"] = plan.Weight.ToString() + "KG";
                 taskTable.Rows.Add(tableRow);
 
                 Session["TaskTable"] = taskTable;
@@ -57,28 +57,17 @@ namespace TrainingDiary
         //Safe to Txt File
         protected void ExportTextFile(object sender, EventArgs e)
         {
-
-            //Build the Text file data.
             string txt = string.Empty;
-
-            foreach (TableCell cell in Gv1.HeaderRow.Cells)
-            {
-                //Add the Header row for Text file.
-                txt += cell.Text + "\t\t";
-            }
-
-            //Add new line.
-            txt += "\r\n";
 
             foreach (GridViewRow row in Gv1.Rows)
             {
                 foreach (TableCell cell in row.Cells)
                 {
-                    //Add the Data rows.
-                    txt += cell.Text + "\t\t";
+                    
+                    txt += cell.Text + " ";
                 }
 
-                //Add new line.
+                //Break line, add to new rows
                 txt += "\r\n";
             }
 
@@ -91,6 +80,10 @@ namespace TrainingDiary
             Response.Output.Write(txt);
             Response.Flush();
             Response.End();
+        }
+        protected void SafeToTxt_Click(object sender, EventArgs e)
+        {
+            ExportTextFile(sender, e);
         }
         //Safe To Pdf file
         protected void SavePdf_Click(object sender, EventArgs e)
@@ -108,6 +101,15 @@ namespace TrainingDiary
             }
         }
 
+        protected void OpenPdf_Click(object sender, EventArgs e)
+        {
+            Response.Clear();
+            string filePath = @"E:\TrainingPlan.pdf";
+            Response.ContentType = "application/pdf";
+            Response.WriteFile(filePath);
+
+            Response.End();
+        }
 
         protected void AddExercise_Click(object sender, EventArgs e)
         {
@@ -124,10 +126,7 @@ namespace TrainingDiary
             //dr["Weight"] = txtb4.Text;
 
             taskTable.Rows.Add(tableRow);
-
-            Gv1.DataSource = taskTable;
-
-            Gv1.DataBind();
+            BindData();
 
             //Value1.Text = "";
 
@@ -138,15 +137,7 @@ namespace TrainingDiary
             //txtb4.Text = "";
         }
 
-        protected void OpenPdf_Click(object sender, EventArgs e)
-        {
-            Response.Clear();
-            string filePath = @"E:\TrainingPlan.pdf";
-            Response.ContentType = "application/pdf";
-            Response.WriteFile(filePath);
-
-            Response.End();
-        }
+      
 
         protected void Gv1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -196,9 +187,40 @@ namespace TrainingDiary
             Gv1.DataBind();
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void OpenTxt_Click(object sender, EventArgs e)
         {
-            ExportTextFile(sender, e);
+            DataTable dt = (DataTable)Session["TaskTable"];
+            using (TextReader tr = File.OpenText((@"E:\\file.txt")))
+            {
+                
+                string line;
+                while ((line = tr.ReadLine()) != null)
+                {
+                  
+                    //ROZMIESZCZENIE W DANYCH W ODPOWIEDNICH ROWSW !!
+                    string[] items = line.Trim().Split(' ');
+                   
+                    if (dt.Columns.Count < items.Length)
+                    {
+                        // Create the data columns for the data table based on the number of items
+                        // on the first line of the file
+                        for (int i = dt.Columns.Count; i < items.Length; i++)
+                            dt.Columns.Add(new DataColumn());
+                      
+                           
+                            
+                    }
+                    dt.Rows.Add(items);
+
+                }
+                //show it in gridview 
+                BindData();
+            }
+        }
+
+        protected void Gv1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+          
         }
     }
 }
