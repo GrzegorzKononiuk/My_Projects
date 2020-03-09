@@ -33,18 +33,22 @@ namespace TrainingDiary
                 taskTable.Columns.Add("Reps", typeof(string));
 
                 taskTable.Columns.Add("Weight", typeof(string));
+                for (int i = 0; i < 5; i++)
+                {
 
-                tableRow = taskTable.NewRow();
 
-                tableRow["Exercise"] = plan.exercises.ToString();
+                    tableRow = taskTable.NewRow();
+                    tableRow["Exercise"] = plan.exercises.ToString();
 
-                tableRow["Series"] = plan.Series.ToString() + "s";
+                    tableRow["Series"] = plan.Series.ToString() + "s";
 
-                tableRow["Reps"] = plan.Reps.ToString() + "rep";
+                    tableRow["Reps"] = plan.Reps.ToString() + "rep";
 
-                tableRow["Weight"] = plan.Weight.ToString() + "KG";
-                taskTable.Rows.Add(tableRow);
+                    tableRow["Weight"] = plan.Weight.ToString() + "KG";
+                    taskTable.Rows.Add(tableRow);
 
+                }
+                
                 Session["TaskTable"] = taskTable;
 
                 BindData();
@@ -74,7 +78,7 @@ namespace TrainingDiary
             //Download the Text File.
             Response.Clear();
             Response.Buffer = true;
-            Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.txt");
+            Response.AddHeader("content-disposition", "attachment;filename=TrainingToEdit.txt");
             Response.Charset = "";
             Response.ContentType = "application/text";
             Response.Output.Write(txt);
@@ -169,10 +173,10 @@ namespace TrainingDiary
 
             //Update the values.
             GridViewRow row = Gv1.Rows[e.RowIndex];
-            dt.Rows[row.DataItemIndex]["Exercise"] = ((TextBox)(row.Cells[1].Controls[0])).Text;
-            dt.Rows[row.DataItemIndex]["Series"] = ((TextBox)(row.Cells[2].Controls[0])).Text;
-            dt.Rows[row.DataItemIndex]["Reps"] = ((TextBox)(row.Cells[3].Controls[0])).Text;
-            dt.Rows[row.DataItemIndex]["Weight"] = ((TextBox)(row.Cells[4].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["Exercise"] = ((TextBox)(row.Cells[2].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["Series"] = ((TextBox)(row.Cells[3].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["Reps"] = ((TextBox)(row.Cells[4].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["Weight"] = ((TextBox)(row.Cells[5].Controls[0])).Text;
             
 
             //Reset the edit index.
@@ -190,7 +194,7 @@ namespace TrainingDiary
         protected void OpenTxt_Click(object sender, EventArgs e)
         {
             DataTable dt = (DataTable)Session["TaskTable"];
-            using (TextReader tr = File.OpenText((@"E:\\file.txt")))
+            using (TextReader tr = File.OpenText((@"E:\\TrainingToEdit.txt")))
             {
                 
                 string line;
@@ -213,6 +217,7 @@ namespace TrainingDiary
                     dt.Rows.Add(items);
 
                 }
+                
                 //show it in gridview 
                 BindData();
             }
@@ -220,7 +225,26 @@ namespace TrainingDiary
 
         protected void Gv1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-          
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                string item = e.Row.Cells[0].Text;
+                foreach (Button button in e.Row.Cells[2].Controls.OfType<Button>())
+                {
+                    if (button.CommandName == "Delete")
+                    {
+                        button.Attributes["onclick"] = "if(!confirm('Do you want to delete " + item + "?')){ return false; };";
+                    }
+                }
+            }
+        }
+
+        protected void Gv1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int index = Convert.ToInt32(e.RowIndex);
+            DataTable dt = Session["TaskTable"] as DataTable;
+            dt.Rows[index].Delete();
+            ViewState["TaskTable"] = dt;
+            BindData();
         }
     }
 }

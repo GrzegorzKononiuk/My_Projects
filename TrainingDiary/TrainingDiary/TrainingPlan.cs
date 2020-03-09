@@ -13,7 +13,6 @@ namespace TrainingDiary
             get
             {
                 Array values = Enum.GetValues(typeof(Exercises));
-                Random random = new Random();
                 Exercises randomBar = (Exercises)values.GetValue(random.Next(values.Length));
                 return randomBar;
             }

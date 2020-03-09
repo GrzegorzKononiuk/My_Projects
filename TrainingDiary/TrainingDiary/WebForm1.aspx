@@ -14,20 +14,26 @@
             <asp:gridview ID="Gv1" runat="server"
                 AutoGenerateEditButton="True" 
                 AutoGenerateColumns="true" 
-                AllowPaging="true" 
+                AllowPaging="true"
                 HeaderStyle-BackColor="Red" 
                 BackColor="LightBlue"
                 BorderWidth="5" 
                 BorderColor="Blue" 
                 OnRowEditing="Gv1_RowEditing" 
-                OnRowUpdating="Gv1_RowUpdating" 
+                OnRowUpdating="Gv1_RowUpdating"
                 OnPageIndexChanging="Gv1_PageIndexChanging" 
-                OnRowCancelingEdit="Gv1_RowCancelingEdit" OnRowDataBound="Gv1_RowDataBound">
-            
+                OnRowCancelingEdit="Gv1_RowCancelingEdit" 
+                OnRowDataBound="Gv1_RowDataBound" 
+                OnRowDeleting="Gv1_RowDeleting"
+                >
+                <Columns>
+                    <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
+
+                </Columns>
 
             </asp:gridview>
             
-          <!-- Safe & Open PDF Buttons -->
+          <!-- Safe , Open PDF & TXT Buttons -->
             <asp:Button ID="SavePdf" runat="server"  Text="Save To Pdf" OnClick="SavePdf_Click" />
             <asp:Button ID="OpenPdf" runat="server" Text="Open PDF in Browser" Font-Bold="True" OnClick="OpenPdf_Click" />
             <asp:Button ID="SafeToTxt" runat="server" OnClick="SafeToTxt_Click" Text="Save To Txt" />
