@@ -28,7 +28,7 @@
                 >
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
-
+                   
                 </Columns>
 
             </asp:gridview>
@@ -36,14 +36,19 @@
           <!-- Safe , Open PDF & TXT Buttons -->
             <asp:Button ID="SavePdf" runat="server"  Text="Save To Pdf" OnClick="SavePdf_Click" />
             <asp:Button ID="OpenPdf" runat="server" Text="Open PDF in Browser" Font-Bold="True" OnClick="OpenPdf_Click" />
-            <asp:Button ID="SafeToTxt" runat="server" OnClick="SafeToTxt_Click" Text="Save To Txt" />
-            <asp:Button ID="OpenTxt" runat="server" OnClick="OpenTxt_Click" Text="Open Txt To Edit" />
           <p>
               <!-- Add Exercise -->
-            <asp:Button  ID="AddExercise" runat="server" Text="Add New Line" OnClick="AddExercise_Click" Height="48px" Width="114px" />
+            <asp:Button ID="SafeToTxt" runat="server" OnClick="SafeToTxt_Click" Text="Save To Txt" />
+            <asp:Button ID="OpenTxt" runat="server" OnClick="OpenTxt_Click" Text="Open Txt To Edit" />
            </p>
             
       </div>
+        <p>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Save To HexView.txt" />
+        </p>
+        <p>
+            <asp:Button  ID="AddExercise" runat="server" Text="Add New Line" OnClick="AddExercise_Click" Height="48px" Width="277px" />
+           </p>
      </form>
 </body>
 </html>
