@@ -3,4 +3,5 @@
 Little projects for training skills:
 
 Card game <-----listboxes, shuffle cards and compare them, counting points<br/>
-TrainingDiary <---- compose your strength training,modify, save it and generate it to pdf file + ASP.NET + ITEXTSHARP (IN PROGRESS)
+TrainingDiary <---- compose strength training, modify, save it and generate it to TXT, PDF file or HEX view + ASP.NET + ITextSharp<br/>
+CheckWeather <------ Weather API for Android (Xamarin) (IN PROGRESS)
