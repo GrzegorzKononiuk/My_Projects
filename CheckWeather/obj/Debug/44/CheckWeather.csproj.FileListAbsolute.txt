@@ -1,0 +1,9 @@
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\MonoAndroid,Version=v4.4.AssemblyAttributes.cs
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\build.props
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\adb.props
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\CheckWeather.csprojAssemblyReference.cache
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\stamp\_BuildLibraryImportsCache.stamp
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\resourcepaths.cache
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\res.flag
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\flata\compiled.flata
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\44\R.cs.flag
