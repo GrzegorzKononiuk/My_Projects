@@ -1,4 +1,3 @@
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,47 +6,78 @@
 	android:layout_width="match_parent"
     android:layout_height="match_parent">
 	
-	 <RelativeLayout
-		 android:layout_width="match_parent"
-		 android:layout_height="200dp">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="200dp">
 		
-		<EditText
-			android:layout_width="232dp"
-			android:layout_height="80dp"
-			android:layout_marginLeft="50dp"
-			android:layout_marginRight="50dp"
-			android:textColor="@android:color/white"
-			android:hint="Enter City"
-			android:gravity="center"
-			android:layout_centerInParent="true"
-			android:id="@+id/cityNameText"/>
-		
-		<Button
-			android:layout_width="200dp"
-			android:layout_height="30dp"
-			android:layout_centerHorizontal="true"
-			android:background="?android:attr/colorAccent"
-			android:text="Check Weather"
-			android:layout_marginTop="20dp"
-			android:layout_below="@id/cityNameText"
-			android:id="@+id/getWeatherButton"/>
+	<EditText
+		android:id="@+id/cityNameText"
+		android:layout_width="232dp"
+		android:layout_height="80dp"
+		android:layout_marginLeft="50dp"
+		android:layout_marginRight="50dp"
+		android:layout_centerHorizontal="true"
+		android:textColor="@android:color/white"
+		android:hint="Enter City"
+		android:gravity="center"/>
 			
-		</RelativeLayout>
-		
-		<RelativeLayout
-			 android:layout_width="match_parent"
-			android:layout_height="0dp"
-			android:layout_weight="0.8">
-		
-				<ImageView
-			android:layout_width="120dp"
-			android:layout_height="70dp"
-			android:layout_centerVertical="true"
-			android:src="@drawable/thermometer"
-			android:id="@+id/thermometerImage"/>
+	<Button
+		android:id="@+id/getWeatherButton"
+		android:layout_width="200dp"
+		android:layout_height="30dp"
+		android:layout_marginTop="10dp"
+		android:layout_centerHorizontal="true"
+		android:background="?android:attr/colorAccent"
+		android:text="Check Weather"
+		android:layout_below="@id/cityNameText"/>
 		
 			
+	</RelativeLayout>
 		
-		</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.8">
+		
+		<ImageView
+		android:id="@+id/thermometerImage"
+		android:src="@drawable/thermometer"
+		android:layout_width="70dp"
+		android:layout_height="70dp"/>
+		
+		<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="33"
+		android:textColor="@android:color/white"
+		android:textSize="44sp"
+		android:textStyle="bold"
+		android:layout_toRightOf="@id/thermometerImage"/>
+		
+		<TextView
+		android:id="@+id/weatherDescriptionText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp"
+		android:text="Shower Rain"
+		android:textColor="@android:color/white"
+		android:textStyle="bold"
+		android:textSize="44sp"
+		android:layout_below="@id/thermometerImage"/>
+		
+		<TextView
+		android:id="@+id/placeText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Lagos, NG"
+		android:textColor="@android:color/white"
+		android:textSize="44sp"
+		android:layout_below="@+id/weatherDescriptionText"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp"
+		android:textStyle="bold"/>
+	
+	</RelativeLayout>
 					  
 </LinearLayout>
