@@ -4,6 +4,9 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using System.Net.Http;
+using System;
+using Newtonsoft.Json.Linq;
+using System.Globalization;
 
 namespace CheckWeather
 {
@@ -37,6 +40,7 @@ namespace CheckWeather
         private void GetWeatherButton_Click(object sender, System.EventArgs e)
         {
             string place = cityNameEditText.Text;
+            GetWeather(place);
         }
 
         async void GetWeather(string place)
@@ -53,7 +57,23 @@ namespace CheckWeather
             string url = apiBase + place + "&appid=" + apiKey + "&units=" + unit;
 
             var handler = new HttpClientHandler();
+            HttpClient client = new HttpClient(handler);
+            string result = await client.GetStringAsync(url);
 
+            Console.WriteLine(result);
+
+            var resultObject = JObject.Parse(result);
+            string weatherDescription = resultObject["weather"][0]["description"].ToString();
+            string icon = resultObject["weather"][0]["icon"].ToString();
+            string temperature = resultObject["main"][0]["temp"].ToString();
+            string placename = resultObject["name"].ToString();
+            string country = resultObject["sys"]["country"].ToString();
+            
+            weatherDescription = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(weatherDescription);
+
+            weatherDescriptionTextView.Text = weatherDescription;
+            placeTextView.Text = placename + ", " + country;
+            temperatureTextView.Text = temperature;
         }
     }
 }
