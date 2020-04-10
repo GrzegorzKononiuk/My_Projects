@@ -7,36 +7,40 @@ using System.Net.Http;
 using System;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
+using Android.Content.Res;
+using Android.Content;
+using Xamarin.Forms;
 
 namespace CheckWeather
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        Button getWeatherButton;
+        Android.Widget.Button getWeatherButton;
+        Android.Widget.Button getWeatherInBstok;
         TextView placeTextView;
         TextView temperatureTextView;
         TextView weatherDescriptionTextView;
         EditText cityNameEditText;
         ImageView weatherImageView;
-        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-           
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-
+           
             cityNameEditText = (EditText)FindViewById(Resource.Id.cityNameText);
-            placeTextView = (EditText)FindViewById(Resource.Id.placeText);
-            temperatureTextView = (EditText)FindViewById(Resource.Id.temperatureTextView);
-            weatherDescriptionTextView = (EditText)FindViewById(Resource.Id.weatherDescriptionText);
+            placeTextView = (TextView)FindViewById(Resource.Id.placeText);
+            temperatureTextView = (TextView)FindViewById(Resource.Id.temperatureTextView);
+            weatherDescriptionTextView = (TextView)FindViewById(Resource.Id.weatherDescriptionText);
             weatherImageView = (ImageView)FindViewById(Resource.Id.thermometerImage);
-            getWeatherButton = (Button)FindViewById(Resource.Id.getWeatherButton);
-
+            getWeatherButton = (Android.Widget.Button)FindViewById(Resource.Id.getWeatherButton);
+            getWeatherInBstok = (Android.Widget.Button)FindViewById(Resource.Id.bstokButton);
+            
             getWeatherButton.Click += GetWeatherButton_Click;
-        }
+            getWeatherInBstok.Click += GetWeatherInBstok_Click;
 
+        }
+    
         private void GetWeatherButton_Click(object sender, System.EventArgs e)
         {
             string place = cityNameEditText.Text;
@@ -75,5 +79,16 @@ namespace CheckWeather
             placeTextView.Text = placename + ", " + country;
             temperatureTextView.Text = temperature;
         }
+
+        private void GetWeatherInBstok_Click(object sender, EventArgs e)
+        {
+            /// WHBY DONT WORK ???!!!!
+
+            Intent intent = new Intent(this, typeof(BstokRadar));
+            StartActivity(intent);
+
+           
+        }
+
     }
 }

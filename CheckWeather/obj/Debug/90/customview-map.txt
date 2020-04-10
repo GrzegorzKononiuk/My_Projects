@@ -1,25 +1,56 @@
+@string/appbar_scrolling_view_behavior;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+alpha;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\enterfromleft.xml
+alpha;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
+android.support.v7.widget.RecyclerView;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\shellcontent.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\activity_main.xml
-cache-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
 EditText;obj\Debug\90\res\layout\activity_main.xml
-external-cache-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+FrameLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\bottomtablayout.xml
 ImageView;obj\Debug\90\res\layout\activity_main.xml
+item;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\values\styles.xml
 item;obj\Debug\90\res\values\styles.xml
+LinearLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\bottomtablayout.xml
 LinearLayout;obj\Debug\90\res\layout\activity_main.xml
-paths;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+LinearLayout;obj\Debug\90\res\layout\bstokradar.xml
+paths;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
+resources;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\ic_launcher_background.xml
 resources;obj\Debug\90\res\values\strings.xml
 resources;obj\Debug\90\res\values\styles.xml
+set;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\enterfromleft.xml
+set;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\enterfromright.xml
+set;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\exittoleft.xml
+set;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\exittoright.xml
 string;obj\Debug\90\res\values\strings.xml
+style;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
 TextView;obj\Debug\90\res\layout\activity_main.xml
+TextView;obj\Debug\90\res\layout\bstokradar.xml
+translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\enterfromleft.xml
+translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\enterfromright.xml
+translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\exittoleft.xml
+translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\exittoright.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml

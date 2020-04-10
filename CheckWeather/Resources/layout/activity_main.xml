@@ -30,7 +30,7 @@
 		android:background="?android:attr/colorAccent"
 		android:text="Check Weather"
 		android:layout_below="@id/cityNameText"/>
-		
+
 			
 	</RelativeLayout>
 		
@@ -78,7 +78,17 @@
 		android:layout_marginTop="10dp"
 		android:layout_marginLeft="10dp"
 		android:textStyle="bold"/>
-	
+		
+		<Button
+		android:id="@+id/bstokButton"
+		android:layout_width="222dp"
+		android:layout_height="111dp"
+		android:layout_below="@id/placeText"
+		android:layout_centerHorizontal="true"
+		android:textColor="@android:color/black"
+		android:text="Check Weather in Bialystok"
+		android:textStyle="italic"
+		android:textSize="20sp"/>	
 	</RelativeLayout>
 					  
 </LinearLayout>
