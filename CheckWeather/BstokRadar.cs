@@ -17,7 +17,7 @@ using Xamarin.Forms;
 
 namespace CheckWeather
 {
-    [Activity(Label = "BstokRadar")]
+    [Activity(Label = "BstokRadar",  NoHistory = true)]
     public class BstokRadar : Activity
     {
         TextView bstokTextView;
@@ -29,24 +29,30 @@ namespace CheckWeather
             SetContentView(Resource.Layout.bstokradar);
 
             bstokTextView = (TextView)FindViewById(Resource.Id.bstokText);
-
+            
             string city = "http://antistorm.eu/webservice.php?id=10";
             GetBstokOnRadar(city);
 
 
         }
+        
         async void GetBstokOnRadar(string place)
         {
             var handler = new HttpClientHandler();
             HttpClient client = new HttpClient(handler);
             string result = await client.GetStringAsync(place);
 
-            Console.WriteLine(place);
+            
             var resultObject = JObject.Parse(result);
-            string cityName = resultObject[0]["m"].ToString();
-            //STOWRZYC KONTROLKE TEXTVIEW DLA CITYNAME I OBADAC NAA KOMORCE
-            bstokTextView.Text = cityName;
+            string cityName = resultObject["m"].ToString();
+            string stormChance = resultObject["p_b"].ToString();
+            string timeToStorm = resultObject["t_b"].ToString();
+            
+            //TE STRINGI LADNIE W XMLU ZROBIC ZEBY WYSWIETLALO
+            //DLA KAZDEGO ZROBIC ODZIELNIE TEXT VIEW I ID 
+            bstokTextView.Text = cityName+ stormChance + timeToStorm;
         }
+    
        
     }
 }

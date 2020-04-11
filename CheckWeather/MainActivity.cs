@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace CheckWeather
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, NoHistory = true)]
     public class MainActivity : AppCompatActivity
     {
         Android.Widget.Button getWeatherButton;
@@ -44,9 +44,9 @@ namespace CheckWeather
         private void GetWeatherButton_Click(object sender, System.EventArgs e)
         {
             string place = cityNameEditText.Text;
-            GetWeather(place);
+            //GetWeather(place);
         }
-
+        /**
         async void GetWeather(string place)
         {
             string apiKey = "89b85d41729fb2edeee0f26e543c5bb4";
@@ -79,7 +79,7 @@ namespace CheckWeather
             placeTextView.Text = placename + ", " + country;
             temperatureTextView.Text = temperature;
         }
-
+        **/
         private void GetWeatherInBstok_Click(object sender, EventArgs e)
         {
             /// WHBY DONT WORK ???!!!!

@@ -14,8 +14,7 @@
 		android:layout_marginTop="10dp"
 		android:layout_centerHorizontal="true"
 		android:background="?android:attr/colorError"
-		android:text="yoyoyoyo"
 		android:layout_below="@id/cityNameText"/>
-
+		
 
 </LinearLayout>
