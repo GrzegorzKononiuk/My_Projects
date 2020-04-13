@@ -20,7 +20,9 @@ namespace CheckWeather
     [Activity(Label = "BstokRadar",  NoHistory = true)]
     public class BstokRadar : Activity
     {
-        TextView bstokTextView;
+        TextView cityTextView;
+        TextView stormChanceTextView;
+        TextView timeToStormTextView;
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -28,7 +30,9 @@ namespace CheckWeather
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.bstokradar);
 
-            bstokTextView = (TextView)FindViewById(Resource.Id.bstokText);
+            cityTextView = (TextView)FindViewById(Resource.Id.cityText);
+            stormChanceTextView = (TextView)FindViewById(Resource.Id.stormChanceText);
+            timeToStormTextView = (TextView)FindViewById(Resource.Id.timeToStormText);
             
             string city = "http://antistorm.eu/webservice.php?id=10";
             GetBstokOnRadar(city);
@@ -50,7 +54,9 @@ namespace CheckWeather
             
             //TE STRINGI LADNIE W XMLU ZROBIC ZEBY WYSWIETLALO
             //DLA KAZDEGO ZROBIC ODZIELNIE TEXT VIEW I ID 
-            bstokTextView.Text = cityName+ stormChance + timeToStorm;
+            cityTextView.Text = cityName;
+            stormChanceTextView.Text = stormChance;
+            timeToStormTextView.Text = timeToStorm;
         }
     
        

@@ -8,7 +8,25 @@
   android:layout_height="match_parent">
 	
 		<TextView
-		android:id="@+id/bstokText"
+		android:id="@+id/cityText"
+		android:layout_width="200dp"
+		android:layout_height="130dp"
+		android:layout_marginTop="10dp"
+		android:layout_centerHorizontal="true"
+		android:background="?android:attr/colorError"
+		android:layout_below="@id/cityNameText"/>
+
+		<TextView
+		android:id="@+id/stormChanceText"
+		android:layout_width="200dp"
+		android:layout_height="130dp"
+		android:layout_marginTop="10dp"
+		android:layout_centerHorizontal="true"
+		android:background="?android:attr/colorError"
+		android:layout_below="@id/cityNameText"/>
+
+	<TextView
+		android:id="@+id/timeToStormText"
 		android:layout_width="200dp"
 		android:layout_height="130dp"
 		android:layout_marginTop="10dp"

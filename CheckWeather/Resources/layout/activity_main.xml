@@ -6,6 +6,7 @@
 	android:layout_width="match_parent"
     android:layout_height="match_parent">
 	
+	
 	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="200dp">
@@ -30,7 +31,15 @@
 		android:background="?android:attr/colorAccent"
 		android:text="Check Weather"
 		android:layout_below="@id/cityNameText"/>
-
+		
+		<Button
+		android:id="@+id/getDate" 
+		android:layout_width="132dp"
+		android:layout_height="43dp"
+	    android:layout_marginTop="10dp"
+		android:layout_centerHorizontal="true"
+	    android:text="Check Date"
+		android:layout_below="@id/getWeatherButton"/>
 			
 	</RelativeLayout>
 		

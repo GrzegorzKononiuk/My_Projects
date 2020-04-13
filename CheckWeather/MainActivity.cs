@@ -18,6 +18,7 @@ namespace CheckWeather
     {
         Android.Widget.Button getWeatherButton;
         Android.Widget.Button getWeatherInBstok;
+        Android.Widget.Button getDateButton;
         TextView placeTextView;
         TextView temperatureTextView;
         TextView weatherDescriptionTextView;
@@ -28,19 +29,33 @@ namespace CheckWeather
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
            
+            //EDIT TEXT CONTROL
             cityNameEditText = (EditText)FindViewById(Resource.Id.cityNameText);
+            
+            //TEXT VIEW CONTROLS
             placeTextView = (TextView)FindViewById(Resource.Id.placeText);
             temperatureTextView = (TextView)FindViewById(Resource.Id.temperatureTextView);
             weatherDescriptionTextView = (TextView)FindViewById(Resource.Id.weatherDescriptionText);
+            
+            //IMAGEVIEW CONTROL
             weatherImageView = (ImageView)FindViewById(Resource.Id.thermometerImage);
+            
+            //BUTTONS CONTROLS
             getWeatherButton = (Android.Widget.Button)FindViewById(Resource.Id.getWeatherButton);
             getWeatherInBstok = (Android.Widget.Button)FindViewById(Resource.Id.bstokButton);
+            getDateButton = (Android.Widget.Button)FindViewById(Resource.Id.getDate);
             
             getWeatherButton.Click += GetWeatherButton_Click;
             getWeatherInBstok.Click += GetWeatherInBstok_Click;
+            getDateButton.Click += GetDateButton_Click; ;
 
         }
-    
+
+        private void GetDateButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void GetWeatherButton_Click(object sender, System.EventArgs e)
         {
             string place = cityNameEditText.Text;
