@@ -47,13 +47,17 @@ namespace CheckWeather
             
             getWeatherButton.Click += GetWeatherButton_Click;
             getWeatherInBstok.Click += GetWeatherInBstok_Click;
-            getDateButton.Click += GetDateButton_Click; ;
+            getDateButton.Click += GetDateButton_Click;
+
+
 
         }
 
         private void GetDateButton_Click(object sender, EventArgs e)
         {
-            
+            Intent intent = new Intent(this, typeof(GetDateTime));
+            StartActivity(intent);
+
         }
 
         private void GetWeatherButton_Click(object sender, System.EventArgs e)
@@ -97,7 +101,7 @@ namespace CheckWeather
         **/
         private void GetWeatherInBstok_Click(object sender, EventArgs e)
         {
-            /// WHBY DONT WORK ???!!!!
+          
 
             Intent intent = new Intent(this, typeof(BstokRadar));
             StartActivity(intent);

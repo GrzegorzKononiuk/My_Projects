@@ -33,6 +33,7 @@ item;obj\Debug\90\res\values\styles.xml
 LinearLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\layout\bottomtablayout.xml
 LinearLayout;obj\Debug\90\res\layout\activity_main.xml
 LinearLayout;obj\Debug\90\res\layout\bstokradar.xml
+LinearLayout;obj\Debug\90\res\layout\getdatetime.xml
 paths;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
 resources;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\values\styles.xml
@@ -49,6 +50,7 @@ style;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res
 style;obj\Debug\90\res\values\styles.xml
 TextView;obj\Debug\90\res\layout\activity_main.xml
 TextView;obj\Debug\90\res\layout\bstokradar.xml
+TextView;obj\Debug\90\res\layout\getdatetime.xml
 translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\enterfromleft.xml
 translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\enterfromright.xml
 translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\anim\exittoleft.xml
