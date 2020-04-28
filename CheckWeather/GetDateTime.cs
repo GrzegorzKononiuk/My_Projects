@@ -34,7 +34,7 @@ namespace CheckWeather
             {
                 var culture = new CultureInfo(cultureName);
                 countryTextView.Text = string.Format(culture.NativeName);
-                dateTimeTextView.Text = string.Format("Local date and time: ", localDate.ToString(culture));
+                dateTimeTextView.Text = string.Format(localDate.ToString(culture));
             }
         }
     }

@@ -36,6 +36,7 @@ LinearLayout;obj\Debug\90\res\layout\bstokradar.xml
 LinearLayout;obj\Debug\90\res\layout\getdatetime.xml
 paths;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
+RelativeLayout;obj\Debug\90\res\layout\getdatetime.xml
 resources;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Debug\90\lp\39\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\ic_launcher_background.xml
