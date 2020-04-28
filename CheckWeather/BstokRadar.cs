@@ -46,17 +46,18 @@ namespace CheckWeather
             HttpClient client = new HttpClient(handler);
             string result = await client.GetStringAsync(place);
 
-            
+         
             var resultObject = JObject.Parse(result);
-            string cityName = resultObject["m"].ToString();
+            string cityName =  resultObject["m"].ToString();
             string stormChance = resultObject["p_b"].ToString();
             string timeToStorm = resultObject["t_b"].ToString();
             
             //TE STRINGI LADNIE W XMLU ZROBIC ZEBY WYSWIETLALO
             //DLA KAZDEGO ZROBIC ODZIELNIE TEXT VIEW I ID 
-            cityTextView.Text = cityName;
-            stormChanceTextView.Text = stormChance;
-            timeToStormTextView.Text = timeToStorm;
+            cityTextView.Text = string.Format("City: " + cityName);
+            stormChanceTextView.Text = string.Format("Storm Chance: " + stormChance);
+            timeToStormTextView.Text = string.Format("Time To Storm: " + timeToStorm);
+
         }
     
        
