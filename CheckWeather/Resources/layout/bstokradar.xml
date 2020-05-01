@@ -22,7 +22,6 @@
 		android:textSize="22dp"
 		android:textColor="#ffff00"
 		android:gravity="center"
-		android:layout_below="@id/cityNameText"
 		android:layout_toRightOf="@id/cityPixel"/>
 		
 		<ImageView

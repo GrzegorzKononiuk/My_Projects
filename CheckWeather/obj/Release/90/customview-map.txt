@@ -18,24 +18,25 @@ android.support.v7.widget.Toolbar;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeath
 background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Release\90\res\layout\activity_main.xml
-Button;obj\Release\90\res\layout\bstokradar.xml
 cache-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Release\90\res\values\colors.xml
 color;obj\Release\90\res\values\ic_launcher_background.xml
-EditText;obj\Release\90\res\layout\activity_main.xml
 external-cache-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 FrameLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\layout\bottomtablayout.xml
-ImageView;obj\Release\90\res\layout\activity_main.xml
+ImageView;obj\Release\90\res\layout\bstokradar.xml
 item;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\values\styles.xml
 item;obj\Release\90\res\values\styles.xml
 LinearLayout;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\layout\bottomtablayout.xml
 LinearLayout;obj\Release\90\res\layout\activity_main.xml
 LinearLayout;obj\Release\90\res\layout\bstokradar.xml
+LinearLayout;obj\Release\90\res\layout\getdatetime.xml
 paths;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Release\90\res\layout\activity_main.xml
+RelativeLayout;obj\Release\90\res\layout\bstokradar.xml
+RelativeLayout;obj\Release\90\res\layout\getdatetime.xml
 resources;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\values\styles.xml
 resources;obj\Release\90\res\values\colors.xml
 resources;obj\Release\90\res\values\ic_launcher_background.xml
@@ -48,7 +49,8 @@ set;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res
 string;obj\Release\90\res\values\strings.xml
 style;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\values\styles.xml
 style;obj\Release\90\res\values\styles.xml
-TextView;obj\Release\90\res\layout\activity_main.xml
+TextView;obj\Release\90\res\layout\bstokradar.xml
+TextView;obj\Release\90\res\layout\getdatetime.xml
 translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\anim\enterfromleft.xml
 translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\anim\enterfromright.xml
 translate;E:\pulpit pliki\NAUKA\MOJE PROJEKTY\CheckWeather\obj\Release\90\lp\39\jl\res\anim\exittoleft.xml
