@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <SelectedDevice>LENOVO A3500-F</SelectedDevice>
+    <SelectedDevice>api_22</SelectedDevice>
     <DefaultDevice>api_22</DefaultDevice>
   </PropertyGroup>
 </Project>
