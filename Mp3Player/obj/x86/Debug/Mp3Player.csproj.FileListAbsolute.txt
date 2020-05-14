@@ -216,3 +216,5 @@ E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\obj\x86\Debug\qualifiers.txt
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\obj\x86\Debug\qualifiers.txt.intermediate
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\obj\x86\Debug\ProjectArchitectures.txt
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json

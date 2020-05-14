@@ -22,9 +22,19 @@ namespace Mp3Player
     /// </summary>
     public sealed partial class MainPage : Page
     {
+     
+        
         public MainPage()
         {
             this.InitializeComponent();
+          
+        }
+
+      
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

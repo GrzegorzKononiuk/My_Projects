@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D24E54EFD15CF81527FFC1B750333D7D500EF77ABBED9E9441479C8D3E5F501C</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2EA62FF48FDA75151D237223A0DCBA373C3A5007CD652F5A058369DE4C6BB255</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>3a661ff5-ce81-4617-898b-3decf0387453_1.0.0.0_x86__hnxx87916hktp</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>3a661ff5-ce81-4617-898b-3decf0387453_hnxx87916hktp!App</RegisteredUserModeAppID>
     <RegisteredPackageID>3a661ff5-ce81-4617-898b-3decf0387453</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-13T20:42:55.908</Modified>
+      <Modified>2020-05-14T15:38:53.845</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Mp3Player.exe">
       <PackagePath>entrypoint\Mp3Player.exe</PackagePath>
-      <Modified>2020-05-13T20:42:55.242</Modified>
+      <Modified>2020-05-14T15:38:47.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -494,55 +494,59 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+      <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+      <Modified>2019-03-18T16:36:56.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-05-13T20:38:53.796</Modified>
+      <Modified>2020-05-13T20:52:54.602</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2020-05-08T15:08:00.460</Modified>
+      <Modified>2020-05-13T20:52:54.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-08T15:08:00.460</Modified>
+      <Modified>2020-05-13T20:52:54.597</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-08T15:08:00.460</Modified>
+      <Modified>2020-05-13T20:52:54.597</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-08T15:08:00.460</Modified>
+      <Modified>2020-05-13T20:52:54.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-08T15:08:00.460</Modified>
+      <Modified>2020-05-13T20:52:54.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-08T15:08:00.460</Modified>
+      <Modified>2020-05-13T20:52:54.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-08T15:08:00.460</Modified>
+      <Modified>2020-05-13T20:52:54.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Mp3Player.xr.xml">
       <PackagePath>Mp3Player.xr.xml</PackagePath>
-      <Modified>2020-05-13T20:42:54.992</Modified>
+      <Modified>2020-05-14T15:38:47.118</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-05-13T20:41:46.677</Modified>
+      <Modified>2020-05-14T15:38:47.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-05-13T20:42:54.996</Modified>
+      <Modified>2020-05-14T15:38:47.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -550,11 +554,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-05-13T20:41:50.400</Modified>
+      <Modified>2020-05-14T15:38:48.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Core\Mp3Player.exe">
       <PackagePath>Mp3Player.exe</PackagePath>
-      <Modified>2020-05-13T20:42:55.890</Modified>
+      <Modified>2020-05-14T15:38:53.824</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

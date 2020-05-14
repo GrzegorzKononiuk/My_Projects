@@ -7,9 +7,28 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+    <Page.BottomAppBar >
+        <CommandBar OverflowButtonVisibility="Collapsed"  Height="222">
+            
+            <AppBarToggleButton x:ConnectionId='2' Icon="Shuffle" Label="Shuffle"                           />
+            <AppBarToggleButton x:ConnectionId='3' Icon="RepeatAll" Label="Repeat"                           />
+            <AppBarSeparator/>
+            <AppBarButton x:ConnectionId='4' Icon="Back" Label="Back"                           />
+            <AppBarButton x:ConnectionId='5' Icon="Stop" Label="Stop"                           />
+            <AppBarButton x:ConnectionId='6' Icon="Play" Label="Play"                           />
+            <AppBarButton x:ConnectionId='7' Icon="Forward" Label="Forward"                           />
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:ConnectionId='8' Icon="Like" Label="Like"                           />
+                <AppBarButton x:ConnectionId='9' Icon="Dislike" Label="Dislike"                           />
+            </CommandBar.SecondaryCommands>
+
+            <CommandBar.Content>
+                <TextBlock Text="Now playing..." Margin="12,14"/>
+            </CommandBar.Content>
+        </CommandBar>
+    </Page.BottomAppBar>
     <Grid>
-        <Button Content="Button" Margin="723,457,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
