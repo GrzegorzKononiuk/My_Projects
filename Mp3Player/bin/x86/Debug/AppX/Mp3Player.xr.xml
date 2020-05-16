@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.RootTypes>
-    <RootType FullName="Windows.UI.Xaml.Application" />
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.XamlControlsResources" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="BottomAppBar" />
@@ -9,28 +12,28 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="OverflowButtonVisibility" />
-      <RootProperty Name="Height" />
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="FlowDirection" />
       <RootProperty Name="PrimaryCommands" />
-      <RootProperty Name="SecondaryCommands" />
-      <RootProperty Name="Content" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarToggleButton">
-      <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
-      <RootEvent Name="Click" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator" />
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid" />
+    <RootType FullName="Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer">
+      <RootProperty Name="AutoPlay" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
+      <RootProperty Name="Source" />
+      <RootProperty Name="AreTransportControlsEnabled" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="AutoPlay" />
+    </RootType>
     <RootType FullName="Mp3Player.MainPage" />
   </Roots.RootTypes>
 </Roots>
