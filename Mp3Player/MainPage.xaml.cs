@@ -30,9 +30,6 @@ namespace Mp3Player
           
         }
 
-        private void Play_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }
