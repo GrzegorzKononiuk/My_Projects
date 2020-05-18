@@ -10,15 +10,20 @@
 
     <Grid>
         <MediaPlayerElement 
-          x:Name="mediaSimple"
+          x:Name="mediaPlayer"
           Source="ms-appx:///Videos/video1.mp4"
           AreTransportControlsEnabled="True"
           Width="400" 
           AutoPlay="True"/>
-        
-      <Image Stretch="UniformToFill" Height="600" Width="600" Source="/Assets/tapes.jpg" />
+           
+        <Button Content="Choose file" Click="Button_Click"/>
+        <!--
+        <Image Stretch="UniformToFill" Height="600" Width="600" Source="/Assets/tapes.jpg" />
+        -->
+       
 
-       
-       
+
+
+
     </Grid>
 </Page>

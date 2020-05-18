@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-17T14:54:43.056</Modified>
+      <Modified>2020-05-18T14:19:09.279</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Mp3Player.exe">
       <PackagePath>entrypoint\Mp3Player.exe</PackagePath>
-      <Modified>2020-05-17T14:54:41.635</Modified>
+      <Modified>2020-05-18T14:19:07.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -90,15 +90,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Mp3Player.xr.xml">
       <PackagePath>Mp3Player.xr.xml</PackagePath>
-      <Modified>2020-05-17T14:53:08.687</Modified>
+      <Modified>2020-05-18T14:17:14.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-05-17T14:46:07.171</Modified>
+      <Modified>2020-05-18T14:19:07.601</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-05-17T14:54:41.349</Modified>
+      <Modified>2020-05-18T14:19:07.601</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -118,7 +118,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\bin\x86\Debug\Core\Mp3Player.exe">
       <PackagePath>Mp3Player.exe</PackagePath>
-      <Modified>2020-05-17T14:54:43.049</Modified>
+      <Modified>2020-05-18T14:19:09.272</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
