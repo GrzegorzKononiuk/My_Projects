@@ -8,23 +8,24 @@
     mc:Ignorable="d"
     Background="Black">
 
-    <Grid>
-        <MediaPlayerElement x:ConnectionId='2' 
+    <StackPanel Height="900" Width="1400" Background="Blue">
+        <MediaPlayerElement x:ConnectionId='2' HorizontalAlignment="Center" Margin="322" 
           x:Name="mediaPlayer"
-          Source="ms-appx:///Videos/video1.mp4"
           AreTransportControlsEnabled="True"
-          Width="400" 
-          AutoPlay="True"/>
+          Width="400" />
+          
+        <TextBlock x:ConnectionId='3' 
+            x:Name="LoadedText" 
            
-        <Button x:ConnectionId='3' Content="Choose file"                     />
-        <!--
-        <Image Stretch="UniformToFill" Height="600" Width="600" Source="/Assets/tapes.jpg" />
-        -->
+            TextWrapping="Wrap"
+            FontSize="44"
+            TextAlignment="Center"
+            Text=""/>
        
-
-
-
-
-    </Grid>
+        
+        
+        
+        <Button x:ConnectionId='4' Content="Choose file"                     />
+    </StackPanel>
 </Page>
 

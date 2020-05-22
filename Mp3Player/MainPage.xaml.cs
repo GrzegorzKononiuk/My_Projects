@@ -14,21 +14,18 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Composition;
 using Windows.Media.Core;
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
+using Windows.UI.Xaml.Media.Animation;
+using Windows.Media.Playback;
 namespace Mp3Player
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+   
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
-          
         }
-
+        
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             await SetLocalMedia();
@@ -45,11 +42,11 @@ namespace Mp3Player
 
             var file = await openPicker.PickSingleFileAsync();
 
-           
+
             if (file != null)
             {
                 mediaPlayer.Source = MediaSource.CreateFromStorageFile(file);
-
+                LoadedText.Text = file.Name;         
                 mediaPlayer.MediaPlayer.Play();
             }
         }
