@@ -1,31 +1,51 @@
 ﻿<Page
     x:Class="Mp3Player.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Mp3Player"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="Black">
 
     <StackPanel Height="900" Width="1400" Background="Blue">
-        <MediaPlayerElement x:ConnectionId='2' HorizontalAlignment="Center" Margin="322" 
-          x:Name="mediaPlayer"
-          AreTransportControlsEnabled="True"
-          Width="400" />
-          
-        <TextBlock x:ConnectionId='3' 
+
+        <Grid Height="222" Margin="70">
+            <TextBlock x:ConnectionId='5' 
             x:Name="LoadedText" 
-           
             TextWrapping="Wrap"
-            FontSize="44"
+            FontSize="24"
             TextAlignment="Center"
             Text=""/>
-       
-        
-        
-        
-        <Button x:ConnectionId='4' Content="Choose file"                     />
+
+
+            <MediaPlayerElement x:ConnectionId='6'
+          x:Name="mediaPlayer"/>
+
+            <Rectangle x:ConnectionId='7' 
+            x:Name="myRectangle"
+            Fill="Orange" 
+            Width="200" 
+            Height="100"/>
+        </Grid>
+        <Grid Margin="22" HorizontalAlignment="Stretch" >
+            <RelativePanel Width="122">
+                <Button x:ConnectionId='3' 
+                    x:Name="Play" 
+                    Content="Play" 
+                                                            
+                                                          
+                    RelativePanel.AlignLeftWithPanel="True" HorizontalAlignment="Stretch"
+                                       />
+                <Button x:ConnectionId='4' 
+                    x:Name="Stop" 
+                    Content="Stop" 
+                                                            
+                                                          
+                    RelativePanel.AlignRightWithPanel="True" HorizontalAlignment="Stretch"
+                                       />
+             </RelativePanel>
+        </Grid>
+        <Button x:ConnectionId='2' Content="Choose file" HorizontalAlignment="Center" Margin="10" Width="222"                     />
     </StackPanel>
 </Page>
 

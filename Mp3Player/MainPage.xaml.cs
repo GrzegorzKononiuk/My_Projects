@@ -16,6 +16,8 @@ using Windows.UI.Composition;
 using Windows.Media.Core;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.Media.Playback;
+using System.Numerics;
+
 namespace Mp3Player
 {
    
@@ -47,8 +49,46 @@ namespace Mp3Player
             {
                 mediaPlayer.Source = MediaSource.CreateFromStorageFile(file);
                 LoadedText.Text = file.Name;         
-                mediaPlayer.MediaPlayer.Play();
+              
             }
         }
+      
+        private void CreateOrUpdateSpringAnimation(float finalValue)
+        {
+            if (_springAnimation == null)
+            {
+                _springAnimation = _compositor.CreateSpringVector3Animation();
+                _springAnimation.Target = "Scale";
+            }
+
+            _springAnimation.FinalValue = new Vector3(finalValue);
+        }
+        Compositor _compositor = Window.Current.Compositor;
+        SpringVector3NaturalMotionAnimation _springAnimation;
+        private void Play_Click(object sender, RoutedEventArgs e)
+        {
+            mediaPlayer.MediaPlayer.Play();
+        }
+
+        private void Stop_Click(object sender, RoutedEventArgs e)
+        {
+            mediaPlayer.MediaPlayer.Pause();
+        }
+        private void element_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            
+            CreateOrUpdateSpringAnimation(1.5f);
+
+            (sender as UIElement).StartAnimation(_springAnimation);
+        }
+        private void element_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            
+            CreateOrUpdateSpringAnimation(1.0f);
+
+            (sender as UIElement).StartAnimation(_springAnimation);
+        }
+
+       
     }
 }
