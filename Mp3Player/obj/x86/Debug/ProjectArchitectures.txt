@@ -1,1 +1,1 @@
-E:\pulpit pliki\NAUKA\MOJE PROJEKTY\Mp3Player\Mp3Player.csproj;x86
+D:\MojeProjekty\My_Projects\Mp3Player\Mp3Player.csproj;x86

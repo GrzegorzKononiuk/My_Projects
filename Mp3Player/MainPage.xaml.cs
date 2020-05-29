@@ -17,12 +17,17 @@ using Windows.Media.Core;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.Media.Playback;
 using System.Numerics;
+using Microsoft.UI.Xaml.Controls;
+using System.Collections.ObjectModel;
+using Windows.Graphics.Printing3D;
 
 namespace Mp3Player
 {
-   
+    
     public sealed partial class MainPage : Page
     {
+
+    
         public MainPage()
         {
             this.InitializeComponent();
@@ -68,6 +73,8 @@ namespace Mp3Player
         private void Play_Click(object sender, RoutedEventArgs e)
         {
             mediaPlayer.MediaPlayer.Play();
+            Player.PlaybackRate = 1;
+            EnsurePlaying();
         }
 
         private void Stop_Click(object sender, RoutedEventArgs e)
@@ -88,7 +95,33 @@ namespace Mp3Player
 
             (sender as UIElement).StartAnimation(_springAnimation);
         }
+     
+        private void EnsurePlaying()
+        {
+            if (Stop.IsChecked.Value)
+            {
+                // Resume playing the animation, if paused.
+                Stop.IsChecked = false;
+            }
+            else
+            {
+                if (!Player.IsPlaying)
+                {
+                    // Play the animation at the currently specified playback rate.
+                    _ = Player.PlayAsync(fromProgress: 0, toProgress: 1, looped: false);
+                }
+            }
+        }
 
-       
+        private void PauseButton_Checked(object sender, RoutedEventArgs e)
+        {
+            Player.Pause();
+        }
+
+        private void PauseButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Player.Resume();
+        }
     }
+   
 }

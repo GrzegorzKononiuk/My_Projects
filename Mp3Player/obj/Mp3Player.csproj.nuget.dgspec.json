@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\pulpit pliki\\NAUKA\\MOJE PROJEKTY\\Mp3Player\\Mp3Player.csproj": {}
+    "D:\\MojeProjekty\\My_Projects\\Mp3Player\\Mp3Player.csproj": {}
   },
   "projects": {
-    "E:\\pulpit pliki\\NAUKA\\MOJE PROJEKTY\\Mp3Player\\Mp3Player.csproj": {
+    "D:\\MojeProjekty\\My_Projects\\Mp3Player\\Mp3Player.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\pulpit pliki\\NAUKA\\MOJE PROJEKTY\\Mp3Player\\Mp3Player.csproj",
+        "projectUniqueName": "D:\\MojeProjekty\\My_Projects\\Mp3Player\\Mp3Player.csproj",
         "projectName": "Mp3Player",
-        "projectPath": "E:\\pulpit pliki\\NAUKA\\MOJE PROJEKTY\\Mp3Player\\Mp3Player.csproj",
+        "projectPath": "D:\\MojeProjekty\\My_Projects\\Mp3Player\\Mp3Player.csproj",
         "packagesPath": "C:\\Users\\bezre\\.nuget\\packages\\",
-        "outputPath": "E:\\pulpit pliki\\NAUKA\\MOJE PROJEKTY\\Mp3Player\\obj\\",
+        "outputPath": "D:\\MojeProjekty\\My_Projects\\Mp3Player\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -46,6 +46,10 @@
             "Microsoft.UI.Xaml": {
               "target": "Package",
               "version": "[2.4.0, )"
+            },
+            "Win2D.uwp": {
+              "target": "Package",
+              "version": "[1.25.0, )"
             }
           },
           "imports": [
