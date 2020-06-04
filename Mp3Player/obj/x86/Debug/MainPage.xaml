@@ -8,42 +8,111 @@
     xmlns:l="using:Mp3Player"
     mc:Ignorable="d"
     Background="Black">
-    
-   
+    <Page.Resources>
+
+        <Storyboard x:ConnectionId='2' x:Name="MyStory">
+            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="27"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="121.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="121.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="70.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05" Value="-114"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06" Value="-4.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07" Value="6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="72"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-112.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-112.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="-55.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05" Value="-112.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07" Value="73.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" EnableDependentAnimation="True" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(Rectangle.RadiusY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="48"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="49.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05" Value="40"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06" Value="43.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07" Value="48"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" EnableDependentAnimation="True" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(Rectangle.RadiusX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="48"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="49.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05" Value="40"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06" Value="43.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07" Value="48"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" EnableDependentAnimation="True" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.528"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="0.454"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="0.99"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames RepeatBehavior="Forever" EnableDependentAnimation="True" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.StartPoint)">
+                <EasingPointKeyFrame KeyTime="00:00:00" Value="0.5,0"/>
+                <EasingPointKeyFrame KeyTime="00:00:01" Value="-0.056,0.059"/>
+                <EasingPointKeyFrame KeyTime="00:00:02" Value="0.5,0"/>
+                <EasingPointKeyFrame KeyTime="00:00:03" Value="0.5,0"/>
+                <EasingPointKeyFrame KeyTime="00:00:04" Value="0.658,0.641"/>
+                <EasingPointKeyFrame KeyTime="00:00:05" Value="0.5,0"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames RepeatBehavior="Forever" EnableDependentAnimation="True" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.EndPoint)">
+                <EasingPointKeyFrame KeyTime="00:00:00" Value="0.5,1"/>
+                <EasingPointKeyFrame KeyTime="00:00:01" Value="1.056,0.941"/>
+                <EasingPointKeyFrame KeyTime="00:00:02" Value="0.5,1"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" EnableDependentAnimation="True" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="0.515"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05" Value="0.485"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06" Value="0.485"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07" Value="0.913"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
 
     <StackPanel Height="900" Width="1400" Background="Blue">
         <Grid Height="122" Margin="20">
-            <TextBlock x:ConnectionId='6' 
+            <TextBlock x:ConnectionId='7' 
                 x:Name="LoadedText" 
                 TextWrapping="Wrap"
                 FontSize="24"
                 TextAlignment="Center"
                 Text=""/>
-         
-            <MediaPlayerElement x:ConnectionId='7' x:Name="mediaPlayer"/>
+
+            <MediaPlayerElement x:ConnectionId='8' x:Name="mediaPlayer"/>
         </Grid>
-                    <!-- Animation Theme-->
+        <!-- Animation Theme-->
         <Grid>
-            <Border Width="400" Height="400"
-                    BorderBrush="{ThemeResource ToolTipBorderThemeBrush}"
-                    BorderThickness="5"
-                    Background="LightGray"
-                    Margin="0, 0, 0, 0">
+            <Rectangle 
+                Width="400" 
+                Height="400"
+                Margin="0, 0, 0, 0" Fill="#FF973D3D">
 
-                    <!--  AnimatedVisualPlayer  -->
-                    <muxc:AnimatedVisualPlayer x:ConnectionId='5' x:Name="Player" AutoPlay="False">
-                        
-                        <!--  Codegen-ed Lottie animation source: /AnimatedVisuals/LottieLogo1.cs -->
-                        <l:LottieLogo1/>
 
-                    </muxc:AnimatedVisualPlayer>
-            </Border>
-            
+            </Rectangle>
+            <Rectangle x:ConnectionId='6' x:Name="___Rectangle_Anim" HorizontalAlignment="Left" Height="99" Margin="636,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="96" RadiusX="48" RadiusY="48" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.RenderTransform>
+                    <CompositeTransform/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
         </Grid>
-        
+
         <Grid Margin="22" HorizontalAlignment="Stretch" >
             <RelativePanel Width="122">
-                <Button x:ConnectionId='3' 
+                <Button x:ConnectionId='4' 
                     x:Name="Play" 
                     Content="Play"
                                                             
@@ -51,22 +120,21 @@
                     RelativePanel.AlignLeftWithPanel="True" 
                     HorizontalAlignment="Stretch"
                                        />
-                <ToggleButton x:ConnectionId='4' x:Name="Stop" 
+                <ToggleButton x:ConnectionId='5' x:Name="Stop" 
                     Content="Stop"
-                                                 
-                                                     
+                  
                                                             
                                                           
                     RelativePanel.AlignRightWithPanel="True" HorizontalAlignment="Stretch"
                                        />
-             </RelativePanel>
+            </RelativePanel>
         </Grid>
-        <Button x:ConnectionId='2' 
+        <Button x:ConnectionId='3' 
             Content="Choose file" 
             HorizontalAlignment="Center"
             Margin="10" Width="222" 
                                 />
-      
-     </StackPanel>
+
+    </StackPanel>
 </Page>
 

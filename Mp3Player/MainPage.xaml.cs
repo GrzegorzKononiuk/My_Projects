@@ -26,8 +26,6 @@ namespace Mp3Player
     
     public sealed partial class MainPage : Page
     {
-
-    
         public MainPage()
         {
             this.InitializeComponent();
@@ -73,13 +71,14 @@ namespace Mp3Player
         private void Play_Click(object sender, RoutedEventArgs e)
         {
             mediaPlayer.MediaPlayer.Play();
-            Player.PlaybackRate = 1;
-            EnsurePlaying();
+            MyStory.Begin();
+           
         }
 
         private void Stop_Click(object sender, RoutedEventArgs e)
         {
             mediaPlayer.MediaPlayer.Pause();
+            MyStory.Pause();
         }
         private void element_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
@@ -96,32 +95,6 @@ namespace Mp3Player
             (sender as UIElement).StartAnimation(_springAnimation);
         }
      
-        private void EnsurePlaying()
-        {
-            if (Stop.IsChecked.Value)
-            {
-                // Resume playing the animation, if paused.
-                Stop.IsChecked = false;
-            }
-            else
-            {
-                if (!Player.IsPlaying)
-                {
-                    // Play the animation at the currently specified playback rate.
-                    _ = Player.PlayAsync(fromProgress: 0, toProgress: 1, looped: false);
-                }
-            }
-        }
-
-        private void PauseButton_Checked(object sender, RoutedEventArgs e)
-        {
-            Player.Pause();
-        }
-
-        private void PauseButton_Unchecked(object sender, RoutedEventArgs e)
-        {
-            Player.Resume();
-        }
     }
    
 }
