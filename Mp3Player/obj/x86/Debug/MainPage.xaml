@@ -9,7 +9,6 @@
     mc:Ignorable="d"
     Background="Black">
     <Page.Resources>
-
         <Storyboard x:ConnectionId='2' x:Name="MyStory">
             <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-9"/>
@@ -77,26 +76,44 @@
     </Page.Resources>
 
     <StackPanel Height="900" Width="1400" Background="Blue">
+        
         <Grid Height="122" Margin="20">
-            <TextBlock x:ConnectionId='7' 
+            <TextBlock x:ConnectionId='9' 
                 x:Name="LoadedText" 
                 TextWrapping="Wrap"
                 FontSize="24"
                 TextAlignment="Center"
                 Text=""/>
-
-            <MediaPlayerElement x:ConnectionId='8' x:Name="mediaPlayer"/>
+            <MediaPlayerElement x:ConnectionId='10' x:Name="mediaPlayer"/>
         </Grid>
-        <!-- Animation Theme-->
+        
         <Grid>
-            <Rectangle 
-                Width="400" 
-                Height="400"
-                Margin="0, 0, 0, 0" Fill="#FF973D3D">
-
-
-            </Rectangle>
-            <Rectangle x:ConnectionId='6' x:Name="___Rectangle_Anim" HorizontalAlignment="Left" Height="99" Margin="636,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="96" RadiusX="48" RadiusY="48" RenderTransformOrigin="0.5,0.5">
+            <StackPanel x:ConnectionId='6' x:Name="myStackPanel" Width="350" Height="350" Background="Red">
+                <StackPanel.Resources>
+                    <Storyboard x:ConnectionId='8' x:Name="colorStoryboard">
+                        <!-- WIEKSZA ILOSC KOLOROW PATRZ LINK-->
+                        <ColorAnimationUsingKeyFrames RepeatBehavior="Forever" 
+                            Storyboard.TargetName="myStackPanel" 
+                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                            <LinearColorKeyFrame Value="Blue" KeyTime="00:00:01"/>
+                            <LinearColorKeyFrame Value="Red" KeyTime="00:00:02"/>
+                            <LinearColorKeyFrame Value="Green" KeyTime="00:00:03"/>
+                            
+                        </ColorAnimationUsingKeyFrames>
+                    </Storyboard>
+                </StackPanel.Resources>
+            </StackPanel>
+            <Rectangle x:ConnectionId='7' 
+                x:Name="___Rectangle_Anim" 
+                HorizontalAlignment="Left" 
+                Height="99" 
+                Margin="636,0,0,0" 
+                Stroke="Black" 
+                VerticalAlignment="Center"
+                Width="96" 
+                RadiusX="48" 
+                RadiusY="48" 
+                RenderTransformOrigin="0.5,0.5">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>
@@ -107,8 +124,7 @@
                     <CompositeTransform/>
                 </Rectangle.RenderTransform>
             </Rectangle>
-
-        </Grid>
+         </Grid>
 
         <Grid Margin="22" HorizontalAlignment="Stretch" >
             <RelativePanel Width="122">
@@ -120,21 +136,20 @@
                     RelativePanel.AlignLeftWithPanel="True" 
                     HorizontalAlignment="Stretch"
                                        />
-                <ToggleButton x:ConnectionId='5' x:Name="Stop" 
+                <ToggleButton x:ConnectionId='5' 
+                    x:Name="Stop" 
                     Content="Stop"
-                  
                                                             
                                                           
                     RelativePanel.AlignRightWithPanel="True" HorizontalAlignment="Stretch"
                                        />
             </RelativePanel>
         </Grid>
-        <Button x:ConnectionId='3' 
-            Content="Choose file" 
-            HorizontalAlignment="Center"
-            Margin="10" Width="222" 
-                                />
-
+                <Button x:ConnectionId='3' 
+                    Content="Choose file" 
+                    HorizontalAlignment="Center"
+                    Margin="10" Width="222" 
+                                        />
     </StackPanel>
 </Page>
 

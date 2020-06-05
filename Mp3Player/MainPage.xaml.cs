@@ -72,6 +72,7 @@ namespace Mp3Player
         {
             mediaPlayer.MediaPlayer.Play();
             MyStory.Begin();
+            colorStoryboard.Begin();
            
         }
 
@@ -79,6 +80,7 @@ namespace Mp3Player
         {
             mediaPlayer.MediaPlayer.Pause();
             MyStory.Pause();
+            colorStoryboard.Pause();
         }
         private void element_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
@@ -94,7 +96,8 @@ namespace Mp3Player
 
             (sender as UIElement).StartAnimation(_springAnimation);
         }
-     
+
+       
     }
    
 }

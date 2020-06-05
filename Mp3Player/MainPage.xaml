@@ -9,7 +9,6 @@
     mc:Ignorable="d"
     Background="Black">
     <Page.Resources>
-
         <Storyboard x:Name="MyStory">
             <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-9"/>
@@ -77,6 +76,7 @@
     </Page.Resources>
 
     <StackPanel Height="900" Width="1400" Background="Blue">
+        
         <Grid Height="122" Margin="20">
             <TextBlock 
                 x:Name="LoadedText" 
@@ -84,19 +84,36 @@
                 FontSize="24"
                 TextAlignment="Center"
                 Text=""/>
-
             <MediaPlayerElement x:Name="mediaPlayer"/>
         </Grid>
-        <!-- Animation Theme-->
+        
         <Grid>
+            <StackPanel x:Name="myStackPanel" Width="350" Height="350" Background="Red">
+                <StackPanel.Resources>
+                    <Storyboard x:Name="colorStoryboard">
+                        <!-- WIEKSZA ILOSC KOLOROW PATRZ LINK-->
+                        <ColorAnimationUsingKeyFrames RepeatBehavior="Forever" 
+                            Storyboard.TargetName="myStackPanel" 
+                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                            <LinearColorKeyFrame Value="Blue" KeyTime="00:00:01"/>
+                            <LinearColorKeyFrame Value="Red" KeyTime="00:00:02"/>
+                            <LinearColorKeyFrame Value="Green" KeyTime="00:00:03"/>
+                            
+                        </ColorAnimationUsingKeyFrames>
+                    </Storyboard>
+                </StackPanel.Resources>
+            </StackPanel>
             <Rectangle 
-                Width="400" 
-                Height="400"
-                Margin="0, 0, 0, 0" Fill="#FF973D3D">
-
-
-            </Rectangle>
-            <Rectangle x:Name="___Rectangle_Anim" HorizontalAlignment="Left" Height="99" Margin="636,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="96" RadiusX="48" RadiusY="48" RenderTransformOrigin="0.5,0.5">
+                x:Name="___Rectangle_Anim" 
+                HorizontalAlignment="Left" 
+                Height="99" 
+                Margin="636,0,0,0" 
+                Stroke="Black" 
+                VerticalAlignment="Center"
+                Width="96" 
+                RadiusX="48" 
+                RadiusY="48" 
+                RenderTransformOrigin="0.5,0.5">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>
@@ -107,8 +124,7 @@
                     <CompositeTransform/>
                 </Rectangle.RenderTransform>
             </Rectangle>
-
-        </Grid>
+         </Grid>
 
         <Grid Margin="22" HorizontalAlignment="Stretch" >
             <RelativePanel Width="122">
@@ -120,20 +136,19 @@
                     RelativePanel.AlignLeftWithPanel="True" 
                     HorizontalAlignment="Stretch"
                     Click="Play_Click" />
-                <ToggleButton x:Name="Stop" 
+                <ToggleButton 
+                    x:Name="Stop" 
                     Content="Stop"
-                  
                     PointerEntered="element_PointerEntered" 
                     PointerExited="element_PointerExited" 
                     RelativePanel.AlignRightWithPanel="True" HorizontalAlignment="Stretch"
                     Click="Stop_Click" />
             </RelativePanel>
         </Grid>
-        <Button 
-            Content="Choose file" 
-            HorizontalAlignment="Center"
-            Margin="10" Width="222" 
-            Click="Button_Click"/>
-
+                <Button 
+                    Content="Choose file" 
+                    HorizontalAlignment="Center"
+                    Margin="10" Width="222" 
+                    Click="Button_Click"/>
     </StackPanel>
 </Page>
