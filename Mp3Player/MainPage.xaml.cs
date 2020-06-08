@@ -20,6 +20,9 @@ using System.Numerics;
 using Microsoft.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
 using Windows.Graphics.Printing3D;
+using System.ServiceModel.Channels;
+using Windows.UI.Popups;
+using System.Runtime.Serialization;
 
 namespace Mp3Player
 {
@@ -68,19 +71,41 @@ namespace Mp3Player
         }
         Compositor _compositor = Window.Current.Compositor;
         SpringVector3NaturalMotionAnimation _springAnimation;
-        private void Play_Click(object sender, RoutedEventArgs e)
+        private async void Play_Click(object sender, RoutedEventArgs e)
         {
-            mediaPlayer.MediaPlayer.Play();
-            MyStory.Begin();
-            colorStoryboard.Begin();
+            //if(mediaPlayer.MediaPlayer.Play() == null)
+            try 
+            {
+                
+                mediaPlayer.MediaPlayer.Play();
+                MyStory.Begin();
+                colorStoryboard.Begin();
+            }
+            catch(NullReferenceException ex)
+            {
+                string message = ex.Message;
+                var messageDialog = new MessageDialog(message, "Choose File First !");
+                await messageDialog.ShowAsync();
+            }
+            
+            
            
-        }
+         }
 
-        private void Stop_Click(object sender, RoutedEventArgs e)
+        private async void Stop_Click(object sender, RoutedEventArgs e)
         {
-            mediaPlayer.MediaPlayer.Pause();
-            MyStory.Pause();
-            colorStoryboard.Pause();
+            try
+            {
+                mediaPlayer.MediaPlayer.Pause();
+                MyStory.Pause();
+                colorStoryboard.Pause();
+            }
+            catch (NullReferenceException ex)
+            {
+                string message = ex.Message;
+                var messageDialog = new MessageDialog(message, "Choose File First !");
+                await messageDialog.ShowAsync();
+            }
         }
         private void element_PointerEntered(object sender, PointerRoutedEventArgs e)
         {

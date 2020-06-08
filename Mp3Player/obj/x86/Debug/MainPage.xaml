@@ -7,7 +7,8 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls" 
     xmlns:l="using:Mp3Player"
     mc:Ignorable="d"
-    Background="Black">
+    Width="600"
+    Height="650">
     <Page.Resources>
         <Storyboard x:ConnectionId='2' x:Name="MyStory">
             <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetName="___Rectangle_Anim" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
@@ -75,7 +76,7 @@
         </Storyboard>
     </Page.Resources>
 
-    <StackPanel Height="900" Width="1400" Background="Blue">
+    <StackPanel Height="700" Width="600" Background="Blue">
         
         <Grid Height="122" Margin="20">
             <TextBlock x:ConnectionId='9' 
@@ -89,6 +90,22 @@
         
         <Grid>
             <StackPanel x:ConnectionId='6' x:Name="myStackPanel" Width="350" Height="350" Background="Red">
+                <Rectangle x:ConnectionId='7' 
+                x:Name="___Rectangle_Anim" 
+                Stroke="Black" 
+                RadiusX="48" 
+                RadiusY="48" 
+                RenderTransformOrigin="0.5,0.5" Height="100" Width="121">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                    <Rectangle.RenderTransform>
+                        <CompositeTransform/>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
                 <StackPanel.Resources>
                     <Storyboard x:ConnectionId='8' x:Name="colorStoryboard">
                         <!-- WIEKSZA ILOSC KOLOROW PATRZ LINK-->
@@ -103,27 +120,7 @@
                     </Storyboard>
                 </StackPanel.Resources>
             </StackPanel>
-            <Rectangle x:ConnectionId='7' 
-                x:Name="___Rectangle_Anim" 
-                HorizontalAlignment="Left" 
-                Height="99" 
-                Margin="636,0,0,0" 
-                Stroke="Black" 
-                VerticalAlignment="Center"
-                Width="96" 
-                RadiusX="48" 
-                RadiusY="48" 
-                RenderTransformOrigin="0.5,0.5">
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="White" Offset="1"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-                <Rectangle.RenderTransform>
-                    <CompositeTransform/>
-                </Rectangle.RenderTransform>
-            </Rectangle>
+            
          </Grid>
 
         <Grid Margin="22" HorizontalAlignment="Stretch" >
