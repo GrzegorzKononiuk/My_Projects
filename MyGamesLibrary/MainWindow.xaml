@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGamesLibrary"
         mc:Ignorable="d"
-        Title="MainWindow" WindowState="Maximized" WindowStyle="SingleBorderWindow">
-
-    <Grid>
+        Title="My Games Library" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+    
+    <Window.Resources>
+        <local:SortTypeManager x:Key="sortTypeManager"/>
+    </Window.Resources>
+    
+    <Grid DataContext="{StaticResource ResourceKey=sortTypeManager}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
@@ -18,7 +22,10 @@
             <RowDefinition Height="0.2*" />
         </Grid.RowDefinitions>
         
-        <ListView Grid.Column="0">List of Queriees</ListView>
+        <ListView Grid.Column="0" ItemsSource="{Binding SortQueries}">Sort List
+            
+          
+        </ListView>
         
         
         <Button Grid.Column="1">Button 2</Button>
