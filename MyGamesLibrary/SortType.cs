@@ -8,7 +8,6 @@ using System.Windows.Media.Imaging;
 using System.Windows;
 namespace MyGamesLibrary
 {
-
     class SortType
     {
 
@@ -20,5 +19,7 @@ namespace MyGamesLibrary
             Title = title;
             Image = image;
         }
+
+        
     }
 }

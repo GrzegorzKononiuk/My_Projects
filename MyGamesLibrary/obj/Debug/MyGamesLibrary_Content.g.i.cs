@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_b.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_bl.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_g.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_o.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_r.png")]
 
 

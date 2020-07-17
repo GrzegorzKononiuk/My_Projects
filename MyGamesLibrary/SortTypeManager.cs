@@ -4,17 +4,36 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace MyGamesLibrary
 {
     class SortTypeManager
     {
-        public ObservableCollection<SortType> SortQueries;
+        
+        public ObservableCollection<SortType> SortQueries { get; private set; }
 
-        //STWORZYC LISTE ZAPYTAN 
-        //(SHOW ALL GAMES, PLAYEYD < 50 HOURS / > 50 hours, PLATFORM, PRICE < 50 zl / PRICE > 50 ZL, TYPE)
+        public SortTypeManager()
+        {
+            ShowQueries();
+        }
 
-        //NASTEPNIE W XAML LISTVIEW ZROBIC CLICKED SINGLE ITD
+        private void ShowQueries()
+        {
+            SortQueries = new ObservableCollection<SortType>
+            {
+                new SortType("Show all Games", CreateImage("dot.png")),
+            };
+        }
+        
+        public BitmapImage CreateImage(string imageName)
+        {
+            var uri = new Uri(imageName, UriKind.RelativeOrAbsolute);
+            return new BitmapImage(uri);
 
+        }
+      
+      
     }
 }
