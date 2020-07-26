@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Game.cs" />
     <Compile Include="SortType.cs" />
     <Compile Include="SortTypeManager.cs" />
     <Page Include="MainWindow.xaml">
@@ -98,6 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dot_b.png" />
+    <Resource Include="dot_bl.png" />
+    <Resource Include="dot_g.png" />
+    <Resource Include="dot_o.png" />
+    <Resource Include="dot_r.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

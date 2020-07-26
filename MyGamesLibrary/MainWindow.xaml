@@ -20,13 +20,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"  />
             <RowDefinition Height="0.2*" />
-        </Grid.RowDefinitions>
+         </Grid.RowDefinitions>
 
-        <ListView ItemsSource="{Binding SortQueries}" SelectedIndex="0">
+        <ListView ItemsSource="{Binding SortQueries}" SelectionChanged="ListView_SelectionChanged" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <!-- z Gridem cos pokombinowac-->
-                    <Grid HorizontalAlignment="Center">
+                   <Grid HorizontalAlignment="Center">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
@@ -40,6 +39,16 @@
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView Grid.Column="1" ItemsSource="{Binding CurrentQuery}" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>   
         </ListView>
      </Grid>
 </Window>

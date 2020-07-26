@@ -20,15 +20,23 @@ namespace MyGamesLibrary
     /// </summary>
     public partial class MainWindow : Window
     {
+        SortTypeManager sortTypeManager;
        
         public MainWindow()
         {
             InitializeComponent();
+
+            sortTypeManager = FindResource("sortTypeManager") as SortTypeManager;
+            sortTypeManager.UpdateQueryResults(sortTypeManager.SortQueries[0]);
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if (e.AddedItems.Count >= 1 && e.AddedItems[0] is SortType)
+            {
+                sortTypeManager.CurrentQuery.Clear();
+                sortTypeManager.UpdateQueryResults(e.AddedItems[0] as SortType);
+            }
         }
     }
 }
