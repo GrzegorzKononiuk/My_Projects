@@ -8,6 +8,7 @@ namespace MyGamesLibrary
 {
     class Game
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int HoursPlayed { get; set; }
         public string Platfrom { get; set; }

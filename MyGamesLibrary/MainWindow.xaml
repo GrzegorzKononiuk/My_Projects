@@ -50,5 +50,18 @@
                 </DataTemplate>
             </ListView.ItemTemplate>   
         </ListView>
-     </Grid>
+
+
+        <ListView Grid.Column="2" ItemsSource="{Binding CurrentQuery}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Hours}" />
+                       
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </Window>
