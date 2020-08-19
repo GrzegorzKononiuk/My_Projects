@@ -59,7 +59,7 @@ namespace MyGamesLibrary
             switch (Title)
             {
                 case "Show all Games": ShowAllGames(); break;
-                case "Played > 50h": HoursPlayed(); break;
+                case "Played > 50h": HoursPlayedSorting(); break;
                 
             }
         }
@@ -91,52 +91,66 @@ namespace MyGamesLibrary
                    new Game
                 {
                     Id = 3,
-                    Name = "Watch Dogs",
-                    HoursPlayed= 122,
-                    Platfrom = "Uplay",
-                    Cost = 11,
+                    Name = "Gothic",
+                    HoursPlayed= 55,
+                    Platfrom = "Gog",
+                    Cost = 47,
+                    //Image = CreateImage("dot.png"),
+                },
+                    new Game
+                {
+                    Id = 4,
+                    Name = "Gothic",
+                    HoursPlayed= 45,
+                    Platfrom = "Gog",
+                    Cost = 47,
+                    //Image = CreateImage("dot.png"),
+                },
+                   new Game
+                {
+                    Id = 5,
+                    Name = "BioShock",
+                    HoursPlayed= 56,
+                    Platfrom = "Gog",
+                    Cost = 91,
+                    //Image = CreateImage("dot.png"),
+                },
+                   new Game
+                {
+                    Id = 6,
+                    Name = "Lord of The Rings",
+                    HoursPlayed= 72,
+                    Platfrom = "Steam",
+                    Cost = 22,
                     //Image = CreateImage("dot.png"),
                 }
-            };
+
+        };
            
         }
 
         
-        private static Dictionary<int, decimal> GetPrice()
+        private void HoursPlayedSorting()
         {
-            return new Dictionary<int, decimal>
-            {
-                {1, 43M}, {2, 83M}, {3, 63M}
-            };
            
+            IEnumerable<Game> games = BuildCatalog();
+            Dictionary<int, Game> dictionary = games.ToDictionary(p => p.Id);
+           
+            var sortedStudents = from s in dictionary
+                                 orderby s.Value.HoursPlayed
+                                 where s.Value.HoursPlayed > 50
+                                 select new
+                                 {
+                                    
+                                     Name = s.Value.Name,
+                                     Hours = s.Value.HoursPlayed
+                                 };
+
+            sortedStudents.ToList().ForEach(s => Console.WriteLine("Game Name: {0}, Hours Spend in Game: {1}h,", s.Name, s.Hours));
+
         }
 
-        //private void ExpensiveComics()
-        public void HoursPlayed()
-        {
-            IEnumerable <Game> games = BuildCatalog();
-            Dictionary<int, decimal> values = GetPrice();
-
-            var mostPlayed = from game in games
-                                where values[game.Id] < 78
-                                orderby values[game.Id] descending
-                                select game;
-
-            CurrentQuery.Clear();
-            foreach (Game game in mostPlayed)
-                CurrentQuery.Add(
-                    new
-                    {
-                        Title = String.Format("{0} Time Spend in Game: " + game.HoursPlayed,
-                                                      game.Name, values[game.Id])
-                        //PODOAWAC JESZCZE PARE GIER ZEBY ROZNICE WYCHWYCIC CYZDOBRZE DZIALA
-                        //TIME SPEND IN GAME ITD MA BYC W TRZECIEJ KOLUMNIE
-                        //PAMIETJA ZE ROBISZ TERAZ  QUERY "PLAYED > 50H"
-                    }
-
-               );
-        }
-
+      
         public void ShowAllGames()
         {
           foreach(Game game in BuildCatalog())
