@@ -50,8 +50,6 @@ namespace MyGamesLibrary
 
         }
 
-      
-
         public void UpdateQueryResults(SortType sortType)
         {
             Title = sortType.Title;
@@ -59,7 +57,8 @@ namespace MyGamesLibrary
             switch (Title)
             {
                 case "Show all Games": ShowAllGames(); break;
-                case "Played > 50h": HoursPlayedSorting(); break;
+                case "Played > 50h": HoursPlayedMoreThan50(); break;
+                case "Played < 50h": HoursPlayedLessThan50(); break;
                 
             }
         }
@@ -91,7 +90,7 @@ namespace MyGamesLibrary
                    new Game
                 {
                     Id = 3,
-                    Name = "Gothic",
+                    Name = "Pathologic",
                     HoursPlayed= 55,
                     Platfrom = "Gog",
                     Cost = 47,
@@ -103,7 +102,7 @@ namespace MyGamesLibrary
                     Name = "Gothic",
                     HoursPlayed= 45,
                     Platfrom = "Gog",
-                    Cost = 47,
+                    Cost = 41,
                     //Image = CreateImage("dot.png"),
                 },
                    new Game
@@ -129,28 +128,40 @@ namespace MyGamesLibrary
            
         }
 
+        private void HoursPlayedLessThan50()
+        {
+
+        }
         
-        private void HoursPlayedSorting()
+        private void HoursPlayedMoreThan50()
         {
            
             IEnumerable<Game> games = BuildCatalog();
             Dictionary<int, Game> dictionary = games.ToDictionary(p => p.Id);
            
-            var sortedStudents = from s in dictionary
+            var sortedGames = from s in dictionary
                                  orderby s.Value.HoursPlayed
                                  where s.Value.HoursPlayed > 50
-                                 select new
+                                 select new Game
                                  {
                                     
                                      Name = s.Value.Name,
-                                     Hours = s.Value.HoursPlayed
+                                     HoursPlayed = s.Value.HoursPlayed
                                  };
 
-            sortedStudents.ToList().ForEach(s => Console.WriteLine("Game Name: {0}, Hours Spend in Game: {1}h,", s.Name, s.Hours));
-
+            foreach(Game game in sortedGames)
+            {
+                CurrentQuery.Add
+                    (
+                        new
+                        {
+                            Title = String.Format("Game Name: {0},", game.Name),
+                            Hours = String.Format("Hours Spend in Game: {0},", game.HoursPlayed),
+                        }
+                    );
+            }
         }
 
-      
         public void ShowAllGames()
         {
           foreach(Game game in BuildCatalog())
@@ -161,15 +172,9 @@ namespace MyGamesLibrary
                     Hours = game.HoursPlayed,
                     DigitalPlatform = game.Platfrom,
                     Price = game.Cost
-
-
                 };
                 CurrentQuery.Add(result);
           }
         }
-
- 
-
-      
     }
 }
