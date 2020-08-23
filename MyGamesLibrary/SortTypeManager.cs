@@ -57,8 +57,10 @@ namespace MyGamesLibrary
             switch (Title)
             {
                 case "Show all Games": ShowAllGames(); break;
-                case "Played > 50h": HoursPlayedMoreThan50(); break;
                 case "Played < 50h": HoursPlayedLessThan50(); break;
+                case "Played > 50h": HoursPlayedMoreThan50(); break;
+                case "Platfrom": SortByPlatform(); break;
+               
                 
             }
         }
@@ -127,12 +129,51 @@ namespace MyGamesLibrary
         };
            
         }
-
-        private void HoursPlayedLessThan50()
+        
+        public void ShowAllGames()
         {
+            foreach (Game game in BuildCatalog())
+            {
+                var result = new
+                {
+                    Title = game.Name,
 
+                    DigitalPlatform = game.Platfrom,
+                    Price = game.Cost
+                };
+                CurrentQuery.Add(result);
+            }
         }
         
+        private void HoursPlayedLessThan50()
+        {
+            IEnumerable<Game> games = BuildCatalog();
+            Dictionary<int, Game> dictionary = games.ToDictionary(p => p.Id);
+
+            var sortedGames = from s in dictionary
+                              orderby s.Value.HoursPlayed
+                              where s.Value.HoursPlayed < 50
+                              select new Game
+                              {
+
+                                  Name = s.Value.Name,
+                                  HoursPlayed = s.Value.HoursPlayed
+                              };
+
+            foreach (Game game in sortedGames)
+            {
+                CurrentQuery.Add
+                    (
+                        new
+                        {
+                            Title = String.Format("Game Name: {0},", game.Name),
+                            Hours = String.Format("Hours Spend in Game: {0},", game.HoursPlayed),
+                        }
+                    );
+            }
+        }
+        
+
         private void HoursPlayedMoreThan50()
         {
            
@@ -161,20 +202,29 @@ namespace MyGamesLibrary
                     );
             }
         }
-
-        public void ShowAllGames()
+        //https://www.tutorialsteacher.com/codeeditor?cid=cs-RG85mz
+        private void SortByPlatform()
         {
-          foreach(Game game in BuildCatalog())
-          {
-                var result = new
-                {
-                    Title = game.Name,
-                    Hours = game.HoursPlayed,
-                    DigitalPlatform = game.Platfrom,
-                    Price = game.Cost
-                };
-                CurrentQuery.Add(result);
-          }
+            IEnumerable<Game> games = BuildCatalog();
+            Dictionary<int, Game> dictionary = games.ToDictionary(p => p.Id);
+
+            var sortPlatform = from s in games
+                               orderby s.Platfrom
+                               where s.Platfrom == "Steam"
+                               select new Game
+                               {
+
+                                   Name = s.Name,
+                                   Platfrom = s.Platfrom
+                               };
+
+            sortPlatform.ToList().ForEach(s => Console.WriteLine(s.Name , s.Platfrom));
+
+
+
+            //sortPlatform.ToList().ForEach(s => Console.WriteLine(s.));
         }
+
+
     }
 }
