@@ -9,6 +9,7 @@
     
     <Window.Resources>
         <local:SortTypeManager x:Key="sortTypeManager"/>
+        
     </Window.Resources>
     
     <Grid DataContext="{StaticResource ResourceKey=sortTypeManager}">
@@ -44,9 +45,16 @@
         <ListView Grid.Column="1" ItemsSource="{Binding CurrentQuery}" SelectionMode="Single">
             <ListView.ItemTemplate>
                 <DataTemplate>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                    <Image Source="{Binding Image}"></Image>
                     <StackPanel>
                         <TextBlock Text="{Binding Title}" />
                     </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>   
         </ListView>
@@ -57,8 +65,6 @@
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding Hours}" />
-                       
-
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

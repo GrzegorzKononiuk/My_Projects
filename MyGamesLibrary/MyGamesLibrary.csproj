@@ -107,5 +107,13 @@
     <Resource Include="dot_o.png" />
     <Resource Include="dot_r.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BioShock.png" />
+    <Resource Include="children.png" />
+    <Resource Include="Dishonored.png" />
+    <Resource Include="gothic.png" />
+    <Resource Include="Pathologic.png" />
+    <Resource Include="rings.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

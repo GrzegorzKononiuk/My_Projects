@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_b.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_bl.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_g.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_o.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dot_r.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bioshock.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("children.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dishonored.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gothic.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pathologic.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("rings.png")]
 
 

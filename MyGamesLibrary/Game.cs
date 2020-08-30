@@ -13,7 +13,7 @@ namespace MyGamesLibrary
         public int HoursPlayed { get; set; }
         public string Platfrom { get; set; }
         public int Cost { get; set; }
-        public BitmapImage Image { get; set; }
+        public BitmapImage Cover { get; set; }
 
     }
 }

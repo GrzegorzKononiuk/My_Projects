@@ -38,8 +38,7 @@ namespace MyGamesLibrary
                 new SortType("Played < 50h", CreateImage("dot_b.png")),
                 new SortType("Played > 50h", CreateImage("dot_g.png")),
                 new SortType("Platfrom", CreateImage("dot_bl.png")),
-                new SortType("Price < 20zl", CreateImage("dot_r.png")),
-                new SortType("Price > 20zl", CreateImage("dot_o.png")),
+               
             };
         }
         
@@ -60,11 +59,8 @@ namespace MyGamesLibrary
                 case "Played < 50h": HoursPlayedLessThan50(); break;
                 case "Played > 50h": HoursPlayedMoreThan50(); break;
                 case "Platfrom": SortByPlatform(); break;
-               
-                
             }
         }
-
 
         public IEnumerable<Game> BuildCatalog()
         {
@@ -77,7 +73,7 @@ namespace MyGamesLibrary
                     HoursPlayed= 22,
                     Platfrom = "Steam",
                     Cost = 33,
-                    //Image = CreateImage("dot.png"),
+                    Cover = CreateImage("Dishonored.png"),
                 },
 
                  new Game
@@ -137,9 +133,8 @@ namespace MyGamesLibrary
                 var result = new
                 {
                     Title = game.Name,
+                    Image = game.Cover
 
-                    DigitalPlatform = game.Platfrom,
-                    Price = game.Cost
                 };
                 CurrentQuery.Add(result);
             }
@@ -202,7 +197,7 @@ namespace MyGamesLibrary
                     );
             }
         }
-        //https://www.tutorialsteacher.com/codeeditor?cid=cs-RG85mz
+        
         private void SortByPlatform()
         {
             IEnumerable<Game> games = BuildCatalog();
@@ -210,7 +205,7 @@ namespace MyGamesLibrary
 
             var sortPlatform = from s in games
                                orderby s.Platfrom
-                               where s.Platfrom == "Steam"
+                               where s.Platfrom.Contains(s.Platfrom)
                                select new Game
                                {
 
@@ -218,11 +213,19 @@ namespace MyGamesLibrary
                                    Platfrom = s.Platfrom
                                };
 
-            sortPlatform.ToList().ForEach(s => Console.WriteLine(s.Name , s.Platfrom));
+            
+            foreach (Game game in sortPlatform)
+            {
+                CurrentQuery.Add
+                    (
+                        new
+                        {
+                            Title = String.Format("Game Name: {0},", game.Name),
+                            Hours = String.Format("Platform: {0},", game.Platfrom),
+                        }
+                    );
+            }
 
-
-
-            //sortPlatform.ToList().ForEach(s => Console.WriteLine(s.));
         }
 
 
