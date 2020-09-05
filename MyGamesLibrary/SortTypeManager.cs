@@ -83,7 +83,7 @@ namespace MyGamesLibrary
                     HoursPlayed= 76,
                     Platfrom = "Gog",
                     Cost = 41,
-                    //Image = CreateImage("dot.png"),
+                    Cover = CreateImage("children.png"),
                 },
                    new Game
                 {
@@ -92,7 +92,7 @@ namespace MyGamesLibrary
                     HoursPlayed= 55,
                     Platfrom = "Gog",
                     Cost = 47,
-                    //Image = CreateImage("dot.png"),
+                     Cover = CreateImage("Pathologic.png"),
                 },
                     new Game
                 {
@@ -101,7 +101,7 @@ namespace MyGamesLibrary
                     HoursPlayed= 45,
                     Platfrom = "Gog",
                     Cost = 41,
-                    //Image = CreateImage("dot.png"),
+                     Cover = CreateImage("gothic.png"),
                 },
                    new Game
                 {
@@ -110,8 +110,9 @@ namespace MyGamesLibrary
                     HoursPlayed= 56,
                     Platfrom = "Gog",
                     Cost = 91,
-                    //Image = CreateImage("dot.png"),
+                    Cover = CreateImage("BioShock.png"),
                 },
+                   /**
                    new Game
                 {
                     Id = 6,
@@ -119,8 +120,9 @@ namespace MyGamesLibrary
                     HoursPlayed= 72,
                     Platfrom = "Steam",
                     Cost = 22,
-                    //Image = CreateImage("dot.png"),
+                    //Cover = CreateImage("rings.png"),
                 }
+                   **/
 
         };
            
@@ -132,7 +134,7 @@ namespace MyGamesLibrary
             {
                 var result = new
                 {
-                    Title = game.Name,
+                    
                     Image = game.Cover
 
                 };
@@ -152,6 +154,7 @@ namespace MyGamesLibrary
                               {
 
                                   Name = s.Value.Name,
+                                  Cover = s.Value.Cover,
                                   HoursPlayed = s.Value.HoursPlayed
                               };
 
@@ -162,6 +165,7 @@ namespace MyGamesLibrary
                         new
                         {
                             Title = String.Format("Game Name: {0},", game.Name),
+                            Image = game.Cover,
                             Hours = String.Format("Hours Spend in Game: {0},", game.HoursPlayed),
                         }
                     );
@@ -182,6 +186,7 @@ namespace MyGamesLibrary
                                  {
                                     
                                      Name = s.Value.Name,
+                                     Cover = s.Value.Cover,
                                      HoursPlayed = s.Value.HoursPlayed
                                  };
 
@@ -192,6 +197,7 @@ namespace MyGamesLibrary
                         new
                         {
                             Title = String.Format("Game Name: {0},", game.Name),
+                            Image = game.Cover,
                             Hours = String.Format("Hours Spend in Game: {0},", game.HoursPlayed),
                         }
                     );
@@ -201,16 +207,18 @@ namespace MyGamesLibrary
         private void SortByPlatform()
         {
             IEnumerable<Game> games = BuildCatalog();
-            Dictionary<int, Game> dictionary = games.ToDictionary(p => p.Id);
+
+            // CO BY BYLO GDYBYM W KLASIE GAME MIAL public string NAMEOFIMAGES {getl; set}
+            
 
             var sortPlatform = from s in games
-                               orderby s.Platfrom
+                               orderby s.Platfrom, s.Cost
                                where s.Platfrom.Contains(s.Platfrom)
                                select new Game
                                {
-
-                                   Name = s.Name,
+                                   
                                    Platfrom = s.Platfrom
+                                   
                                };
 
             
@@ -220,8 +228,10 @@ namespace MyGamesLibrary
                     (
                         new
                         {
-                            Title = String.Format("Game Name: {0},", game.Name),
+                           
+                            //Image = CreateImage(imageName[1]),
                             Hours = String.Format("Platform: {0},", game.Platfrom),
+                            
                         }
                     );
             }
