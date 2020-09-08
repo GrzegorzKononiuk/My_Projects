@@ -72,6 +72,7 @@ namespace MyGamesLibrary
                     Name = "Dishonored",
                     HoursPlayed= 22,
                     Platfrom = "Steam",
+                    PlatformIcon = CreateImage("steam.png"),
                     Cost = 33,
                     Cover = CreateImage("Dishonored.png"),
                 },
@@ -82,6 +83,7 @@ namespace MyGamesLibrary
                     Name = "Chidren of Mortia",
                     HoursPlayed= 76,
                     Platfrom = "Gog",
+                    PlatformIcon = CreateImage("gog.png"),
                     Cost = 41,
                     Cover = CreateImage("children.png"),
                 },
@@ -90,7 +92,8 @@ namespace MyGamesLibrary
                     Id = 3,
                     Name = "Pathologic",
                     HoursPlayed= 55,
-                    Platfrom = "Gog",
+                    Platfrom = "Uplay",
+                    PlatformIcon = CreateImage("uplay.png"),
                     Cost = 47,
                      Cover = CreateImage("Pathologic.png"),
                 },
@@ -100,29 +103,21 @@ namespace MyGamesLibrary
                     Name = "Gothic",
                     HoursPlayed= 45,
                     Platfrom = "Gog",
+                    PlatformIcon = CreateImage("gog.png"),
                     Cost = 41,
-                     Cover = CreateImage("gothic.png"),
+                    Cover = CreateImage("gothic.png"),
                 },
                    new Game
                 {
                     Id = 5,
                     Name = "BioShock",
                     HoursPlayed= 56,
-                    Platfrom = "Gog",
+                    Platfrom = "Origin",
+                    PlatformIcon = CreateImage("origin.png"),
                     Cost = 91,
                     Cover = CreateImage("BioShock.png"),
                 },
-                   /**
-                   new Game
-                {
-                    Id = 6,
-                    Name = "Lord of The Rings",
-                    HoursPlayed= 72,
-                    Platfrom = "Steam",
-                    Cost = 22,
-                    //Cover = CreateImage("rings.png"),
-                }
-                   **/
+                   
 
         };
            
@@ -207,17 +202,18 @@ namespace MyGamesLibrary
         private void SortByPlatform()
         {
             IEnumerable<Game> games = BuildCatalog();
-
+            Dictionary<int, Game> dictionary = games.ToDictionary(p => p.Id);
             // CO BY BYLO GDYBYM W KLASIE GAME MIAL public string NAMEOFIMAGES {getl; set}
-            
 
-            var sortPlatform = from s in games
-                               orderby s.Platfrom, s.Cost
-                               where s.Platfrom.Contains(s.Platfrom)
+
+            var sortPlatform = from s in dictionary
+                               orderby s.Value.Platfrom
+                               where s.Value.Platfrom.Contains(s.Value.Platfrom)
                                select new Game
                                {
-                                   
-                                   Platfrom = s.Platfrom
+                                   Cover = s.Value.Cover,
+                                   PlatformIcon = s.Value.PlatformIcon,
+                                   Platfrom = s.Value.Platfrom
                                    
                                };
 
@@ -228,9 +224,9 @@ namespace MyGamesLibrary
                     (
                         new
                         {
-                           
-                            //Image = CreateImage(imageName[1]),
-                            Hours = String.Format("Platform: {0},", game.Platfrom),
+                            
+                            Image = game.Cover,
+                            Platform = game.PlatformIcon,
                             
                         }
                     );

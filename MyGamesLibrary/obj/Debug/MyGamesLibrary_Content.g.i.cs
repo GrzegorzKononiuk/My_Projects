@@ -8,11 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bioshock.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("children.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dishonored.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gothic.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pathologic.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("rings.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gog.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("origin.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("steam.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("uplay.png")]
 
 

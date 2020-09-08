@@ -115,5 +115,11 @@
     <Resource Include="Pathologic.png" />
     <Resource Include="rings.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gog.png" />
+    <Resource Include="origin.png" />
+    <Resource Include="steam.png" />
+    <Resource Include="uplay.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

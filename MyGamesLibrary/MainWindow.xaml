@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyGamesLibrary"
         mc:Ignorable="d"
-        Title="My Games Library" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+        Title="My Games Library" WindowState="Maximized" WindowStyle="SingleBorderWindow" >
     
     <Window.Resources>
         <local:SortTypeManager x:Key="sortTypeManager"/>
@@ -23,8 +23,8 @@
                 <Setter.Value>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                         <LinearGradientBrush.GradientStops>
-                            <GradientStop Offset="0.0" Color="#90DDDD" />
-                            <GradientStop Offset="1.0" Color="#5BFFFF" />
+                            <GradientStop Offset="0.0" Color="#000000" />
+                            <GradientStop Offset="1.0" Color="#000000" />
                         </LinearGradientBrush.GradientStops>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -42,7 +42,7 @@
             <RowDefinition Height="0.2*" />
          </Grid.RowDefinitions>
 
-        <ListView ItemsSource="{Binding SortQueries}" SelectionChanged="ListView_SelectionChanged" >
+        <ListView Background="Aqua"  ItemsSource="{Binding SortQueries}" SelectionChanged="ListView_SelectionChanged" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                    <Grid HorizontalAlignment="Left">
@@ -61,28 +61,30 @@
             </ListView.ItemTemplate>
         </ListView>
 
-
-        
-        <ListView Grid.Column="2" ItemsSource="{Binding CurrentQuery}">
+        <ListView Background="AntiqueWhite" Grid.Column="2" ItemsSource="{Binding CurrentQuery}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid HorizontalAlignment="Stretch">
+                    <Grid >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="233"/>
-                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
 
-                        <Border  BorderBrush="#FFDADFE1" Background="#FFECF0F1" BorderThickness="1" Height="120"  VerticalAlignment="Center">
+                        <Border BorderBrush="#FFDADFE1" Background="AntiqueWhite" BorderThickness="1" Height="120"  VerticalAlignment="Center">
                            
                             <Image Source="{Binding Image}"/>
                         </Border>
                         <StackPanel Grid.Column="2"  VerticalAlignment="Center">
                             <TextBlock Text="{Binding Hours}" Style="{StaticResource TitleText}" Name="textblock1"></TextBlock>
+                            <Image Source="{Binding Platform}"/>
                         </StackPanel>
-                    
+                     
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
+        <!-- NOWAL IST VIEW ROBIC TAK JAK GODZ DOLACZAJA SIE PO KLIKNIECIU TAK W TEJ LISCIE DO IMAGE DOLACZAJA SIE ICONY I HUJ !!!!-->
     </Grid>
 </Window>

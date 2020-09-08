@@ -14,6 +14,7 @@ namespace MyGamesLibrary
         public string Platfrom { get; set; }
         public int Cost { get; set; }
         public BitmapImage Cover { get; set; }
+        public BitmapImage PlatformIcon { get; set; }
 
     }
 }
