@@ -161,7 +161,7 @@ namespace MyGamesLibrary
                         {
                             Title = String.Format("Game Name: {0},", game.Name),
                             Image = game.Cover,
-                            Hours = String.Format("Hours Spend in Game: {0},", game.HoursPlayed),
+                            Hours = String.Format("Played(hours): {0},", game.HoursPlayed),
                         }
                     );
             }
@@ -193,7 +193,7 @@ namespace MyGamesLibrary
                         {
                             Title = String.Format("Game Name: {0},", game.Name),
                             Image = game.Cover,
-                            Hours = String.Format("Hours Spend in Game: {0},", game.HoursPlayed),
+                            Hours = String.Format("Played(hours): {0},", game.HoursPlayed),
                         }
                     );
             }

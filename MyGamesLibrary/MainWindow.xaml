@@ -10,9 +10,9 @@
     <Window.Resources>
         <local:SortTypeManager x:Key="sortTypeManager"/>
         <Style TargetType="TextBlock">
-            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="4"/>
         </Style>
 
         <Style BasedOn="{StaticResource {x:Type TextBlock}}"
@@ -64,27 +64,23 @@
         <ListView Background="AntiqueWhite" Grid.Column="2" ItemsSource="{Binding CurrentQuery}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid >
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="233"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="333"/>
                         </Grid.ColumnDefinitions>
-
                         <Border BorderBrush="#FFDADFE1" Background="AntiqueWhite" BorderThickness="1" Height="120"  VerticalAlignment="Center">
-                           
                             <Image Source="{Binding Image}"/>
                         </Border>
                         <StackPanel Grid.Column="2"  VerticalAlignment="Center">
                             <TextBlock Text="{Binding Hours}" Style="{StaticResource TitleText}" Name="textblock1"></TextBlock>
-                            <Image Source="{Binding Platform}"/>
+                            
+                            <Image Source="{Binding Platform}" Width="122"/>
                         </StackPanel>
-                     
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-        <!-- NOWAL IST VIEW ROBIC TAK JAK GODZ DOLACZAJA SIE PO KLIKNIECIU TAK W TEJ LISCIE DO IMAGE DOLACZAJA SIE ICONY I HUJ !!!!-->
-    </Grid>
+     </Grid>
 </Window>
