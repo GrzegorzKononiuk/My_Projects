@@ -1,0 +1,76 @@
+D:\MojeProjekty\My_Projects\MyGamesLibrary\bin\Debug\MyGamesLibrary.exe.config
+D:\MojeProjekty\My_Projects\MyGamesLibrary\bin\Debug\MyGamesLibrary.exe
+D:\MojeProjekty\My_Projects\MyGamesLibrary\bin\Debug\MyGamesLibrary.pdb
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MainWindow.g.cs
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\App.g.cs
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary_MarkupCompile.cache
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary_MarkupCompile.lref
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MainWindow.baml
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary.g.resources
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary.Properties.Resources.resources
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary.csproj.GenerateResource.cache
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary.csproj.CoreCompileInputs.cache
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary.exe
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary.pdb
+D:\MojeProjekty\My_Projects\MyGamesLibrary\obj\Debug\MyGamesLibrary.csprojAssemblyReference.cache
+D:\BRUDNOPIS\MyGamesLibrary\bin\Debug\MyGamesLibrary.exe.config
+D:\BRUDNOPIS\MyGamesLibrary\bin\Debug\MyGamesLibrary.exe
+D:\BRUDNOPIS\MyGamesLibrary\bin\Debug\MyGamesLibrary.pdb
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.csprojAssemblyReference.cache
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MainWindow.g.cs
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\App.g.cs
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary_MarkupCompile.cache
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary_MarkupCompile.lref
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MainWindow.baml
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.g.resources
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.Properties.Resources.resources
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.csproj.GenerateResource.cache
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.csproj.CoreCompileInputs.cache
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.exe
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.pdb
+D:\BRUDNOPIS\MyGamesLibrary\bin\Debug\Windows.winmd
+D:\BRUDNOPIS\MyGamesLibrary\obj\Debug\MyGamesLibrary.csproj.CopyComplete
+D:\BRUDNOPIS\MyGamesLibrary\bin\Debug\System.Runtime.WindowsRuntime.dll
+D:\BRUDNOPIS\MyGamesLibrary\bin\Debug\System.Runtime.WindowsRuntime.xml
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\bin\Debug\MyGamesLibrary.exe.config
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\bin\Debug\MyGamesLibrary.exe
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\bin\Debug\MyGamesLibrary.pdb
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\bin\Debug\System.Runtime.WindowsRuntime.dll
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\bin\Debug\Windows.winmd
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\bin\Debug\System.Runtime.WindowsRuntime.xml
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csprojAssemblyReference.cache
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MainWindow.g.cs
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\App.g.cs
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary_MarkupCompile.cache
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary_MarkupCompile.lref
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MainWindow.baml
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.g.resources
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.Properties.Resources.resources
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csproj.GenerateResource.cache
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csproj.CoreCompileInputs.cache
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csproj.CopyComplete
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.exe
+D:\BRUDNOPIS\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.pdb
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\bin\Debug\MyGamesLibrary.exe.config
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\bin\Debug\MyGamesLibrary.exe
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\bin\Debug\MyGamesLibrary.pdb
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\bin\Debug\System.Runtime.WindowsRuntime.dll
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\bin\Debug\Windows.winmd
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\bin\Debug\System.Runtime.WindowsRuntime.xml
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csprojAssemblyReference.cache
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MainWindow.g.cs
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\App.g.cs
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary_MarkupCompile.cache
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary_MarkupCompile.lref
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MainWindow.baml
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.g.resources
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.Properties.Resources.resources
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csproj.GenerateResource.cache
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csproj.CoreCompileInputs.cache
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.csproj.CopyComplete
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.exe
+D:\MojeProjekty\My_Projects\MyGamesLibrary (UWP CONVERTED)\obj\Debug\MyGamesLibrary.pdb
