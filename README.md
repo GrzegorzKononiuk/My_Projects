@@ -2,7 +2,7 @@
 
 Little projects for training skills:<br/>
 
-ShopingList <--- delegate, callback function + MVVM pattern<br/>
+ShopingList <--- MVVM + pattern delegate, callback function<br/>
 Mp3Player <---- Universal Windows Platform (async, await, task)<br/>
 My Games Library <---- LINQ<br/>
 TrainingDiary <---- compose strength training, modify, save it and generate it to TXT, PDF file or HEX view + ASP.NET + ITextSharp<br/>
