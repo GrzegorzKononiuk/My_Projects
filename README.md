@@ -1,7 +1,5 @@
 # My_Projects
 
-Little projects for training skills:<br/>
-
 ShopingList <--- MVVM + pattern delegate, callback function<br/>
 Mp3Player <---- Universal Windows Platform (async, await, task)<br/>
 My Games Library <---- LINQ<br/>
