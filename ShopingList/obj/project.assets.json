@@ -1557,11 +1557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MojeProjekty\\My_Projects\\ShopingList\\ShopingList.csproj",
+      "projectUniqueName": "D:\\My_Projects\\My_Projects\\ShopingList\\ShopingList.csproj",
       "projectName": "ShopingList",
-      "projectPath": "D:\\MojeProjekty\\My_Projects\\ShopingList\\ShopingList.csproj",
+      "projectPath": "D:\\My_Projects\\My_Projects\\ShopingList\\ShopingList.csproj",
       "packagesPath": "C:\\Users\\bezre\\.nuget\\packages\\",
-      "outputPath": "D:\\MojeProjekty\\My_Projects\\ShopingList\\obj\\",
+      "outputPath": "D:\\My_Projects\\My_Projects\\ShopingList\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

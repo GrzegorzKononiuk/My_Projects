@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WPrk+vf//zB/egyKyx03iXIStUWDA4GUqbw/IB673YUwl6+iWYDh+YH1BR8Z3IXsyippzP2c87qGIPsGEbrnFw==",
+  "dgSpecHash": "GhciPamW82Die3tY13DOFK9OzecfyAFOmbZomGysct0+IHydmg1bU8GirQ36gGampDXJGUYXO5A4Kc0ZbhcL6g==",
   "success": true,
-  "projectFilePath": "D:\\MojeProjekty\\My_Projects\\ShopingList\\ShopingList.csproj",
+  "projectFilePath": "D:\\My_Projects\\My_Projects\\ShopingList\\ShopingList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bezre\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
