@@ -22,5 +22,6 @@ namespace ShopingList
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+       
     }
 }
