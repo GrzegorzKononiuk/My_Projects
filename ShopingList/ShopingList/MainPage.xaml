@@ -7,10 +7,8 @@
              x:Class="ShopingList.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button Text="Add To List" Clicked="Button_Clicked"></Button>
     </StackLayout>
-
+        
+    
 </ContentPage>

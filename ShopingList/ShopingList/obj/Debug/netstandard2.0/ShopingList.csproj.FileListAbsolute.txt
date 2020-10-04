@@ -1,0 +1,16 @@
+D:\My_Projects\My_Projects\ShopingList\ShopingList\bin\Debug\netstandard2.0\ShopingList.deps.json
+D:\My_Projects\My_Projects\ShopingList\ShopingList\bin\Debug\netstandard2.0\ShopingList.dll
+D:\My_Projects\My_Projects\ShopingList\ShopingList\bin\Debug\netstandard2.0\ref\ShopingList.dll
+D:\My_Projects\My_Projects\ShopingList\ShopingList\bin\Debug\netstandard2.0\ShopingList.pdb
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ShopingList.csprojAssemblyReference.cache
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ShopingList.AssemblyInfoInputs.cache
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ShopingList.AssemblyInfo.cs
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ShopingList.csproj.CoreCompileInputs.cache
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\XamlC.stamp
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ShopingList.dll
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ref\ShopingList.dll
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ShopingList.pdb
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\GroceriesEntryPage.xaml.g.cs
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\GroceriesPage.xaml.g.cs

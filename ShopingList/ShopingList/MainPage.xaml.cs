@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Collections.ObjectModel;
 
 namespace ShopingList
 {
@@ -13,9 +14,17 @@ namespace ShopingList
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        
         public MainPage()
         {
+           
             InitializeComponent();
+
+        }
+
+        async private void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GroceriesPage());
         }
     }
 }
