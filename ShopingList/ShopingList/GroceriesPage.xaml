@@ -1,22 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="http://xamarin.com/schemas/2014/forms/design"
              x:Class="ShopingList.GroceriesPage"
              Title="Add Product">
 
-    <!-- DODAJ NOWY PRODUKT=-->
+    <!-- DODAWANIE NOWEJ NOTKI - (WEJSCIE W NOTE ENTRY PAGE PO KLIKNIECU  "OnNoteAddedClicked")-->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
                      Clicked="OnNoteAddedClicked" />
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView"
+
+    <ContentPage.Content>
+        <ListView x:Name="listView"
               Margin="20"
               ItemSelected="OnListViewItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Text}"
-                          Detail="{Binding Date}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Spacing="0">
+                                <Label Text="{Binding Text}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label"
+                                                Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                                Value="true">
+                                            <Setter Property="FontAttributes"
+                                                Value="Italic, Bold" />
+                                            <Setter Property="FontSize"
+                                                Value="Small" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <input:CheckBox x:Name="checkBox"  HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>

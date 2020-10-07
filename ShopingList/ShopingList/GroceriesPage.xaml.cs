@@ -31,13 +31,11 @@ namespace ShopingList
                 {
                     Filename = filename,
                     Text = File.ReadAllText(filename),
-                    Date = File.GetCreationTime(filename)
+                    
                 });
             }
-
             listView.ItemsSource = notes
-                .OrderBy(d => d.Date)
-                .ToList();
+                    .ToList();
         }
         
         async private void OnNoteAddedClicked(object sender, EventArgs e)
