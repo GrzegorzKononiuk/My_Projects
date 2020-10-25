@@ -6,12 +6,12 @@ using Xamarin.Forms;
 
 namespace ShopingList
 {
-    public class Groceries
+    public class Groceries : ContentPage
     {
         public string Filename { get; set; }
         public string Text { get; set; }
         public DateTime Date { get; set; }
-
+        public string Number { get; set; }
 
 
     }

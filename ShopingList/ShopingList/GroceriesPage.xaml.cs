@@ -13,11 +13,14 @@ namespace ShopingList
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GroceriesPage : ContentPage
     {
+        public PassingNumber passingNumber{ get; set; }
         public GroceriesPage()
         {
             InitializeComponent();
+            passingNumber = new PassingNumber();
+            BindingContext = passingNumber;
         }
-                                    //<!-- DODAJ NOWY PRODUKT=
+       
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -31,7 +34,9 @@ namespace ShopingList
                 {
                     Filename = filename,
                     Text = File.ReadAllText(filename),
-                    
+                    Date = File.GetCreationTime(filename),
+                    Number = passingNumber.MyProperty
+
                 });
             }
             listView.ItemsSource = notes
@@ -55,6 +60,15 @@ namespace ShopingList
                     BindingContext = e.SelectedItem as Groceries
                 });
             }
+        }
+
+        async private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialValue: "10", maxLength: 2, keyboard: Keyboard.Numeric);
+            int number = Int32.Parse(result);
+            GetNumber getNumber = new GetNumber(passingNumber.NumberOfProduct);
+            getNumber(number);
+            OnAppearing();
         }
     }
 }

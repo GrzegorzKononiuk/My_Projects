@@ -10,33 +10,27 @@
         <ToolbarItem Text="+"
                      Clicked="OnNoteAddedClicked" />
     </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
         <ListView x:Name="listView"
-              Margin="20"
-              ItemSelected="OnListViewItemSelected">
+                  ItemSelected="OnListViewItemSelected"
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <ViewCell.View>
-                            <StackLayout Orientation="Horizontal" Spacing="0">
-                                <Label Text="{Binding Text}">
-                                    <Label.Triggers>
-                                        <DataTrigger TargetType="Label"
-                                                Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
-                                                Value="true">
-                                            <Setter Property="FontAttributes"
-                                                Value="Italic, Bold" />
-                                            <Setter Property="FontSize"
-                                                Value="Small" />
-                                        </DataTrigger>
-                                    </Label.Triggers>
-                                </Label>
-                                <input:CheckBox x:Name="checkBox"  HorizontalOptions="EndAndExpand"/>
-                            </StackLayout>
-                        </ViewCell.View>
+
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <Label x:Name="textLabel" Text="{Binding Text}">
+
+                            </Label>
+                            <Label x:Name="numberLabel" Text="{Binding Number}" IsVisible="true">
+
+                            </Label>
+                            <input:CheckBox x:Name="checkBox"  HorizontalOptions="EndAndExpand" CheckedChanged="checkBox_CheckedChanged"/>
+                        </StackLayout>
+
                     </ViewCell>
                 </DataTemplate>
+
             </ListView.ItemTemplate>
         </ListView>
     </ContentPage.Content>
