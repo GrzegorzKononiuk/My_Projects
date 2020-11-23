@@ -70,5 +70,32 @@ namespace ShopingList
             getNumber(number);
             OnAppearing();
         }
+
+        string Filename { get; set; }
+
+        private void Save_List_Click(object sender, EventArgs e)
+        {
+            var filename = Path.Combine(App.FolderPath, $"{"Lista.txt"}");
+            Filename = filename;
+            using (var tw = new StreamWriter(filename))
+            {
+                foreach (Groceries groceries in listView.ItemsSource)
+                {
+                    tw.WriteLine(groceries.Text + groceries.Number);
+                }
+            }
+        }
+
+        private void Open_List_Click(object sender, EventArgs e)
+        {
+            string line = "";
+            using (StreamReader sr = new StreamReader(Filename))
+            {
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+        }
     }
 }

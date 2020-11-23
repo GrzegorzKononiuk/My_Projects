@@ -32,6 +32,12 @@
                 </DataTemplate>
 
             </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout Orientation="Vertical">
+                    <Button x:Name="SaveClick" BackgroundColor="Beige" VerticalOptions="End" Text="SafeList" Clicked="Save_List_Click"></Button>
+                    <Button x:Name="OpenClick" BackgroundColor="Beige" VerticalOptions="End" Text="OpenList" Clicked="Open_List_Click"></Button>
+                </StackLayout>
+            </ListView.Footer>
         </ListView>
     </ContentPage.Content>
 </ContentPage>
