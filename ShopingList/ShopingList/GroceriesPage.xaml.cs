@@ -14,6 +14,7 @@ namespace ShopingList
     public partial class GroceriesPage : ContentPage
     {
         public PassingNumber passingNumber{ get; set; }
+        OutputList outputList { get; set; }
         public GroceriesPage()
         {
             InitializeComponent();
@@ -81,20 +82,30 @@ namespace ShopingList
             {
                 foreach (Groceries groceries in listView.ItemsSource)
                 {
-                    tw.WriteLine(groceries.Text + groceries.Number);
+                    tw.WriteLine(groceries.Text + " - " + groceries.Number);
                 }
             }
         }
 
-        private void Open_List_Click(object sender, EventArgs e)
+
+        private void View_List_Click(object sender, EventArgs e)
         {
-            string line = "";
+            outputList = new OutputList();
+            string x = "";
             using (StreamReader sr = new StreamReader(Filename))
             {
+                //ODCZYTAC NUMBER 
+                string line;
+
                 while ((line = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(line);
+
+                    x = outputList.Lista(line + "\n");
                 }
+                Navigation.PushAsync(new OutputList
+                {
+                    BindingContext = new OutputList(x)
+                });
             }
         }
     }

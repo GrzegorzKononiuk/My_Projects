@@ -14,3 +14,4 @@ D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ref\
 D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\ShopingList.pdb
 D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\GroceriesEntryPage.xaml.g.cs
 D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\GroceriesPage.xaml.g.cs
+D:\My_Projects\My_Projects\ShopingList\ShopingList\obj\Debug\netstandard2.0\OutputList.xaml.g.cs
