@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,8 +13,9 @@ namespace ShopingList
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GroceriesPage : ContentPage
     {
-        public PassingNumber passingNumber{ get; set; }
         OutputList outputList { get; set; }
+        PassingNumber passingNumber{ get; set; }
+        public string FileName { get; set; }
         public GroceriesPage()
         {
             InitializeComponent();
@@ -24,21 +25,23 @@ namespace ShopingList
        
         protected override void OnAppearing()
         {
-            base.OnAppearing();
+            //base.OnAppearing();
 
             var notes = new List<Groceries>();
 
             var files = Directory.EnumerateFiles(App.FolderPath, "*.notes.txt");
             foreach (var filename in files)
             {
-                notes.Add(new Groceries
+                Path.GetFileName(filename);
+                FileName = filename;
+
+                notes.Add(new Groceries()
                 {
                     Filename = filename,
                     Text = File.ReadAllText(filename),
-                    Date = File.GetCreationTime(filename),
-                    Number = passingNumber.MyProperty
 
                 });
+
             }
             listView.ItemsSource = notes
                     .ToList();
@@ -69,6 +72,12 @@ namespace ShopingList
             int number = Int32.Parse(result);
             GetNumber getNumber = new GetNumber(passingNumber.NumberOfProduct);
             getNumber(number);
+            
+            using (StreamWriter sw = File.AppendText(FileName))
+            {
+                sw.WriteLine(passingNumber.MyProperty);
+            }
+            
             OnAppearing();
         }
 
@@ -82,7 +91,7 @@ namespace ShopingList
             {
                 foreach (Groceries groceries in listView.ItemsSource)
                 {
-                    tw.WriteLine(groceries.Text + " - " + groceries.Number);
+                    tw.WriteLine(groceries.Text);
                 }
             }
         }

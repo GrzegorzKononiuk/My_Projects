@@ -8,23 +8,13 @@ namespace ShopingList
 
     public class PassingNumber
     {
-       
-        private string _myProperty = null;
-        public string MyProperty
-        {
-            get => _myProperty;
-            set
-            {
-                if (value != null)
-                {
-                    _myProperty = value;
-                }
-            }
-        }
+
+        public string MyProperty { get; set; }
 
         public string NumberOfProduct(int amount)
         {
-            return _myProperty = amount.ToString() + " sztuk";
+            return MyProperty = " x " + amount.ToString();
+
         }
 
 

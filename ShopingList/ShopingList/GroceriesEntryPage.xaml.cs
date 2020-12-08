@@ -17,7 +17,7 @@ namespace ShopingList
         {
             InitializeComponent();
         }
-        //                              <!--STRONA Z PRZYCISKAMI SAVE DELETE -->
+                               
         async private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var note = (Groceries)BindingContext;

@@ -11,26 +11,23 @@
                      Clicked="OnNoteAddedClicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="listView"
-                  ItemSelected="OnListViewItemSelected"
-                  HasUnevenRows="True">
+        <ListView x:Name="listView" ItemSelected="OnListViewItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-
                         <StackLayout Orientation="Horizontal" Spacing="0">
-                            <Label x:Name="textLabel" Text="{Binding Text}">
+
+
+                            <Label Text="{Binding Text}">
+
 
                             </Label>
-                            <Label x:Name="numberLabel" Text="{Binding Number}" IsVisible="true">
 
-                            </Label>
-                            <input:CheckBox x:Name="checkBox"  HorizontalOptions="EndAndExpand" CheckedChanged="checkBox_CheckedChanged"/>
+
+                            <input:CheckBox x:Name="checkBox" HorizontalOptions="EndAndExpand" CheckedChanged="checkBox_CheckedChanged"></input:CheckBox>
                         </StackLayout>
-
                     </ViewCell>
                 </DataTemplate>
-
             </ListView.ItemTemplate>
             <ListView.Footer>
                 <StackLayout Orientation="Vertical">
@@ -39,5 +36,6 @@
                 </StackLayout>
             </ListView.Footer>
         </ListView>
+
     </ContentPage.Content>
 </ContentPage>
