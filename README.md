@@ -1,6 +1,6 @@
 # My_Projects
 
-ShopingList <--- MVVM + pattern delegate, callback function<br/>
+ShopingList <--- delegate + interface + switch case + try & catch block + ArrayList + handling exceptions + style <Labels><br/>
 Mp3Player <---- Universal Windows Platform (async, await, task)<br/>
 My Games Library <---- LINQ<br/>
 TrainingDiary <---- PDF file or HEX view + ASP.NET + ITextSharp compose strength training, modify, save it and generate it to TXT <br/>

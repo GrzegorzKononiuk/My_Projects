@@ -16,15 +16,20 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Spacing="0">
-
-
                             <Label Text="{Binding Text}">
-
-
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label"
+                                         Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                         Value="true">
+                                        <Setter  Property="FontAttributes"
+                                         Value="Italic, Bold" />
+                                        <Setter  Property="FontSize"
+                                         Value="Large" />
+                                    </DataTrigger>
+                                </Label.Triggers>
                             </Label>
 
-
-                            <input:CheckBox x:Name="checkBox" HorizontalOptions="EndAndExpand" CheckedChanged="checkBox_CheckedChanged"></input:CheckBox>
+                            <input:CheckBox x:Name="checkBox" HorizontalOptions="EndAndExpand"></input:CheckBox>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -33,6 +38,7 @@
                 <StackLayout Orientation="Vertical">
                     <Button x:Name="SaveClick" BackgroundColor="Beige" VerticalOptions="End" Text="SafeList" Clicked="Save_List_Click"></Button>
                     <Button x:Name="ViewList" BackgroundColor="Beige" VerticalOptions="End" Text="ViewList" Clicked="View_List_Click"></Button>
+                    <Label x:Name="myLabel" Text="" VerticalOptions="End"></Label>
                 </StackLayout>
             </ListView.Footer>
         </ListView>

@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections;
 
 namespace ShopingList
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GroceriesPage : ContentPage
     {
+        ArrayList arrayList = new ArrayList();
         OutputList outputList { get; set; }
-        PassingNumber passingNumber{ get; set; }
+        ICountItems countItems = new CountItems();
         public string FileName { get; set; }
         public GroceriesPage()
         {
             InitializeComponent();
-            passingNumber = new PassingNumber();
-            BindingContext = passingNumber;
+           
         }
        
         protected override void OnAppearing()
@@ -41,8 +42,12 @@ namespace ShopingList
                     Text = File.ReadAllText(filename),
 
                 });
+                arrayList.Add(filename);
 
             }
+            countItems.CreateList(arrayList);
+            myLabel.Text = countItems.Get;
+            arrayList.Clear();
             listView.ItemsSource = notes
                     .ToList();
         }
@@ -66,20 +71,7 @@ namespace ShopingList
             }
         }
 
-        async private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            var result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialValue: "10", maxLength: 2, keyboard: Keyboard.Numeric);
-            int number = Int32.Parse(result);
-            GetNumber getNumber = new GetNumber(passingNumber.NumberOfProduct);
-            getNumber(number);
-            
-            using (StreamWriter sw = File.AppendText(FileName))
-            {
-                sw.WriteLine(passingNumber.MyProperty);
-            }
-            
-            OnAppearing();
-        }
+       
 
         string Filename { get; set; }
 
