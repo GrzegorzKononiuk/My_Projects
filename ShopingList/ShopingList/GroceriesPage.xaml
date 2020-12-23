@@ -4,32 +4,40 @@
              xmlns:input="http://xamarin.com/schemas/2014/forms/design"
              x:Class="ShopingList.GroceriesPage"
              Title="Add Product">
-
-    <!-- DODAWANIE NOWEJ NOTKI - (WEJSCIE W NOTE ENTRY PAGE PO KLIKNIECU  "OnNoteAddedClicked")-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
+                     
                      Clicked="OnNoteAddedClicked" />
     </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <ListView x:Name="listView" ItemSelected="OnListViewItemSelected">
+
+        <ListView x:Name="listView" ItemSelected="OnListViewItemSelected" SeparatorColor="Red" RowHeight="50">
+            <ListView.Header>
+                <StackLayout Padding="22" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Label
+                        FontSize="24"
+                        Text="Shoping List"
+                        TextColor="Green"/>
+                    <Label x:Name="myLabel" 
+                           Text="" 
+                           VerticalOptions="End"
+                           Style="{StaticResource LabelStyle}"></Label>
+                </StackLayout>
+            </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Spacing="0">
-                            <Label Text="{Binding Text}">
-                                <Label.Triggers>
-                                    <DataTrigger TargetType="Label"
-                                         Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
-                                         Value="true">
-                                        <Setter  Property="FontAttributes"
-                                         Value="Italic, Bold" />
-                                        <Setter  Property="FontSize"
-                                         Value="Large" />
-                                    </DataTrigger>
-                                </Label.Triggers>
-                            </Label>
-
-                            <input:CheckBox x:Name="checkBox" HorizontalOptions="EndAndExpand"></input:CheckBox>
+                            <Label Text="{Binding Text}"></Label>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -38,10 +46,11 @@
                 <StackLayout Orientation="Vertical">
                     <Button x:Name="SaveClick" BackgroundColor="Beige" VerticalOptions="End" Text="SafeList" Clicked="Save_List_Click"></Button>
                     <Button x:Name="ViewList" BackgroundColor="Beige" VerticalOptions="End" Text="ViewList" Clicked="View_List_Click"></Button>
-                    <Label x:Name="myLabel" Text="" VerticalOptions="End"></Label>
                 </StackLayout>
             </ListView.Footer>
         </ListView>
 
     </ContentPage.Content>
+
+   
 </ContentPage>

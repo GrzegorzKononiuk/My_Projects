@@ -93,20 +93,27 @@ namespace ShopingList
         {
             outputList = new OutputList();
             string x = "";
-            using (StreamReader sr = new StreamReader(Filename))
+            try
             {
-                //ODCZYTAC NUMBER 
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader(Filename))
                 {
 
-                    x = outputList.Lista(line + "\n");
+                    string line;
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+
+                        x = outputList.Lista(line + "\n");
+                    }
+                    Navigation.PushAsync(new OutputList
+                    {
+                        BindingContext = new OutputList(x)
+                    });
                 }
-                Navigation.PushAsync(new OutputList
-                {
-                    BindingContext = new OutputList(x)
-                });
+            }
+            catch (Exception c)
+            {
+                DisplayAlert("WARNING", string.Format("Click Save List first", c), "OK");
             }
         }
     }

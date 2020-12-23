@@ -6,9 +6,14 @@
              mc:Ignorable="d"
              x:Class="ShopingList.MainPage">
 
-    <StackLayout>
-        <Button Text="Add To List" Clicked="Button_Clicked"></Button>
+    <StackLayout BackgroundColor="Black">
+        <ImageButton Source="shop.png"
+                     
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                     Clicked="Button_Clicked"/>
+
     </StackLayout>
-        
-    
+
+
 </ContentPage>

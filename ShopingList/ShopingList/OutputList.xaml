@@ -1,11 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ShopingList.OutputList">
+             x:Class="ShopingList.OutputList"
+             BackgroundColor="Black">
+
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal" Spacing="0">
-            <Label x:Name="mytextLabel" Text="{Binding Line}"></Label>
+
+
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label x:Name="mytextLabel"
+                    FontSize="Medium"
+                    LineHeight="0.8"
+                   TextDecorations="Underline"
+                   TextColor="DarkOrange"
+                    Text="{Binding Line}"></Label>
         </StackLayout>
+
+
 
     </ContentPage.Content>
 </ContentPage>

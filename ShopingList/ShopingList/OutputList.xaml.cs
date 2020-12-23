@@ -27,20 +27,11 @@ namespace ShopingList
         
         public string Lista(string items)
         {
-            //DOBRA PACZ NOTESPAGE.CS ON APPEWRING METODA 
+            
 
             return mytextLabel.Text += items.ToString();
 
         }
-        
-        private void EditButtonClicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OnSaveButtonClicked(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

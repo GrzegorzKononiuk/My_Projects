@@ -19,6 +19,7 @@ namespace ShopingList
         {
            
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
         }
 

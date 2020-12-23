@@ -477,3 +477,4 @@ D:\My_Projects\My_Projects\ShopingList\ShopingList.Android\obj\Debug\90\stamp\_C
 D:\My_Projects\My_Projects\ShopingList\ShopingList.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\My_Projects\My_Projects\ShopingList\ShopingList.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\My_Projects\My_Projects\ShopingList\ShopingList.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\My_Projects\My_Projects\ShopingList\ShopingList.Android\obj\Debug\90\res\drawable\shop.png
