@@ -1,5 +1,6 @@
 # My_Projects
 
+Arkanoid <---- MVVM + UNIT TEST - WPF (IN PROGRESS)<br/>
 ShopingList <--- delegate + interface + switch case + try & catch block + ArrayList + handling exceptions + style <Labels><br/>
 Mp3Player <---- Universal Windows Platform (async, await, task)<br/>
 My Games Library <---- LINQ<br/>

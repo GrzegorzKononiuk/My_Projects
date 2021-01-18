@@ -1,0 +1,15 @@
+D:\My_Projects\My_Projects\Arkanoid\bin\Debug\Arkanoid.exe.config
+D:\My_Projects\My_Projects\Arkanoid\bin\Debug\Arkanoid.exe
+D:\My_Projects\My_Projects\Arkanoid\bin\Debug\Arkanoid.pdb
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyReference.cache
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\MainWindow.g.cs
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\App.g.cs
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid_MarkupCompile.cache
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid_MarkupCompile.lref
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\MainWindow.baml
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.g.resources
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.Properties.Resources.resources
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csproj.GenerateResource.cache
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csproj.CoreCompileInputs.cache
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.exe
+D:\My_Projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.pdb
