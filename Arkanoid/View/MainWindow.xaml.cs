@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Arkanoid.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,20 @@ namespace Arkanoid
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ArkanoidViewModel ViewModel;
         public MainWindow()
         {
             InitializeComponent();
+            ViewModel = new ArkanoidViewModel();
+        }
+
+        private void keyDownEventHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+            {
+
+                //ViewModel.Move(Direction.Left);
+            }
         }
     }
 }
