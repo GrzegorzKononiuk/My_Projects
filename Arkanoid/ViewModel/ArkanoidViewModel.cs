@@ -14,44 +14,51 @@ using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Globalization;
+using Arkanoid.Model;
 
 namespace Arkanoid.ViewModel
 {
   
-    class ArkanoidViewModel : IValueConverter
+    public class ArkanoidViewModel : INotifyPropertyChanged
     {
-        public string DisplayedImage
+        private int _number;
+        public int Number
         {
-            get { return @"pack://application:,,,/images/plank.png"; }
-        }
-
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return new BitmapImage(new Uri(DisplayedImage));
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotSupportedException();
-        }
-        /**
-        public void Move(Direction direction)
-        {
-            switch (direction)
+            get { return _number; }
+            set
             {
-                case Direction.Left:
-
-                    //1  // WSTAW IMG PLANK.PNG
-
-                  //2  //TUTAJ POTRZEBUJE LOGIKE DZIALANIA CZYT LOCATION.X - PIXELSPERMOVE ITD
-                    //TO WSZYSTKO POPRZEZ REFERENCJE DO private Plank _plank;
-                    break;
-                case Direction.Right:
-                   
-                    break;
-                default: break;
+                _number = value;
+                OnPropertyChanged();
             }
         }
-        **/
+
+        public double Move(double x)
+        {
+            switch (x)
+            {
+                case 1:
+                    return 10;
+                case 2:
+                    return 10;
+            }
+            return x;
+        }
+
+        public void SaveData()
+        {
+            PlayerData player = new PlayerData() { Arrows = Number };
+            string filePath = "data.save";
+            DataSerializer dataSerializer = new DataSerializer();
+            
+            dataSerializer.XmlSerialize(typeof(PlayerData), player, filePath);
+            _ = dataSerializer.XmlDeserialize(typeof(PlayerData), filePath) as PlayerData;
+            
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

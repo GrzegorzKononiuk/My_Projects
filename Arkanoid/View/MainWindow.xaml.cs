@@ -21,20 +21,35 @@ namespace Arkanoid
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ArkanoidViewModel ViewModel;
+        private readonly ArkanoidViewModel _viewModel;
+        
         public MainWindow()
         {
             InitializeComponent();
-            ViewModel = new ArkanoidViewModel();
+            
+            _viewModel = new ArkanoidViewModel();
+            MyLabel.DataContext = _viewModel;
         }
-
-        private void keyDownEventHandler(object sender, KeyEventArgs e)
+        
+        private void Canvas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Left)
             {
+                Canvas.SetLeft(PlankImg, Canvas.GetLeft(PlankImg) - _viewModel.Move(1));
 
-                //ViewModel.Move(Direction.Left);
+                _viewModel.Number++;
             }
+            else if (e.Key == Key.Right)
+            {
+                Canvas.SetLeft(PlankImg, Canvas.GetLeft(PlankImg) + _viewModel.Move(2));
+
+                _viewModel.Number++;
+            }
+        }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _viewModel.SaveData();
         }
     }
 }

@@ -6,15 +6,31 @@
         xmlns:local="clr-namespace:Arkanoid" 
         xmlns:viewmodel="clr-namespace:Arkanoid.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Keyboard.KeyDown="keyDownEventHandler">
-    
+        Title="MainWindow" Height="450" Width="800" FocusManager.FocusedElement="{Binding ElementName=MyCanvas}">
+
     <Window.Resources>
-        <viewmodel:ArkanoidViewModel x:Key="viewModel"/>
+        <viewmodel:ConvertImage x:Key="convertImage"/>
+        <viewmodel:ArkanoidViewModel x:Key="arkanoidViewModel"/>
     </Window.Resources>
 
+    <Canvas Name="MyCanvas" KeyDown="Canvas_KeyDown" Focusable="True" DataContext="{StaticResource convertImage}">
 
-    <StackPanel DataContext="{StaticResource viewModel}">
-        <Image Source="{Binding DisplayedImage, Converter={StaticResource viewModel}}" Height="100" Width="100"/>
-    </StackPanel>
+        <Image Name="PlankImg" 
+                Source="{Binding DisplayedImage, Converter={StaticResource convertImage}}"  
+                Canvas.Left="10" 
+                Canvas.Top="10" 
+                HorizontalAlignment="Center" 
+                Height="64" 
+                Margin="0" 
+                VerticalAlignment="Top" 
+                Width="64"/>
+
+        <Label x:Name="MyLabel"
+               DataContext="{StaticResource arkanoidViewModel}"
+               Content="{Binding Number}" 
+               ContentStringFormat="Clicked Arrows {0} times."
+               FontSize="22"/>
+        
+        <Button Content="SAVE DATA" Canvas.Left="503" Canvas.Top="305" Width="75" Click="Button_Click"/>
+    </Canvas>
 </Window>
