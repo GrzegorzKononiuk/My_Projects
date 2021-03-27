@@ -28,21 +28,53 @@ namespace Arkanoid
             InitializeComponent();
             
             _viewModel = new ArkanoidViewModel();
-            MyLabel.DataContext = _viewModel;
+            myLabel.DataContext = _viewModel;
+        }
+        
+        public void CheckColision()
+        {
+            foreach (var x in myCanvas.Children.OfType<Rectangle>())
+                if ((string)x.Tag == "wall")
+                {
+                    x.Stroke = Brushes.Black;
+
+                    Rect plankHitBox = new Rect(Canvas.GetLeft(plank), Canvas.GetBottom(plank), plank.Width, plank.Height);
+                    Rect platformHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), 0, x.Height);
+
+                    if (plankHitBox.IntersectsWith(platformHitBox))
+                    {
+                        Canvas.SetLeft(plank, 0);
+
+                    }
+                }
+                else if ((string)x.Tag == "wall1")
+                {
+                    x.Stroke = Brushes.Black;
+
+                    Rect plankHitBox = new Rect(Canvas.GetLeft(plank), Canvas.GetBottom(plank), plank.Width, plank.Height);
+                    Rect platformHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), 0, x.Height);
+
+                    if (plankHitBox.IntersectsWith(platformHitBox))
+                    {
+                        Canvas.SetLeft(plank, 290);
+
+                    }
+                }
+
         }
         
         private void Canvas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Left)
             {
-                Canvas.SetLeft(PlankImg, Canvas.GetLeft(PlankImg) - _viewModel.Move(1));
-
+                Canvas.SetLeft(plank, Canvas.GetLeft(plank) - _viewModel.Move(1));
+                CheckColision();
                 _viewModel.Number++;
             }
             else if (e.Key == Key.Right)
             {
-                Canvas.SetLeft(PlankImg, Canvas.GetLeft(PlankImg) + _viewModel.Move(2));
-
+                Canvas.SetLeft(plank, Canvas.GetLeft(plank) + _viewModel.Move(2));
+                CheckColision();
                 _viewModel.Number++;
             }
         }

@@ -6,31 +6,37 @@
         xmlns:local="clr-namespace:Arkanoid" 
         xmlns:viewmodel="clr-namespace:Arkanoid.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FocusManager.FocusedElement="{Binding ElementName=MyCanvas}">
+        Title="Arkanoid" Height="450" Width="800" FocusManager.FocusedElement="{Binding ElementName=myCanvas}">
 
     <Window.Resources>
         <viewmodel:ConvertImage x:Key="convertImage"/>
         <viewmodel:ArkanoidViewModel x:Key="arkanoidViewModel"/>
     </Window.Resources>
 
-    <Canvas Name="MyCanvas" KeyDown="Canvas_KeyDown" Focusable="True" DataContext="{StaticResource convertImage}">
+    <Canvas Name="myCanvas"
+            Width="400"
+            ClipToBounds="True" 
+            Background="Aqua" 
+            KeyDown="Canvas_KeyDown" 
+            Focusable="True" 
+            DataContext="{StaticResource convertImage}">
 
-        <Image Name="PlankImg" 
-                Source="{Binding DisplayedImage, Converter={StaticResource convertImage}}"  
-                Canvas.Left="10" 
-                Canvas.Top="10" 
-                HorizontalAlignment="Center" 
-                Height="64" 
-                Margin="0" 
-                VerticalAlignment="Top" 
-                Width="64"/>
+        <Rectangle x:Name="plank" Canvas.Left="245"  Canvas.Bottom="25" Width="110" Height="50">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="{Binding DisplayedImage, Converter={StaticResource convertImage}}" />
+            </Rectangle.Fill>
+        </Rectangle>
 
-        <Label x:Name="MyLabel"
+        <Rectangle x:Name="wall"  Canvas.Left="1" Canvas.Bottom="2" Height="150" Tag="wall" />
+        <Rectangle x:Name="wall1" Canvas.Left="399" Canvas.Bottom="2" Height="150" Tag="wall1" />
+        
+        <Label x:Name="myLabel"
                DataContext="{StaticResource arkanoidViewModel}"
                Content="{Binding Number}" 
                ContentStringFormat="Clicked Arrows {0} times."
                FontSize="22"/>
-        
-        <Button Content="SAVE DATA" Canvas.Left="503" Canvas.Top="305" Width="75" Click="Button_Click"/>
+
+        <Button Content="SAVE DATA"  Click="Button_Click"/>
+
     </Canvas>
 </Window>
