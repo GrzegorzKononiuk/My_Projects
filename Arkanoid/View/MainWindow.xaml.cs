@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Arkanoid
 {
@@ -22,6 +23,7 @@ namespace Arkanoid
     public partial class MainWindow : Window
     {
         private readonly ArkanoidViewModel _viewModel;
+        DispatcherTimer theTimer;
         
         public MainWindow()
         {
@@ -29,12 +31,44 @@ namespace Arkanoid
             
             _viewModel = new ArkanoidViewModel();
             myLabel.DataContext = _viewModel;
+            WallColision();
+            theTimer = new DispatcherTimer();
+            theTimer.Interval = TimeSpan.FromMilliseconds(80);
+            theTimer.IsEnabled = true;
+            theTimer.Tick += dispatcherTimer_Tick;
+            theTimer.Start();
         }
-        
-        public void CheckColision()
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            foreach (var x in myCanvas.Children.OfType<Rectangle>())
-                if ((string)x.Tag == "wall")
+            updateBall();
+        }
+        double velX = 34, velY = 22;
+        private void updateBall()
+        {
+
+            double nextX = Canvas.GetLeft(ball) + velX;
+
+            Canvas.SetLeft(ball, nextX);
+
+            if (nextX == 0 || nextX + ball.ActualWidth > playArea.ActualWidth && velX > 0)
+            {
+                velX = -velX;
+            }
+
+            double nextY = Canvas.GetBottom(ball) + velY;
+
+            Canvas.SetBottom(ball, nextY);
+            if (nextY == 0 || nextY + ball.ActualHeight > playArea.ActualHeight && velY > 0)
+            {
+                velY = -velY;
+            }
+
+        }
+        public void WallColision()
+        {
+            foreach (var x in playArea.Children.OfType<Rectangle>())
+                if ((string)x.Tag == "leftWall")
                 {
                     x.Stroke = Brushes.Black;
 
@@ -47,7 +81,7 @@ namespace Arkanoid
 
                     }
                 }
-                else if ((string)x.Tag == "wall1")
+                else if ((string)x.Tag == "rightWall")
                 {
                     x.Stroke = Brushes.Black;
 
@@ -68,13 +102,13 @@ namespace Arkanoid
             if (e.Key == Key.Left)
             {
                 Canvas.SetLeft(plank, Canvas.GetLeft(plank) - _viewModel.Move(1));
-                CheckColision();
+                WallColision();
                 _viewModel.Number++;
             }
             else if (e.Key == Key.Right)
             {
                 Canvas.SetLeft(plank, Canvas.GetLeft(plank) + _viewModel.Move(2));
-                CheckColision();
+                WallColision();
                 _viewModel.Number++;
             }
         }

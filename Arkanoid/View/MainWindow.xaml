@@ -6,14 +6,13 @@
         xmlns:local="clr-namespace:Arkanoid" 
         xmlns:viewmodel="clr-namespace:Arkanoid.ViewModel"
         mc:Ignorable="d"
-        Title="Arkanoid" Height="450" Width="800" FocusManager.FocusedElement="{Binding ElementName=myCanvas}">
-
+        Title="Arkanoid" Height="450" Width="800" FocusManager.FocusedElement="{Binding ElementName=playArea}">
     <Window.Resources>
         <viewmodel:ConvertImage x:Key="convertImage"/>
         <viewmodel:ArkanoidViewModel x:Key="arkanoidViewModel"/>
     </Window.Resources>
 
-    <Canvas Name="myCanvas"
+    <Canvas Name="playArea"
             Width="400"
             ClipToBounds="True" 
             Background="Aqua" 
@@ -21,15 +20,20 @@
             Focusable="True" 
             DataContext="{StaticResource convertImage}">
 
-        <Rectangle x:Name="plank" Canvas.Left="245"  Canvas.Bottom="25" Width="110" Height="50">
+
+        <Ellipse x:Name="ball" Width="28" Height="28" Fill="Red" Canvas.Left="0" Canvas.Bottom="0">
+
+        </Ellipse>
+
+        <Rectangle x:Name="plank" Canvas.Left="135" Canvas.Bottom="25" Width="110" Height="30">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="{Binding DisplayedImage, Converter={StaticResource convertImage}}" />
             </Rectangle.Fill>
         </Rectangle>
 
-        <Rectangle x:Name="wall"  Canvas.Left="1" Canvas.Bottom="2" Height="150" Tag="wall" />
-        <Rectangle x:Name="wall1" Canvas.Left="399" Canvas.Bottom="2" Height="150" Tag="wall1" />
-        
+        <Rectangle x:Name="leftWall"  Canvas.Left="1" Canvas.Bottom="2" Height="400" Tag="leftWall" />
+        <Rectangle x:Name="rightWall" Canvas.Left="399" Canvas.Bottom="2" Height="400" Tag="rightWall" />
+
         <Label x:Name="myLabel"
                DataContext="{StaticResource arkanoidViewModel}"
                Content="{Binding Number}" 
