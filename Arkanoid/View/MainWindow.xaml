@@ -21,9 +21,28 @@
             DataContext="{StaticResource convertImage}">
 
 
-        <Ellipse x:Name="ball" Width="28" Height="28" Fill="Red" Canvas.Left="0" Canvas.Bottom="0">
+        <Rectangle x:Name="enemy"
+                   Canvas.Bottom="350" 
+                   Canvas.Left="0"
+                   Stroke="Coral" StrokeThickness="4"
+                   Fill="Yellow"  
+                   Width="80"
+                   Height="20" 
+                   Tag="enemy"/>
 
-        </Ellipse>
+
+        <Rectangle x:Name="ball"
+                       Canvas.Left="0" 
+                       Canvas.Bottom="0" 
+                       Stroke="Black"
+                       StrokeThickness="2" 
+                       RadiusX="22"
+                       RadiusY="15" 
+                       Width="28" 
+                       Height="20" 
+                       Fill="Red" 
+                       Tag="ball">
+        </Rectangle>
 
         <Rectangle x:Name="plank" Canvas.Left="135" Canvas.Bottom="25" Width="110" Height="30">
             <Rectangle.Fill>

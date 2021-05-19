@@ -63,7 +63,7 @@ namespace Arkanoid
             {
                 velY = -velY;
             }
-
+            CheckBallColision();
         }
         public void WallColision()
         {
@@ -112,7 +112,39 @@ namespace Arkanoid
                 _viewModel.Number++;
             }
         }
+        public void CheckBallColision()
+        {
+
+            //KMINIC JA KTO PRZEPUSIC PRZEZ PETLE FOR ZEBNY ADD MOZNA BNYLO ZROBIC
+            // PACZ LINKI
+
         
+
+            //NAJPIERW MUSI BYC ADD ZEBY MOZNA BYLO ZROBIC REMOVE !!
+            foreach (var x in playArea.Children.OfType<Rectangle>())
+
+                if ((string)x.Tag == "enemy")
+                {
+
+                    Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
+                    Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
+
+                    if (ballHitBox.IntersectsWith(enemyHitBox))
+                    {
+                        if (velY + ball.ActualHeight > enemy.ActualHeight && velY > 0)
+                        {
+
+                            velY = -velY;
+
+                        }
+                
+
+
+                    }
+                }
+
+
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _viewModel.SaveData();
