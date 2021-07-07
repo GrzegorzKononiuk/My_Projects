@@ -6,60 +6,130 @@
         xmlns:local="clr-namespace:Arkanoid" 
         xmlns:viewmodel="clr-namespace:Arkanoid.ViewModel"
         mc:Ignorable="d"
-        Title="Arkanoid" Height="450" Width="800" FocusManager.FocusedElement="{Binding ElementName=playArea}">
+        Title="Arkanoid" 
+        Height="550" 
+        Width="700"  
+        WindowStartupLocation="CenterScreen" 
+        FocusManager.FocusedElement="{Binding ElementName=playArea}">
+    
     <Window.Resources>
         <viewmodel:ConvertImage x:Key="convertImage"/>
         <viewmodel:ArkanoidViewModel x:Key="arkanoidViewModel"/>
     </Window.Resources>
+    
+    <!-- INFO -->
+    <Canvas x:Name="info" Width="650"  VerticalAlignment="Top" Height="210" Margin="0" Background="Red" >
+        <Grid Canvas.Top="1" Canvas.Right="20" Margin="0" Width="210" Height="220">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-    <Canvas Name="playArea"
-            Width="400"
-            ClipToBounds="True" 
-            Background="Aqua" 
-            KeyDown="Canvas_KeyDown" 
-            Focusable="True" 
-            DataContext="{StaticResource convertImage}">
+            <Border Background="GhostWhite" Grid.Row="0" BorderBrush="Black" BorderThickness="4">
+                <Label x:Name="arrowsCount" 
+                     DataContext="{StaticResource arkanoidViewModel}"
+                     Content="{Binding Number}" 
+                     ContentStringFormat="Clicked Arrows {0}"
+                     FontSize="24"/>
+            </Border>
 
+            <Border Background="GhostWhite" Grid.Row="1" BorderBrush="Black" BorderThickness="4">
+                <Label x:Name="myLifes"
+                     DataContext="{StaticResource arkanoidViewModel}"
+                     Content="{Binding LifeNumber}" 
+                     ContentStringFormat="Life left - {0}."
+                     FontSize="24"
+                     Margin="0"/>
+            </Border>
 
-        <Rectangle x:Name="enemy"
-                   Canvas.Bottom="350" 
-                   Canvas.Left="0"
-                   Stroke="Coral" StrokeThickness="4"
-                   Fill="Yellow"  
-                   Width="80"
-                   Height="20" 
-                   Tag="enemy"/>
+            <Viewbox Width="22"  Grid.Row="2" Margin="0" HorizontalAlignment="Left">
+                <Path x:Name="myElipse1" 
+                          Fill="Yellow" 
+                          Stroke="Red" 
+                          StrokeThickness="3" 
+                          Data="M 241,200 
+                          A 10,10 0 0 0 200,240
+                          C 210,250 240,270 240,270
+                          C 240,270 260,260 280,240
+                          A 20,20 0 0 0 239,200"   
+                          RenderTransformOrigin="0.001, 0.001">
+                    <Path.RenderTransform>
+                        <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
+                    </Path.RenderTransform>
+                </Path>
+            </Viewbox>
 
+            <Viewbox Width="22" Height="32" Grid.Row="2" Margin="0"  HorizontalAlignment="Center">
+                <Path x:Name="myElipse2" 
+                          Fill="Yellow" 
+                          Stroke="Red" 
+                          StrokeThickness="3" 
+                          Data="M 241,200 
+                          A 10,10 0 0 0 200,240
+                          C 210,250 240,270 240,270
+                          C 240,270 260,260 280,240
+                          A 20,20 0 0 0 239,200"   
+                          RenderTransformOrigin="0.001, 0.001">
+                    <Path.RenderTransform>
+                        <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
+                    </Path.RenderTransform>
+                </Path>
+            </Viewbox>
 
-        <Rectangle x:Name="ball"
-                       Canvas.Left="0" 
-                       Canvas.Bottom="0" 
-                       Stroke="Black"
-                       StrokeThickness="2" 
-                       RadiusX="22"
-                       RadiusY="15" 
-                       Width="28" 
-                       Height="20" 
-                       Fill="Red" 
-                       Tag="ball">
-        </Rectangle>
+            <Viewbox Width="152" Height="50" Grid.Row="3">
+                <Button Width="151" Height="23" HorizontalAlignment="Center"  Content="SAVE SCORE"  Click="Button_Click"/>
+            </Viewbox>
+        </Grid>
 
-        <Rectangle x:Name="plank" Canvas.Left="135" Canvas.Bottom="25" Width="110" Height="30">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="{Binding DisplayedImage, Converter={StaticResource convertImage}}" />
-            </Rectangle.Fill>
-        </Rectangle>
+        <Canvas Name="playArea"
+                Width="400"
+                Height="400"
+                ClipToBounds="True" 
+                Background="Aqua" 
+                KeyDown="Canvas_KeyDown" 
+                Focusable="True" 
+                DataContext="{StaticResource convertImage}">
 
-        <Rectangle x:Name="leftWall"  Canvas.Left="1" Canvas.Bottom="2" Height="400" Tag="leftWall" />
-        <Rectangle x:Name="rightWall" Canvas.Left="399" Canvas.Bottom="2" Height="400" Tag="rightWall" />
+            <!-- BLOCKS -->
+            <Rectangle 
+                x:Name="enemy"
+                Canvas.Bottom="350" 
+                Canvas.Left="0"
+                Stroke="Coral" 
+                StrokeThickness="4"
+                Fill="Yellow"  
+                Width="80"
+                Height="20" 
+                Tag="enemy"/>
 
-        <Label x:Name="myLabel"
-               DataContext="{StaticResource arkanoidViewModel}"
-               Content="{Binding Number}" 
-               ContentStringFormat="Clicked Arrows {0} times."
-               FontSize="22"/>
+            <!-- BALL -->
+            <Rectangle 
+                x:Name="ball"
+                Canvas.Left="165" 
+                Canvas.Bottom="60" 
+                Stroke="Black"
+                StrokeThickness="2" 
+                RadiusX="25"
+                RadiusY="15" 
+                Width="28" 
+                Height="31" 
+                Fill="Red" 
+                Tag="ball">
+            </Rectangle>
 
-        <Button Content="SAVE DATA"  Click="Button_Click"/>
+            <!-- PLANK-->
+            <Rectangle x:Name="plank" Canvas.Left="135" Canvas.Bottom="25" Width="110" Height="30">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding PlankImage, Converter={StaticResource convertImage}}" />
+                </Rectangle.Fill>
+            </Rectangle>
 
+            <!-- WALLS -->
+            <Rectangle x:Name="leftWall"  Canvas.Left="1" Canvas.Bottom="2" Height="400" Tag="leftWall" />
+            <Rectangle x:Name="rightWall" Canvas.Left="399" Canvas.Bottom="2" Height="400" Tag="rightWall" />
+            <Rectangle x:Name="downWall"  Canvas.Left="1" Canvas.Bottom="2" Fill="Orange" Width="400" Height="22" Tag="downWall" />
+        </Canvas>
     </Canvas>
 </Window>

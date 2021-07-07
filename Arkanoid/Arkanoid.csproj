@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Model\DataSerializer.cs" />
     <Compile Include="Model\PlayerData.cs" />
+    <Compile Include="Model\RectangleItem.cs" />
     <Compile Include="ViewModel\ArkanoidViewModel.cs" />
     <Compile Include="ViewModel\ConvertImage.cs" />
     <Compile Include="View\MainWindow.xaml.cs">

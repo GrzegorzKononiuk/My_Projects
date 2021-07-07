@@ -24,16 +24,17 @@ namespace Arkanoid
     {
         private readonly ArkanoidViewModel _viewModel;
         DispatcherTimer theTimer;
+        Random random = new Random();
         
         public MainWindow()
         {
             InitializeComponent();
-            
+
             _viewModel = new ArkanoidViewModel();
-            myLabel.DataContext = _viewModel;
-            WallColision();
+            arrowsCount.DataContext = _viewModel;
+            myLifes.DataContext = _viewModel;
             theTimer = new DispatcherTimer();
-            theTimer.Interval = TimeSpan.FromMilliseconds(80);
+            theTimer.Interval = TimeSpan.FromMilliseconds(40);
             theTimer.IsEnabled = true;
             theTimer.Tick += dispatcherTimer_Tick;
             theTimer.Start();
@@ -51,9 +52,13 @@ namespace Arkanoid
 
             Canvas.SetLeft(ball, nextX);
 
-            if (nextX == 0 || nextX + ball.ActualWidth > playArea.ActualWidth && velX > 0)
+            if (nextX + ball.ActualWidth > playArea.ActualWidth && velX > 0)
             {
                 velX = -velX;
+            }
+            if (nextX + ball.ActualWidth < 1)
+            {
+                velX = +34;
             }
 
             double nextY = Canvas.GetBottom(ball) + velY;
@@ -63,11 +68,49 @@ namespace Arkanoid
             {
                 velY = -velY;
             }
+
+            if (nextY + ball.ActualHeight < downWall.ActualHeight)
+            {
+                MessageBoxResult result =
+                    MessageBox.Show("Again ?", "Ups", MessageBoxButton.YesNo);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        Canvas.SetLeft(ball, 165);
+                        Canvas.SetBottom(ball, 60);
+                        int LifeCount = _viewModel.LifeNumber--;
+
+                        myElipse1.Fill = new SolidColorBrush(Colors.Black);
+
+                        if (LifeCount == 1)
+                        {
+                            myElipse2.Fill = new SolidColorBrush(Colors.Black);
+                        }
+
+                        if (LifeCount == 0)
+                        {
+                            myElipse1.Fill = new SolidColorBrush(Colors.Yellow);
+                            myElipse2.Fill = new SolidColorBrush(Colors.Yellow);
+                            _viewModel.LifeNumber = 2;
+                        }
+                        break;
+
+                    case MessageBoxResult.No:
+                        MessageBox.Show("Bye Bye !", "Arkanoid");
+                        Application.Current.Shutdown();
+                        break;
+
+                }
+                velX = random.Next(-5, 10);
+                velY = 22;
+            }
+            WallColision();
             CheckBallColision();
         }
         public void WallColision()
         {
             foreach (var x in playArea.Children.OfType<Rectangle>())
+            {
                 if ((string)x.Tag == "leftWall")
                 {
                     x.Stroke = Brushes.Black;
@@ -91,9 +134,22 @@ namespace Arkanoid
                     if (plankHitBox.IntersectsWith(platformHitBox))
                     {
                         Canvas.SetLeft(plank, 290);
-
                     }
                 }
+                else if ((string)x.Tag == "ball")
+                {
+                    x.Stroke = Brushes.Black;
+
+                    Rect plankHitBox = new Rect(Canvas.GetLeft(plank), Canvas.GetBottom(plank), plank.Width, plank.Height);
+                    Rect ballHit = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
+
+                    if (plankHitBox.IntersectsWith(ballHit))
+                    {
+
+                        velY = -velY;
+                    }
+                }
+            }
 
         }
         
@@ -114,13 +170,6 @@ namespace Arkanoid
         }
         public void CheckBallColision()
         {
-
-            //KMINIC JA KTO PRZEPUSIC PRZEZ PETLE FOR ZEBNY ADD MOZNA BNYLO ZROBIC
-            // PACZ LINKI
-
-        
-
-            //NAJPIERW MUSI BYC ADD ZEBY MOZNA BYLO ZROBIC REMOVE !!
             foreach (var x in playArea.Children.OfType<Rectangle>())
 
                 if ((string)x.Tag == "enemy")

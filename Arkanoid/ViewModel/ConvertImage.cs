@@ -11,14 +11,14 @@ namespace Arkanoid.ViewModel
 {
     class ConvertImage : IValueConverter
     {
-        public string DisplayedImage
+        public string PlankImage
         {
             get { return @"pack://application:,,,/Images/plank.png"; }
         }
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return new BitmapImage(new Uri(DisplayedImage));
+            return new BitmapImage(new Uri(PlankImage));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
