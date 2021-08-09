@@ -83,7 +83,10 @@ namespace Arkanoid
                         int LifeCount = _viewModel.LifeNumber--;
 
                         myElipse1.Fill = new SolidColorBrush(Colors.Black);
-
+                        enemy.Fill = new SolidColorBrush(Colors.Yellow);
+                        enemy2.Fill = new SolidColorBrush(Colors.Yellow);
+                        enemy3.Fill = new SolidColorBrush(Colors.Yellow);
+                        enemy4.Fill = new SolidColorBrush(Colors.Yellow);
                         if (LifeCount == 1)
                         {
                             myElipse2.Fill = new SolidColorBrush(Colors.Black);
