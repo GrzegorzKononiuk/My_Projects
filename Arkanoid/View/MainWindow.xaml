@@ -130,7 +130,32 @@
                 Width="80"
                 Height="20" 
                 Tag="enemy"/>
+            <Rectangle x:Name="enemy2"
+                   Canvas.Bottom="350" 
+                   Canvas.Left="110"
+                   Stroke="Coral" StrokeThickness="4"
+                   Fill="Yellow"  
+                   Width="80"
+                   Height="20" 
+                   Tag="enemy2"/>
 
+            <Rectangle x:Name="enemy3"
+                   Canvas.Bottom="350" 
+                   Canvas.Left="220"
+                   Stroke="Coral" StrokeThickness="4"
+                   Fill="Yellow"  
+                   Width="80"
+                   Height="20" 
+                   Tag="enemy3"/>
+
+            <Rectangle x:Name="enemy4"
+                   Canvas.Bottom="350" 
+                   Canvas.Left="330"
+                   Stroke="Coral" StrokeThickness="4"
+                   Fill="Yellow"  
+                   Width="80"
+                   Height="20" 
+                   Tag="enemy4"/>
             <!-- BALL -->
             <Rectangle 
                 x:Name="ball"

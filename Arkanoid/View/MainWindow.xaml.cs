@@ -173,6 +173,7 @@ namespace Arkanoid
         public void CheckBallColision()
         {
             foreach (var x in playArea.Children.OfType<Rectangle>())
+            {
 
                 if ((string)x.Tag == "enemy")
                 {
@@ -180,20 +181,94 @@ namespace Arkanoid
                     Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
                     Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
 
+
                     if (ballHitBox.IntersectsWith(enemyHitBox))
                     {
-                        
-                        if (velY + ball.ActualHeight > enemy.ActualHeight && velY > 0)
+                        if (velY + ball.ActualHeight > list.ActualHeight && velY > 0)
                         {
-                            
+
+
+
+                            enemy.Fill = new SolidColorBrush(Colors.White);
                             velY = -velY;
 
                         }
-                        
-
-
                     }
+
+
+
                 }
+                if ((string)x.Tag == "enemy2")
+                {
+
+                    Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
+                    Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
+
+
+                    if (ballHitBox.IntersectsWith(enemyHitBox))
+                    {
+                        if (velY + ball.ActualHeight > enemy2.ActualHeight && velY > 0)
+                        {
+
+
+
+                            enemy2.Fill = new SolidColorBrush(Colors.White);
+                            velY = -velY;
+
+                        }
+                    }
+
+
+
+                }
+                if ((string)x.Tag == "enemy3")
+                {
+
+                    Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
+                    Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
+
+
+                    if (ballHitBox.IntersectsWith(enemyHitBox))
+                    {
+                        if (velY + ball.ActualHeight > enemy3.ActualHeight && velY > 0)
+                        {
+
+
+
+                            enemy3.Fill = new SolidColorBrush(Colors.White);
+                            velY = -velY;
+
+                        }
+                    }
+
+
+
+                }
+                if ((string)x.Tag == "enemy4")
+                {
+
+                    Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
+                    Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
+
+
+                    if (ballHitBox.IntersectsWith(enemyHitBox))
+                    {
+                        if (velY + ball.ActualHeight > enemy4.ActualHeight && velY > 0)
+                        {
+
+
+
+                            enemy4.Fill = new SolidColorBrush(Colors.White);
+                            velY = -velY;
+
+                        }
+                    }
+
+
+
+                }
+
+            }
 
 
         }
