@@ -13,14 +13,6 @@ namespace Arkanoid.Model
         public double Width { get; set; }
         public double Height { get; set; }
 
-        public RectangleItem(double x, double y, double width, double height)
-        {
-            X = x;
-            Y = y;
-            Width = width;
-            Height = height;
-
-        }
 
     }
 }

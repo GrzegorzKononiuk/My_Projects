@@ -31,8 +31,10 @@ namespace Arkanoid
             InitializeComponent();
 
             _viewModel = new ArkanoidViewModel();
+            list.ItemsSource = _viewModel.blockItems;
             arrowsCount.DataContext = _viewModel;
             myLifes.DataContext = _viewModel;
+       
             theTimer = new DispatcherTimer();
             theTimer.Interval = TimeSpan.FromMilliseconds(40);
             theTimer.IsEnabled = true;
@@ -44,7 +46,7 @@ namespace Arkanoid
         {
             updateBall();
         }
-        double velX = 34, velY = 22;
+        double velX = -14, velY = 22;
         private void updateBall()
         {
 
@@ -101,8 +103,8 @@ namespace Arkanoid
                         break;
 
                 }
-                velX = random.Next(-5, 10);
-                velY = 22;
+                //velX = random.Next(-5, 10);
+                //velY = 22;
             }
             WallColision();
             CheckBallColision();
@@ -180,13 +182,14 @@ namespace Arkanoid
 
                     if (ballHitBox.IntersectsWith(enemyHitBox))
                     {
+                        
                         if (velY + ball.ActualHeight > enemy.ActualHeight && velY > 0)
                         {
-
+                            
                             velY = -velY;
 
                         }
-                
+                        
 
 
                     }

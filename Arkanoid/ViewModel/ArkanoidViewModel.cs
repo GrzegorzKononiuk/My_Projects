@@ -25,11 +25,31 @@ namespace Arkanoid.ViewModel
 
         public ObservableCollection<RectangleItem> blockItems = new ObservableCollection<RectangleItem>()
         {
-             new RectangleItem(0, 390, 80, 20),
-             new RectangleItem(80, 390, 80, 20),
-             new RectangleItem(160, 390, 80, 20),
-             new RectangleItem(240, 390, 80, 20),
-             new RectangleItem(320, 390, 80, 20),
+            
+             //FROM TOP LEFT TO BOTTOM RIGHT
+             new RectangleItem(){X = 0, Y = 0, Width = 80, Height = 120},
+             new RectangleItem(){X = 80, Y= 75, Width = 80, Height = 120 },
+             new RectangleItem(){X = 160, Y= 150, Width = 80, Height = 120 },
+             new RectangleItem(){X = 240, Y= 225, Width = 80, Height = 120 },
+             new RectangleItem(){X = 320, Y= 300, Width = 80, Height = 120 },
+
+             //FROM TO RIGHT TO BOTTOM LEFT
+             new RectangleItem(){X = 320, Y = 0, Width = 80, Height = 120},
+             new RectangleItem(){X = 240, Y = 75, Width = 80, Height = 120},
+             new RectangleItem(){X = 80, Y = 225, Width = 80, Height = 120},
+             new RectangleItem(){X = 0, Y = 300, Width = 80, Height = 120},
+             
+             //MIDDLE LEFT & MIDDLE RIGHT
+             new RectangleItem(){X = 0, Y = 150, Width = 80, Height = 120},
+             new RectangleItem(){X = 320, Y = 150, Width = 80, Height = 120},
+
+             //MIDDLE TOP & MIDDLE BOTTOM
+             new RectangleItem(){X = 160, Y = 0, Width = 80, Height = 120},
+             new RectangleItem(){X = 160, Y = 300, Width = 80, Height = 120},
+
+
+
+
         };
 
         private int _lifeNumber = 2;
