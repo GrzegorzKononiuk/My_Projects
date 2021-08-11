@@ -1,6 +1,7 @@
 ﻿using Arkanoid.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,7 @@ namespace Arkanoid
             InitializeComponent();
 
             _viewModel = new ArkanoidViewModel();
+            Read();
             list.ItemsSource = _viewModel.blockItems;
             arrowsCount.DataContext = _viewModel;
             myLifes.DataContext = _viewModel;
@@ -46,7 +48,9 @@ namespace Arkanoid
         {
             updateBall();
         }
-        double velX = -14, velY = 22;
+        
+        double velX = 4, velY = 22;
+        
         private void updateBall()
         {
 
@@ -81,12 +85,13 @@ namespace Arkanoid
                         Canvas.SetLeft(ball, 165);
                         Canvas.SetBottom(ball, 60);
                         int LifeCount = _viewModel.LifeNumber--;
-
+                        
                         myElipse1.Fill = new SolidColorBrush(Colors.Black);
                         enemy.Fill = new SolidColorBrush(Colors.Yellow);
                         enemy2.Fill = new SolidColorBrush(Colors.Yellow);
                         enemy3.Fill = new SolidColorBrush(Colors.Yellow);
                         enemy4.Fill = new SolidColorBrush(Colors.Yellow);
+                        
                         if (LifeCount == 1)
                         {
                             myElipse2.Fill = new SolidColorBrush(Colors.Black);
@@ -102,16 +107,19 @@ namespace Arkanoid
 
                     case MessageBoxResult.No:
                         MessageBox.Show("Bye Bye !", "Arkanoid");
+                        //SAVE DATA WHEN APP CLOSE
+                        _viewModel.SaveData();
                         Application.Current.Shutdown();
                         break;
 
                 }
-                //velX = random.Next(-5, 10);
+                velX = random.Next(-5, 10);
                 //velY = 22;
             }
             WallColision();
             CheckBallColision();
         }
+        
         public void WallColision()
         {
             foreach (var x in playArea.Children.OfType<Rectangle>())
@@ -173,6 +181,7 @@ namespace Arkanoid
                 _viewModel.Number++;
             }
         }
+        
         public void CheckBallColision()
         {
             foreach (var x in playArea.Children.OfType<Rectangle>())
@@ -184,22 +193,15 @@ namespace Arkanoid
                     Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
                     Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
 
-
                     if (ballHitBox.IntersectsWith(enemyHitBox))
                     {
                         if (velY + ball.ActualHeight > list.ActualHeight && velY > 0)
                         {
-
-
-
                             enemy.Fill = new SolidColorBrush(Colors.White);
                             velY = -velY;
 
                         }
                     }
-
-
-
                 }
                 if ((string)x.Tag == "enemy2")
                 {
@@ -207,22 +209,15 @@ namespace Arkanoid
                     Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
                     Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
 
-
                     if (ballHitBox.IntersectsWith(enemyHitBox))
                     {
                         if (velY + ball.ActualHeight > enemy2.ActualHeight && velY > 0)
                         {
-
-
-
                             enemy2.Fill = new SolidColorBrush(Colors.White);
                             velY = -velY;
 
                         }
                     }
-
-
-
                 }
                 if ((string)x.Tag == "enemy3")
                 {
@@ -230,22 +225,16 @@ namespace Arkanoid
                     Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
                     Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
 
-
                     if (ballHitBox.IntersectsWith(enemyHitBox))
                     {
                         if (velY + ball.ActualHeight > enemy3.ActualHeight && velY > 0)
                         {
-
-
 
                             enemy3.Fill = new SolidColorBrush(Colors.White);
                             velY = -velY;
 
                         }
                     }
-
-
-
                 }
                 if ((string)x.Tag == "enemy4")
                 {
@@ -253,31 +242,41 @@ namespace Arkanoid
                     Rect ballHitBox = new Rect(Canvas.GetLeft(ball), Canvas.GetBottom(ball), ball.Width, ball.Height);
                     Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetBottom(x), x.Width, x.Height);
 
-
                     if (ballHitBox.IntersectsWith(enemyHitBox))
                     {
                         if (velY + ball.ActualHeight > enemy4.ActualHeight && velY > 0)
                         {
-
-
-
                             enemy4.Fill = new SolidColorBrush(Colors.White);
                             velY = -velY;
 
                         }
                     }
-
-
-
                 }
 
             }
 
 
         }
+        public static void Read()
+        {
+            try
+            {
+                // Open the text file using a stream reader.
+                using (var sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + @"\file.txt"))
+                {
+                    // Read the stream as a string, and write the string to the console.
+                    Console.WriteLine(sr.ReadToEnd());
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _viewModel.SaveData();
+            //_viewModel.SaveData();
         }
     }
 }

@@ -85,17 +85,31 @@ namespace Arkanoid.ViewModel
             }
             return x;
         }
+        //SAVE DATA (ARROWS & LIFES) IN TXT FILE
+        public static string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
 
         public void SaveData()
         {
+
             PlayerData player = new PlayerData() { Arrows = Number, Life = LifeNumber };
+
+            FileStream fParameter = new FileStream(dirParameter, FileMode.Create, FileAccess.Write);
+            StreamWriter m_WriterParameter = new StreamWriter(fParameter);
+            m_WriterParameter.BaseStream.Seek(0, SeekOrigin.End);
+            m_WriterParameter.Write(player.Arrows);
+            m_WriterParameter.Write(player.Life);
+            m_WriterParameter.Flush();
+            m_WriterParameter.Close();
+
+            /**
             string filePath = "data.save";
             DataSerializer dataSerializer = new DataSerializer();
             
             dataSerializer.XmlSerialize(typeof(PlayerData), player, filePath);
             _ = dataSerializer.XmlDeserialize(typeof(PlayerData), filePath) as PlayerData;
-            
+            **/
         }
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
