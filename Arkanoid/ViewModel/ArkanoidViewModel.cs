@@ -85,9 +85,56 @@ namespace Arkanoid.ViewModel
             }
             return x;
         }
-        //SAVE DATA (ARROWS & LIFES) IN TXT FILE
+        
+        private string _lifesCount;
+        public string LifesCount
+        {
+            get { return _lifesCount; }
+            set
+            {
+                _lifesCount = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _arrowsCount;
+        public string ArrowsCount
+        {
+            get { return _arrowsCount; }
+            set
+            {
+                _arrowsCount = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public static string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
 
+        //READ DATA
+        public void ReadData()
+        {
+            try
+            {
+
+                using (var sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + @"\file.txt"))
+                {
+
+                    ArrowsCount = sr.ReadLine();
+                    LifesCount = sr.ReadLine();
+
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+        }
+
+
+
+        //SAVE DATA (ARROWS & LIFES) IN TXT FILE
         public void SaveData()
         {
 
@@ -96,8 +143,7 @@ namespace Arkanoid.ViewModel
             FileStream fParameter = new FileStream(dirParameter, FileMode.Create, FileAccess.Write);
             StreamWriter m_WriterParameter = new StreamWriter(fParameter);
             m_WriterParameter.BaseStream.Seek(0, SeekOrigin.End);
-            m_WriterParameter.Write(player.Arrows);
-            m_WriterParameter.Write(player.Life);
+            m_WriterParameter.Write(String.Format("{0}{2}{1}", player.Arrows, player.Life, Environment.NewLine));
             m_WriterParameter.Flush();
             m_WriterParameter.Close();
 
@@ -109,6 +155,7 @@ namespace Arkanoid.ViewModel
             _ = dataSerializer.XmlDeserialize(typeof(PlayerData), filePath) as PlayerData;
             **/
         }
+
        
 
         public event PropertyChangedEventHandler PropertyChanged;

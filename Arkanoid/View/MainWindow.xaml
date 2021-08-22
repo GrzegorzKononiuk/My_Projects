@@ -77,10 +77,6 @@
                     </Path.RenderTransform>
                 </Path>
             </Viewbox>
-
-            <Viewbox Width="152" Height="50" Grid.Row="3">
-                <Button Width="151" Height="23" HorizontalAlignment="Center"  Content="SAVE SCORE"  Click="Button_Click"/>
-            </Viewbox>
         </Grid>
 
         <Canvas Name="playArea"
@@ -103,6 +99,7 @@
                     <Style TargetType="ContentPresenter">
                         <Setter Property="Canvas.Left" Value="{Binding X}"/>
                         <Setter Property="Canvas.Top" Value="{Binding Y}"/>
+                        <Setter Property="Opacity" Value="0.7"/>
                         <Setter Property="MaxHeight" Value="75" />
                     </Style>
                 </ItemsControl.ItemContainerStyle>
@@ -119,6 +116,29 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
             
+            <Canvas Name="LastGameScore" 
+                    DataContext="{StaticResource arkanoidViewModel}">
+
+                <Border Background="GhostWhite" BorderBrush="Red" BorderThickness="1">
+                  
+                    <StackPanel Background="White" Orientation="Horizontal" Margin="2" Height="25">
+
+                        <TextBlock Text="Last Scores:" FontSize="20" TextWrapping="Wrap" />
+
+                        <Label x:Name="Arrows"
+                           Content="{Binding ArrowsCount}"
+                           ContentStringFormat="Clicked Arrows - {0}"
+                           FontSize="14"/>
+
+                        <Label x:Name="Lifes"
+                           Content="{Binding LifesCount}"
+                           ContentStringFormat="Lifes Left - {0}"
+                           FontSize="14"/>
+
+                    </StackPanel>
+                </Border>
+            </Canvas>
+            
             <!-- BLOCKS -->
             <Rectangle 
                 x:Name="enemy"
@@ -130,32 +150,37 @@
                 Width="80"
                 Height="20" 
                 Tag="enemy"/>
-            <Rectangle x:Name="enemy2"
-                   Canvas.Bottom="350" 
-                   Canvas.Left="110"
-                   Stroke="Coral" StrokeThickness="4"
-                   Fill="Yellow"  
-                   Width="80"
-                   Height="20" 
-                   Tag="enemy2"/>
+            
+            <Rectangle 
+                x:Name="enemy2"
+                Canvas.Bottom="350" 
+                Canvas.Left="110"
+                Stroke="Coral" StrokeThickness="4"
+                Fill="Yellow"  
+                Width="80"
+                Height="20" 
+                Tag="enemy2"/>
 
-            <Rectangle x:Name="enemy3"
-                   Canvas.Bottom="350" 
-                   Canvas.Left="220"
-                   Stroke="Coral" StrokeThickness="4"
-                   Fill="Yellow"  
-                   Width="80"
-                   Height="20" 
-                   Tag="enemy3"/>
+            <Rectangle 
+                x:Name="enemy3"
+                Canvas.Bottom="350" 
+                Canvas.Left="220"
+                Stroke="Coral" StrokeThickness="4"
+                Fill="Yellow"  
+                Width="80"
+                Height="20" 
+                Tag="enemy3"/>
 
-            <Rectangle x:Name="enemy4"
-                   Canvas.Bottom="350" 
-                   Canvas.Left="330"
-                   Stroke="Coral" StrokeThickness="4"
-                   Fill="Yellow"  
-                   Width="80"
-                   Height="20" 
-                   Tag="enemy4"/>
+            <Rectangle 
+                x:Name="enemy4"
+                Canvas.Bottom="350" 
+                Canvas.Left="330"
+                Stroke="Coral" StrokeThickness="4"
+                Fill="Yellow"  
+                Width="80"
+                Height="20" 
+                Tag="enemy4"/>
+            
             <!-- BALL -->
             <Rectangle 
                 x:Name="ball"
@@ -181,7 +206,7 @@
             <!-- WALLS -->
             <Rectangle x:Name="leftWall"  Canvas.Left="1" Canvas.Bottom="2" Height="400" Tag="leftWall" />
             <Rectangle x:Name="rightWall" Canvas.Left="399" Canvas.Bottom="2" Height="400" Tag="rightWall" />
-            <Rectangle x:Name="downWall"  Canvas.Left="1" Canvas.Bottom="2" Fill="Orange" Width="400" Height="22" Tag="downWall" />
+            <Rectangle x:Name="downWall"  Canvas.Left="1" Canvas.Bottom="2"  Width="400" Height="22" Tag="downWall" />
         </Canvas>
     </Canvas>
 </Window>

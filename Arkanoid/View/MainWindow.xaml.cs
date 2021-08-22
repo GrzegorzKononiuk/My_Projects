@@ -32,11 +32,16 @@ namespace Arkanoid
             InitializeComponent();
 
             _viewModel = new ArkanoidViewModel();
-            Read();
+
             list.ItemsSource = _viewModel.blockItems;
+
+            _viewModel.ReadData();
+            
+            Arrows.DataContext = _viewModel;
+            Lifes.DataContext = _viewModel;
             arrowsCount.DataContext = _viewModel;
             myLifes.DataContext = _viewModel;
-       
+            
             theTimer = new DispatcherTimer();
             theTimer.Interval = TimeSpan.FromMilliseconds(40);
             theTimer.IsEnabled = true;
@@ -274,9 +279,6 @@ namespace Arkanoid
                 Console.WriteLine(e.Message);
             }
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //_viewModel.SaveData();
-        }
+     
     }
 }
