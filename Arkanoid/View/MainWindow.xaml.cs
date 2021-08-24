@@ -89,6 +89,9 @@ namespace Arkanoid
                     case MessageBoxResult.Yes:
                         Canvas.SetLeft(ball, 165);
                         Canvas.SetBottom(ball, 60);
+                        Canvas.SetLeft(plank, 135);
+                        Canvas.SetBottom(plank, 25);
+
                         int LifeCount = _viewModel.LifeNumber--;
                         
                         myElipse1.Fill = new SolidColorBrush(Colors.Black);
