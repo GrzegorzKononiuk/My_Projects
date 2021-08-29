@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Arkanoid.UnitTests/1.0.0": {
+        "dependencies": {
+          "Arkanoid": "1.0.0"
+        },
+        "runtime": {
+          "Arkanoid.UnitTests.dll": {}
+        }
+      },
+      "Arkanoid/1.0.0": {
+        "runtime": {
+          "Arkanoid.exe": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Arkanoid.UnitTests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Arkanoid/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\bin\Debug\netcoreapp3.1\Arkanoid.UnitTests.deps.json
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\bin\Debug\netcoreapp3.1\Arkanoid.UnitTests.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\bin\Debug\netcoreapp3.1\Arkanoid.UnitTests.pdb
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\bin\Debug\netcoreapp3.1\Arkanoid.exe
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\bin\Debug\netcoreapp3.1\Arkanoid.pdb
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\bin\Debug\netcoreapp3.1\Arkanoid.exe.config
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\obj\Debug\netcoreapp3.1\Arkanoid.UnitTests.csprojAssemblyReference.cache
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\obj\Debug\netcoreapp3.1\Arkanoid.UnitTests.AssemblyInfoInputs.cache
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\obj\Debug\netcoreapp3.1\Arkanoid.UnitTests.AssemblyInfo.cs
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\obj\Debug\netcoreapp3.1\Arkanoid.UnitTests.csproj.CoreCompileInputs.cache
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\obj\Debug\netcoreapp3.1\Arkanoid.UnitTests.csproj.CopyComplete
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\obj\Debug\netcoreapp3.1\Arkanoid.UnitTests.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid.UnitTests\obj\Debug\netcoreapp3.1\Arkanoid.UnitTests.pdb
