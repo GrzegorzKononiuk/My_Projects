@@ -32,7 +32,7 @@ namespace Arkanoid
             InitializeComponent();
 
             _viewModel = new ArkanoidViewModel();
-      
+            _viewModel.Test();
             list.ItemsSource = _viewModel.blockItems;
 
             _viewModel.ReadData();

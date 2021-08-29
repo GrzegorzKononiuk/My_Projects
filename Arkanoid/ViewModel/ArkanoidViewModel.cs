@@ -22,7 +22,7 @@ namespace Arkanoid.ViewModel
   
     public class ArkanoidViewModel : INotifyPropertyChanged
     {
-
+     
         public ObservableCollection<RectangleItem> blockItems = new ObservableCollection<RectangleItem>()
         {
             
@@ -73,7 +73,10 @@ namespace Arkanoid.ViewModel
                 OnPropertyChanged();
             }
         }
-
+        public string Test()
+        {
+            return "Helolo world!!";
+        }
         public double Move(double x)
         {
             switch (x)
