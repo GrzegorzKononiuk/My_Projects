@@ -32,7 +32,18 @@ D:\BRUDNOPIS\MyProjects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyRe
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Arkanoid.exe.config
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Arkanoid.exe
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Arkanoid.pdb
-D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyReference.cache
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Castle.Core.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Moq.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Castle.Core.xml
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\Moq.xml
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\View\MainWindow.g.cs
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\App.g.cs
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -43,5 +54,6 @@ D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.g.resources
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.Properties.Resources.resources
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csproj.GenerateResource.cache
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csproj.CoreCompileInputs.cache
+D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.exe
 D:\BRUDNOPIS\My_projects\My_Projects\Arkanoid\obj\Debug\Arkanoid.pdb
