@@ -5,11 +5,26 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 namespace Arkanoid.UnitTests
 {
     public class UnitTests
     {
+        public static string file = @"D:\\BRUDNOPIS\\testujemy\\Arkanoid\\bin\\Debug\\\\file.txt";
+
+        [Test]
+        public void TestFileContent()
+        {
+            if (new FileInfo(file).Length > 0)
+            {
+                Console.WriteLine("FILE IS NOT EMPTY");
+            }
+            else
+            {
+                Console.WriteLine("FILE IS EMPTY");
+            }
+        }
         [Test]
         public void TestingMock()
         {
